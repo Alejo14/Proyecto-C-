@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Experto
+    public class Experto: Trabajador
     {
         private List<Estimacion> listaEstimacion;
         public Experto()

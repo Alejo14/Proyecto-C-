@@ -13,7 +13,7 @@ namespace Modelo
         private CuentaUsuario cuentaUsuario;
 
         public Administrador() {
-            this.CuentaUsuario = new CuentaUsuario();
+            //this.CuentaUsuario = new CuentaUsuario();
         }
         public Administrador(int idAdmin)
         {

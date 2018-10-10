@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class KAM
+    public class KAM: Trabajador
     {
         private List<ERU> listaERU;
         private List<SolicitudCambio> listaSolicitudCambio;

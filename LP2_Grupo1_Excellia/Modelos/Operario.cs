@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Operario
+    public class Operario: Trabajador
     {
         private TipoCargo cargo;
         private List<Proyecto> listaProyecto;

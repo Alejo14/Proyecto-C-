@@ -58,12 +58,12 @@
             // btnForm_Buscar
             // 
             this.btnForm_Buscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnForm_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForm_Buscar.Location = new System.Drawing.Point(636, 152);
+            this.btnForm_Buscar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForm_Buscar.Location = new System.Drawing.Point(645, 152);
             this.btnForm_Buscar.Name = "btnForm_Buscar";
-            this.btnForm_Buscar.Size = new System.Drawing.Size(101, 39);
+            this.btnForm_Buscar.Size = new System.Drawing.Size(92, 38);
             this.btnForm_Buscar.TabIndex = 9;
-            this.btnForm_Buscar.Text = "Aceptar";
+            this.btnForm_Buscar.Text = "&Buscar";
             this.btnForm_Buscar.UseVisualStyleBackColor = true;
             this.btnForm_Buscar.Click += new System.EventHandler(this.btnForm_Buscar_Click);
             // 
@@ -93,7 +93,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(91, 101);
+            this.txtBuscar.Location = new System.Drawing.Point(91, 110);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(646, 20);
@@ -103,7 +103,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(258, 44);
+            this.lblTitulo.Location = new System.Drawing.Point(259, 44);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(251, 18);
             this.lblTitulo.TabIndex = 15;
@@ -113,11 +113,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 100);
+            this.label1.Location = new System.Drawing.Point(22, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
+            this.label1.Size = new System.Drawing.Size(62, 18);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Buscar";
+            this.label1.Text = "Código";
             // 
             // frmAsignarTrabajador
             // 

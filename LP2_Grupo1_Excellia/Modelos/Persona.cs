@@ -17,7 +17,8 @@ namespace Modelo
         private string correo;
         private string telefono;
         private CuentaUsuario cuentaUsuario;
-        public Persona() { this.cuentaUsuario = new CuentaUsuario(); }
+        public Persona() { //this.cuentaUsuario = new CuentaUsuario();
+        }
 
         public Persona(string dni, string nombre, string apellidoPaterno,
                 string apellidoMaterno, char sexo, DateTime fechaNac, string correo,

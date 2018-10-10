@@ -15,11 +15,11 @@ namespace Vistas
         public frmContacto()
         {
             InitializeComponent();
-            txtCodigo.Text = "EXC145";
-            txtNombre.Text = "Roberto Paredes";
-            txtCorreo.Text = "r.paredes@hotmail.com";
-            txtRol.Text = "Programador";
-            txtTelefono.Text = "940323164";
+            txtCodigo.Enabled = false;
+            txtCorreo.Enabled = false;
+            txtNombre.Enabled = false;
+            txtRol.Enabled = false;
+            txtTelefono.Enabled = false;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

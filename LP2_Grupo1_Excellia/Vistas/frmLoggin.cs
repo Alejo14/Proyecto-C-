@@ -19,6 +19,16 @@ namespace Vistas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            if (txtUsuario.Text == "")
+            {
+                MessageBox.Show("Ingrese su Usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (txtContraseña.Text == "")
+            {
+                MessageBox.Show("Ingrese su Contraseña", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             FormMenuPrincipal mp = new FormMenuPrincipal();
             this.Hide();
             mp.ShowDialog();
@@ -31,7 +41,7 @@ namespace Vistas
             this.Hide();
             if (rc.ShowDialog() == DialogResult.OK)
             {
-                this.Dispose();
+                this.Visible = true;
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class JefeProyecto
+    public class JefeProyecto:Trabajador
     {
         private List<Proyecto> listaProyecto;
         private List<SolicitudRetiro> listaSolicitudRetiro;
