@@ -119,6 +119,12 @@
     <Compile Include="FormVisualizarProyectos.designer.cs">
       <DependentUpon>FormVisualizarProyectos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarInfProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarInfProyecto.Designer.cs">
+      <DependentUpon>frmAgregarInfProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsignarTrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="frmExportarReportes.designer.cs">
       <DependentUpon>frmExportarReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarProyecto.Designer.cs">
+      <DependentUpon>frmGenerarProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGenerarReportesEstadisticos.cs">
       <SubType>Form</SubType>
@@ -231,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExportarReportes.resx">
       <DependentUpon>frmExportarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarProyecto.resx">
+      <DependentUpon>frmGenerarProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGenerarReportesEstadisticos.resx">
       <DependentUpon>frmGenerarReportesEstadisticos.cs</DependentUpon>

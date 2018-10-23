@@ -84,6 +84,8 @@ namespace LogicaNegocio
             else
                 return -1;
 
+            return -1;
+
         }
         private string CreatePassword(int length)
         {
