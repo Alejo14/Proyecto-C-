@@ -71,21 +71,9 @@ namespace LogicaNegocio
                 }
             }
             if (encontrado)
-            {
-                if (usuario.TipoUsuario == "Analista" || usuario.TipoUsuario == "Tester" || usuario.TipoUsuario == "Programador")
-                {
-                    return determinarTipoUsuario(usuario.Persona);
-                }
-                else if(usuario.TipoUsuario == "Jefe de proyecto")
-                {
-                    return determinarTipoUsuario(usuario.Persona);
-                }   
-            }    
+                return determinarTipoUsuario(usuario.Persona);   
             else
                 return -1;
-
-            return -1;
-
         }
         private string CreatePassword(int length)
         {

@@ -17,11 +17,15 @@ namespace Vistas
     {
         private CuentaUsuario usuarioLogin;
         private CuentaUsuarioBL cuentaUsuarioBL;
+        private bool noIngresoContrasena;
+        private bool noIngresoUsuario;
         public frmLoggin()
         {
             InitializeComponent();
             cuentaUsuarioBL = new CuentaUsuarioBL();
             AcceptButton = btnIngresar;
+            noIngresoContrasena = true;
+            noIngresoUsuario = true;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -31,12 +35,13 @@ namespace Vistas
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "" || txtContraseña.Text == "")
+            if ((txtUsuario.Text == "" || noIngresoUsuario) || (txtContraseña.Text == "" || noIngresoContrasena))
             {
                 MessageBox.Show("Debe ingresar tanto usuario como contraseña para acceder al sistema","Advertencia",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
             usuarioLogin = new CuentaUsuario();
             usuarioLogin.NomUsuario = txtUsuario.Text;
             usuarioLogin.Contrasena = txtContraseña.Text;
@@ -89,6 +94,7 @@ namespace Vistas
             {
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.Black;
+                noIngresoUsuario = false;
             }
         }
 
@@ -98,6 +104,7 @@ namespace Vistas
             {
                 txtUsuario.Text = "Nombre de usuario";
                 txtUsuario.ForeColor = Color.Silver;
+                noIngresoUsuario = true;
             }
         }
 
@@ -108,6 +115,7 @@ namespace Vistas
                 txtContraseña.Text = "";
                 txtContraseña.ForeColor = Color.Black;
                 txtContraseña.PasswordChar = '*';
+                noIngresoContrasena = false;
             }
         }
 
@@ -117,7 +125,8 @@ namespace Vistas
             {
                 txtContraseña.PasswordChar = '\0';
                 txtContraseña.Text = "Contraseña";
-                txtContraseña.ForeColor = Color.Silver;  
+                txtContraseña.ForeColor = Color.Silver;
+                noIngresoContrasena = true;
             }
         }
 
