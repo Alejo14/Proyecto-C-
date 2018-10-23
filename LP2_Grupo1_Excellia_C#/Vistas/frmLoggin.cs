@@ -21,6 +21,7 @@ namespace Vistas
         {
             InitializeComponent();
             cuentaUsuarioBL = new CuentaUsuarioBL();
+            AcceptButton = btnIngresar;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
