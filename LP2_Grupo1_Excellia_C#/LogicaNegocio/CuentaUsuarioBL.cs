@@ -71,7 +71,7 @@ namespace LogicaNegocio
                 }
             }
             if (encontrado)
-                return determinarTipoUsuario(usuario.Persona);        
+                return determinarTipoUsuario(usuario.Persona);   
             else
                 return -1;
         }
