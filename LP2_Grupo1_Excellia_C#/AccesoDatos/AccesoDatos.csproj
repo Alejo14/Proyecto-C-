@@ -65,6 +65,7 @@
     <Compile Include="DBManager.cs" />
     <Compile Include="DominioDA.cs" />
     <Compile Include="EmpresaDA.cs" />
+    <Compile Include="EruDA.cs" />
     <Compile Include="ExpertoDA.cs" />
     <Compile Include="JefeProyectoDA.cs" />
     <Compile Include="KamDA.cs" />

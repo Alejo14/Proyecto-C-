@@ -17,8 +17,8 @@ namespace Modelo
 
         public Empresa()
         {
-            this.listaCliente = new List<Cliente>();
-            this.listaDominio = new List<Dominio>();
+            //this.listaCliente = new List<Cliente>();
+            //this.listaDominio = new List<Dominio>();
         }
 
         public Empresa(int idEmpresa, string ruc, string razonSocial,
@@ -28,8 +28,8 @@ namespace Modelo
             this.ruc = ruc;
             this.direccion = direccion;
             this.razonSocial = razonSocial;
-            this.listaCliente = new List<Cliente>();
-            this.listaDominio = new List<Dominio>();
+            //this.listaCliente = new List<Cliente>();
+            //this.listaDominio = new List<Dominio>();
         }
         public int IdEmpresa { get => idEmpresa; set => idEmpresa = value; }
         public string Ruc { get => ruc; set => ruc = value; }

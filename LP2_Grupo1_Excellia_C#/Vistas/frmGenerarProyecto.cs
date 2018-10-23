@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocio;
+using Modelo;
 
 namespace Vistas
 {
     public partial class frmGenerarProyecto : Form
     {
+        private EruBL eruBL;
+        private ERU eru;
         public frmGenerarProyecto()
         {
             InitializeComponent();
+            dgvEruProyecto.AutoGenerateColumns = false;
+            eruBL = new EruBL();
+            dgvEruProyecto.DataSource = eruBL.listarErusPendientes();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,10 +29,32 @@ namespace Vistas
 
         }
 
+        public ERU ERU { get => eru; set => eru = value; }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frmAgregarInfProyecto frm = new frmAgregarInfProyecto();
             
+            if (dgvEruProyecto.SelectedRows.Count > 0)
+            {
+                ERU = (ERU)dgvEruProyecto.CurrentRow.DataBoundItem;
+                frmAgregarInfProyecto frm = new frmAgregarInfProyecto(ERU);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Se debe de seleccionar una ERU para crearle un proyecto", "Crear proyecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void frmGenerarProyecto_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

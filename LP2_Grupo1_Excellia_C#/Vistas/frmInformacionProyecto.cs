@@ -125,5 +125,10 @@ namespace Vistas
 
             }
         }
+
+        private void cboPrioridad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

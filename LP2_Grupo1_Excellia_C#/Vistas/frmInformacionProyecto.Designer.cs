@@ -206,6 +206,7 @@
             this.cboPrioridad.Name = "cboPrioridad";
             this.cboPrioridad.Size = new System.Drawing.Size(156, 21);
             this.cboPrioridad.TabIndex = 19;
+            this.cboPrioridad.SelectedIndexChanged += new System.EventHandler(this.cboPrioridad_SelectedIndexChanged);
             // 
             // btnCancelarProyecto
             // 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEruProyecto = new System.Windows.Forms.DataGridView();
             this.lblGenerarProyecto = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -36,22 +36,22 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEruProyecto)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvEruProyecto
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEruProyecto.AllowUserToAddRows = false;
+            this.dgvEruProyecto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEruProyecto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(53, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(537, 211);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvEruProyecto.Location = new System.Drawing.Point(54, 75);
+            this.dgvEruProyecto.Name = "dgvEruProyecto";
+            this.dgvEruProyecto.Size = new System.Drawing.Size(535, 211);
+            this.dgvEruProyecto.TabIndex = 0;
             // 
             // lblGenerarProyecto
             // 
@@ -82,26 +82,31 @@
             this.btnRegresar.TabIndex = 3;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "IdERU";
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Descripcion";
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
             this.Column2.Width = 150;
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "NombreCliente";
             this.Column3.HeaderText = "Cliente";
             this.Column3.Name = "Column3";
             this.Column3.Width = 130;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "FechaSolicitud";
             this.Column4.HeaderText = "Fecha Solicitud";
             this.Column4.Name = "Column4";
             this.Column4.Width = 110;
@@ -114,10 +119,11 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblGenerarProyecto);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEruProyecto);
             this.Name = "frmGenerarProyecto";
             this.Text = "frmGenerarProyecto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmGenerarProyecto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEruProyecto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,7 +131,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEruProyecto;
         private System.Windows.Forms.Label lblGenerarProyecto;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnRegresar;

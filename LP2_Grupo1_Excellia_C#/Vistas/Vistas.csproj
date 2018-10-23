@@ -232,6 +232,9 @@
     <EmbeddedResource Include="FormVisualizarProyectos.resx">
       <DependentUpon>FormVisualizarProyectos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarInfProyecto.resx">
+      <DependentUpon>frmAgregarInfProyecto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAsignarTrabajador.resx">
       <DependentUpon>frmAsignarTrabajador.cs</DependentUpon>
     </EmbeddedResource>
