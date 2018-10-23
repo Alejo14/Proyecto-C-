@@ -19,7 +19,8 @@ namespace AccesoDatos
             {
                 conn = new MySqlConnection(cadena);
             }
-            catch {
+            catch
+            {
                 return null;
             }
             conn.Open();

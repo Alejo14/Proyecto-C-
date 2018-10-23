@@ -31,20 +31,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>C:\Users\alulab14.INF.001\Downloads\DRIVERS\MySql.Data.dll</HintPath>
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\..\drivers ADO .NET MySQL\Google.Protobuf.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.Entity.EF6">
-      <HintPath>C:\Users\alulab14.INF.001\Downloads\DRIVERS\MySql.Data.Entity.EF6.dll</HintPath>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\drivers ADO .NET MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework">
+      <HintPath>..\..\drivers ADO .NET MySQL\MySql.Data.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore">
-      <HintPath>C:\Users\alulab14.INF.001\Downloads\DRIVERS\MySQL.Data.EntityFrameworkCore.dll</HintPath>
+      <HintPath>..\..\drivers ADO .NET MySQL\MySQL.Data.EntityFrameworkCore.dll</HintPath>
     </Reference>
     <Reference Include="MySQL.Data.EntityFrameworkCore.Design">
-      <HintPath>C:\Users\alulab14.INF.001\Downloads\DRIVERS\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
+      <HintPath>..\..\drivers ADO .NET MySQL\MySQL.Data.EntityFrameworkCore.Design.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>C:\Users\alulab14.INF.001\Downloads\DRIVERS\MySql.Web.dll</HintPath>
+      <HintPath>..\..\drivers ADO .NET MySQL\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

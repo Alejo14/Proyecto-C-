@@ -48,10 +48,27 @@ namespace Vistas
             }
             else
             {
-                FormMenuOperario mp = new FormMenuOperario();
-                this.Hide();
-                mp.ShowDialog();
-                this.Close();
+                if(tipoUsuario == 5 || tipoUsuario == 6)
+                {
+                    FormMenuOperario mp = new FormMenuOperario();
+                    this.Hide();
+                    mp.ShowDialog();
+                    this.Close();
+                }
+                else if(tipoUsuario == 4)
+                {
+                    frmMenuJefeProyecto mj = new frmMenuJefeProyecto();
+                    this.Hide();
+                    mj.ShowDialog();
+                    this.Close();
+                }else if(tipoUsuario == 7)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("No tiene permisos para hacer uso del sistema.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

@@ -55,7 +55,7 @@ namespace LogicaNegocio
 
             return contrasena;
         }
-        public int validarUsuario(CuentaUsuario usuario) {
+        public int validarUsuario (CuentaUsuario usuario) {
 
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
 
@@ -71,7 +71,16 @@ namespace LogicaNegocio
                 }
             }
             if (encontrado)
-                return determinarTipoUsuario(usuario.Persona);
+            {
+                if (usuario.TipoUsuario == "Analista" || usuario.TipoUsuario == "Tester" || usuario.TipoUsuario == "Programador")
+                {
+                    return determinarTipoUsuario(usuario.Persona);
+                }
+                else if(usuario.TipoUsuario == "Jefe de proyecto")
+                {
+                    return determinarTipoUsuario(usuario.Persona);
+                }   
+            }    
             else
                 return -1;
 
