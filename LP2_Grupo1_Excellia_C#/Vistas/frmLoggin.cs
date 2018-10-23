@@ -23,6 +23,26 @@ namespace Vistas
             cuentaUsuarioBL = new CuentaUsuarioBL();
         }
 
+        public int IdTrabajador
+        {
+            get{
+                if(usuarioLogin.Persona is JefeProyecto)
+                {
+                    JefeProyecto p = (JefeProyecto)usuarioLogin.Persona;
+                    return p.IdTrabajador;
+                }
+                else if(usuarioLogin.Persona is Operario)
+                {
+                    Operario o = (Operario)usuarioLogin.Persona;
+                    return o.IdTrabajador;
+                }else if(usuarioLogin.Persona is Administrador)
+                {
+                    Administrador a = (Administrador)usuarioLogin.Persona;
+                    return a.IdTrabajador;
+                }
+                return -1;
+            }
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -41,29 +61,28 @@ namespace Vistas
             usuarioLogin.Contrasena = txtContraseña.Text;
 
             int tipoUsuario = cuentaUsuarioBL.validarUsuario(usuarioLogin);
-
             if (tipoUsuario < 0)
             {
                 MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if(tipoUsuario == 5 || tipoUsuario == 6)
+                if(tipoUsuario == 1)
                 {
                     FormMenuOperario mp = new FormMenuOperario();
                     this.Hide();
                     mp.ShowDialog();
                     this.Close();
                 }
-                else if(tipoUsuario == 4)
+                else if(tipoUsuario == 2)
                 {
                     frmMenuJefeProyecto mj = new frmMenuJefeProyecto();
                     this.Hide();
                     mj.ShowDialog();
                     this.Close();
-                }else if(tipoUsuario == 7)
+                }else if(tipoUsuario == 4)
                 {
-
+                    MessageBox.Show("Falta implementar la vista de Administrador", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

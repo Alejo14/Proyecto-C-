@@ -71,21 +71,9 @@ namespace LogicaNegocio
                 }
             }
             if (encontrado)
-            {
-                if (usuario.TipoUsuario == "Analista" || usuario.TipoUsuario == "Tester" || usuario.TipoUsuario == "Programador")
-                {
-                    return determinarTipoUsuario(usuario.Persona);
-                }
-                else if(usuario.TipoUsuario == "Jefe de proyecto")
-                {
-                    return determinarTipoUsuario(usuario.Persona);
-                }   
-            }    
+                return determinarTipoUsuario(usuario.Persona);        
             else
                 return -1;
-
-            return -1;
-
         }
         private string CreatePassword(int length)
         {
@@ -106,11 +94,22 @@ namespace LogicaNegocio
             else if (personaUsuario is Trabajador)
             {
                 Trabajador trabajadorUsuario = (Trabajador)(personaUsuario);
-                idTipo = trabajadorUsuario.IdTrabajador;
+                if(trabajadorUsuario is Operario)
+                {
+                    idTipo = 1;
+                }
+                else if(trabajadorUsuario is JefeProyecto)
+                {
+                    idTipo = 2;
+                }
+                else
+                {
+                    idTipo = 3;
+                }
             }
 
             else {
-                idTipo = 7;//Esto indica que es administrador
+                idTipo = 4;//Esto indica que es administrador
             }
 
             return idTipo;
