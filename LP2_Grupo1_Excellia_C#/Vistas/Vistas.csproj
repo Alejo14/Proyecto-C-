@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A05CD2E0-439A-4888-B509-B4C77F38F772}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAgregarRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarRequerimiento.designer.cs">
+      <DependentUpon>FormAgregarRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarUsuario.designer.cs">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionarCuentasUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionarCuentasUsuario.designer.cs">
+      <DependentUpon>FormGestionarCuentasUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfUsuario.designer.cs">
+      <DependentUpon>FormInfUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuOperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuOperario.designer.cs">
+      <DependentUpon>FormMenuOperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSolicitudRetiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSolicitudRetiro.designer.cs">
+      <DependentUpon>FormSolicitudRetiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubirArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSubirArchivos.designer.cs">
+      <DependentUpon>FormSubirArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioModificacionRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioModificacionRequerimiento.designer.cs">
+      <DependentUpon>FormularioModificacionRequerimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVisualizarProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVisualizarProyectos.designer.cs">
+      <DependentUpon>FormVisualizarProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAsignarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignarTrabajador.designer.cs">
+      <DependentUpon>frmAsignarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarTrabajador.designer.cs">
+      <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChat.designer.cs">
+      <DependentUpon>frmChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExportarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExportarReportes.designer.cs">
+      <DependentUpon>frmExportarReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerarReportesEstadisticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerarReportesEstadisticos.designer.cs">
+      <DependentUpon>frmGenerarReportesEstadisticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionProyecto.designer.cs">
+      <DependentUpon>frmInformacionProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoggin.designer.cs">
+      <DependentUpon>frmLoggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuJefeProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuJefeProyecto.Designer.cs">
+      <DependentUpon>frmMenuJefeProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuperarContraseña.designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetirarOperario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetirarOperario.designer.cs">
+      <DependentUpon>frmRetirarOperario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetirarOperarioXProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetirarOperarioXProyecto.Designer.cs">
+      <DependentUpon>frmRetirarOperarioXProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSolicitarRetiroDeProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolicitarRetiroDeProyecto.designer.cs">
+      <DependentUpon>frmSolicitarRetiroDeProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAgregarRequerimiento.resx">
+      <DependentUpon>FormAgregarRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarUsuario.resx">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionarCuentasUsuario.resx">
+      <DependentUpon>FormGestionarCuentasUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInfUsuario.resx">
+      <DependentUpon>FormInfUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuOperario.resx">
+      <DependentUpon>FormMenuOperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSolicitudRetiro.resx">
+      <DependentUpon>FormSolicitudRetiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSubirArchivos.resx">
+      <DependentUpon>FormSubirArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioModificacionRequerimiento.resx">
+      <DependentUpon>FormularioModificacionRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVisualizarProyectos.resx">
+      <DependentUpon>FormVisualizarProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAsignarTrabajador.resx">
+      <DependentUpon>frmAsignarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarTrabajador.resx">
+      <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChat.resx">
+      <DependentUpon>frmChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExportarReportes.resx">
+      <DependentUpon>frmExportarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerarReportesEstadisticos.resx">
+      <DependentUpon>frmGenerarReportesEstadisticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionProyecto.resx">
+      <DependentUpon>frmInformacionProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoggin.resx">
+      <DependentUpon>frmLoggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuJefeProyecto.resx">
+      <DependentUpon>frmMenuJefeProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetirarOperario.resx">
+      <DependentUpon>frmRetirarOperario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolicitarRetiroDeProyecto.resx">
+      <DependentUpon>frmSolicitarRetiroDeProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+      <Project>{b7a7adab-0f35-43c3-9a36-a008e08acb50}</Project>
+      <Name>LogicaNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelo.csproj">
+      <Project>{f324d7f0-b48e-4ecc-b9f7-3ad7c247cfe9}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrupoRio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_customer_man_profile_user_icon_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excellia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excellia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_essential_minimize_ui_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_close_minimize_minus_remove_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon cerrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon maximizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Name1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_document_new_note_icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_guardar_paste_save_icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_document_new_note_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_guardar_paste_save_icon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_customer_man_profile_user_icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_customer_man_profile_user_icon_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_customer_man_profile_user_icon_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excellia_nombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visualizar_pequeño.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exportar_pequeño.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
