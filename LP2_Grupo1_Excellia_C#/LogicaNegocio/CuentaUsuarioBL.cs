@@ -62,6 +62,7 @@ namespace LogicaNegocio
             BindingList<CuentaUsuario> cuentasUsuario = cuentaUsuarioDA.obtenerCuentasUsuario();
 
             bool encontrado = false;
+            bool usuarioEncontrado = false;
 
             foreach (CuentaUsuario usuarioBD in cuentasUsuario) {
                 encontrado = ((usuario.NomUsuario == usuarioBD.NomUsuario) && (usuario.Contrasena == usuarioBD.Contrasena));
@@ -69,11 +70,15 @@ namespace LogicaNegocio
                     usuario = usuarioBD;
                     break;
                 }
+                if (!usuarioEncontrado)
+                    usuarioEncontrado = (usuario.NomUsuario == usuarioBD.NomUsuario);
             }
             if (encontrado)
-                return determinarTipoUsuario(usuario.Persona);   
-            else
+                return determinarTipoUsuario(usuario.Persona);
+            else if (usuarioEncontrado)
                 return -1;
+            else
+                return -2;
         }
         private string CreatePassword(int length)
         {

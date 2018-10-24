@@ -20,7 +20,7 @@ namespace Vistas
         {
             InitializeComponent();
             AbrirFormInPanel(new FormVisualizarProyectos(false));
-            jp = new JefeProyecto();
+            //jp = new JefeProyecto();
             jp = jefeProyecto;
         }
 
@@ -36,12 +36,12 @@ namespace Vistas
                 MenuVertical.Width = 240;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void pbMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -67,27 +67,27 @@ namespace Vistas
             this.panelContenedor.Tag = fh;
             fh.Show();
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExportarReportes_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmExportarReportes());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVisualizarProyectos_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new FormVisualizarProyectos(false));
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnRetirarOperario_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmRetirarOperario());
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnBuscarContacto_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmBuscarTrabajador(0));
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             frmLoggin lg = new frmLoggin();
             this.Hide();
@@ -97,7 +97,7 @@ namespace Vistas
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnGenerarProyecto_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmGenerarProyecto(jp));
         }
