@@ -15,12 +15,12 @@ namespace Vistas
     public partial class FormMenuOperario : Form
     {
         private Operario op;
+        private bool menuEscodido;
         public FormMenuOperario(Operario operario)
         {
             InitializeComponent();
             AbrirFormInPanel(new FormVisualizarProyectos(true));
-            pnlMenu.Width = 262;
-            op = new Operario();
+            menuEscodido = false;
             op = operario;
         }
 
@@ -37,13 +37,13 @@ namespace Vistas
         }
         private void AbrirFormInPanel(object Formhijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
+            if (this.scOperario.Panel2.Controls.Count > 0)
+                this.scOperario.Panel2.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
+            this.scOperario.Panel2.Controls.Add(fh);
+            this.scOperario.Panel2.Tag = fh;
             fh.Show();
         }
         private void btnSolicitarRetiroProyecto_Click(object sender, EventArgs e)
@@ -68,8 +68,21 @@ namespace Vistas
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if (pnlMenu.Width == 262) pnlMenu.Width = 0;
-            else pnlMenu.Width = 262;
+            if (menuEscodido)
+            {
+                scOperario.Panel1.Show();
+                scOperario.SplitterDistance = 260;
+                scOperario.SplitterWidth = 4;
+                menuEscodido = false;
+
+            }
+            else
+            {
+                scOperario.Panel1.Hide();
+                scOperario.SplitterDistance = 0;
+                scOperario.SplitterWidth = 85;
+                menuEscodido = true;
+            }
         }
 
         private void iconCerrar_Click(object sender, EventArgs e)

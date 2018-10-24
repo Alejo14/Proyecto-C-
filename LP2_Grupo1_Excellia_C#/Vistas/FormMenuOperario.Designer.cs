@@ -32,20 +32,21 @@
             this.iconMinimizar = new System.Windows.Forms.PictureBox();
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnExportarReportes = new System.Windows.Forms.Button();
-            this.btnVisualizarProyectos = new System.Windows.Forms.Button();
-            this.bttLogOut = new System.Windows.Forms.Button();
-            this.btnSolicitarRetiroProyecto = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.scOperario = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSolicitarRetiroProyecto = new System.Windows.Forms.Button();
+            this.bttLogOut = new System.Windows.Forms.Button();
+            this.btnVisualizarProyectos = new System.Windows.Forms.Button();
+            this.btnExportarReportes = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
-            this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scOperario)).BeginInit();
+            this.scOperario.Panel1.SuspendLayout();
+            this.scOperario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -106,73 +107,49 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pnlMenu
+            // scOperario
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.White;
-            this.pnlMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlMenu.Controls.Add(this.pictureBox2);
-            this.pnlMenu.Controls.Add(this.pictureBox1);
-            this.pnlMenu.Controls.Add(this.btnSolicitarRetiroProyecto);
-            this.pnlMenu.Controls.Add(this.bttLogOut);
-            this.pnlMenu.Controls.Add(this.btnVisualizarProyectos);
-            this.pnlMenu.Controls.Add(this.btnExportarReportes);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 45);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(262, 565);
-            this.pnlMenu.TabIndex = 19;
+            this.scOperario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scOperario.IsSplitterFixed = true;
+            this.scOperario.Location = new System.Drawing.Point(0, 45);
+            this.scOperario.Name = "scOperario";
             // 
-            // btnExportarReportes
+            // scOperario.Panel1
             // 
-            this.btnExportarReportes.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportarReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExportarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarReportes.Image = global::Vistas.Properties.Resources.Exportar_pequeño;
-            this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarReportes.Location = new System.Drawing.Point(12, 301);
-            this.btnExportarReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExportarReportes.Name = "btnExportarReportes";
-            this.btnExportarReportes.Size = new System.Drawing.Size(185, 56);
-            this.btnExportarReportes.TabIndex = 4;
-            this.btnExportarReportes.Text = "Exportar Reportes";
-            this.btnExportarReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportarReportes.UseVisualStyleBackColor = false;
-            this.btnExportarReportes.Click += new System.EventHandler(this.btnExportarReportes_Click);
+            this.scOperario.Panel1.BackColor = System.Drawing.Color.White;
+            this.scOperario.Panel1.Controls.Add(this.pictureBox2);
+            this.scOperario.Panel1.Controls.Add(this.pictureBox1);
+            this.scOperario.Panel1.Controls.Add(this.btnExportarReportes);
+            this.scOperario.Panel1.Controls.Add(this.btnSolicitarRetiroProyecto);
+            this.scOperario.Panel1.Controls.Add(this.btnVisualizarProyectos);
+            this.scOperario.Panel1.Controls.Add(this.bttLogOut);
             // 
-            // btnVisualizarProyectos
+            // scOperario.Panel2
             // 
-            this.btnVisualizarProyectos.BackColor = System.Drawing.Color.Transparent;
-            this.btnVisualizarProyectos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVisualizarProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarProyectos.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarProyectos.Image = global::Vistas.Properties.Resources.Visualizar_pequeño;
-            this.btnVisualizarProyectos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizarProyectos.Location = new System.Drawing.Point(12, 184);
-            this.btnVisualizarProyectos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVisualizarProyectos.Name = "btnVisualizarProyectos";
-            this.btnVisualizarProyectos.Size = new System.Drawing.Size(138, 50);
-            this.btnVisualizarProyectos.TabIndex = 0;
-            this.btnVisualizarProyectos.Text = "Home";
-            this.btnVisualizarProyectos.UseVisualStyleBackColor = false;
-            this.btnVisualizarProyectos.Click += new System.EventHandler(this.btnVisualizarProyectos_Click);
+            this.scOperario.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.scOperario.Size = new System.Drawing.Size(1190, 565);
+            this.scOperario.SplitterDistance = 260;
+            this.scOperario.TabIndex = 21;
             // 
-            // bttLogOut
+            // pictureBox2
             // 
-            this.bttLogOut.BackColor = System.Drawing.Color.White;
-            this.bttLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.bttLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttLogOut.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttLogOut.Image = global::Vistas.Properties.Resources.LogOut;
-            this.bttLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttLogOut.Location = new System.Drawing.Point(12, 420);
-            this.bttLogOut.Name = "bttLogOut";
-            this.bttLogOut.Size = new System.Drawing.Size(156, 46);
-            this.bttLogOut.TabIndex = 18;
-            this.bttLogOut.Text = "Cerrar Sesión";
-            this.bttLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bttLogOut.UseVisualStyleBackColor = false;
-            this.bttLogOut.Click += new System.EventHandler(this.bttLogOut_Click);
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.Excellia_nombre;
+            this.pictureBox2.Location = new System.Drawing.Point(34, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(195, 104);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 476);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSolicitarRetiroProyecto
             // 
@@ -182,52 +159,75 @@
             this.btnSolicitarRetiroProyecto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarRetiroProyecto.Image = global::Vistas.Properties.Resources.Visualizar_pequeño;
             this.btnSolicitarRetiroProyecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitarRetiroProyecto.Location = new System.Drawing.Point(12, 238);
+            this.btnSolicitarRetiroProyecto.Location = new System.Drawing.Point(13, 230);
             this.btnSolicitarRetiroProyecto.Margin = new System.Windows.Forms.Padding(2);
             this.btnSolicitarRetiroProyecto.Name = "btnSolicitarRetiroProyecto";
             this.btnSolicitarRetiroProyecto.Size = new System.Drawing.Size(240, 59);
-            this.btnSolicitarRetiroProyecto.TabIndex = 2;
+            this.btnSolicitarRetiroProyecto.TabIndex = 23;
             this.btnSolicitarRetiroProyecto.Text = "Solicitar Retiro de Proyecto";
             this.btnSolicitarRetiroProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSolicitarRetiroProyecto.UseVisualStyleBackColor = false;
             this.btnSolicitarRetiroProyecto.Click += new System.EventHandler(this.btnSolicitarRetiroProyecto_Click);
             // 
-            // pictureBox1
+            // bttLogOut
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 484);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.bttLogOut.BackColor = System.Drawing.Color.White;
+            this.bttLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.bttLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttLogOut.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttLogOut.Image = global::Vistas.Properties.Resources.LogOut;
+            this.bttLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttLogOut.Location = new System.Drawing.Point(13, 412);
+            this.bttLogOut.Name = "bttLogOut";
+            this.bttLogOut.Size = new System.Drawing.Size(156, 46);
+            this.bttLogOut.TabIndex = 25;
+            this.bttLogOut.Text = "Cerrar Sesión";
+            this.bttLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bttLogOut.UseVisualStyleBackColor = false;
+            this.bttLogOut.Click += new System.EventHandler(this.bttLogOut_Click);
             // 
-            // pictureBox2
+            // btnVisualizarProyectos
             // 
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Excellia_nombre;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 66);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(195, 104);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
+            this.btnVisualizarProyectos.BackColor = System.Drawing.Color.Transparent;
+            this.btnVisualizarProyectos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVisualizarProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarProyectos.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarProyectos.Image = global::Vistas.Properties.Resources.Visualizar_pequeño;
+            this.btnVisualizarProyectos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVisualizarProyectos.Location = new System.Drawing.Point(13, 176);
+            this.btnVisualizarProyectos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVisualizarProyectos.Name = "btnVisualizarProyectos";
+            this.btnVisualizarProyectos.Size = new System.Drawing.Size(138, 50);
+            this.btnVisualizarProyectos.TabIndex = 22;
+            this.btnVisualizarProyectos.Text = "Home";
+            this.btnVisualizarProyectos.UseVisualStyleBackColor = false;
+            this.btnVisualizarProyectos.Click += new System.EventHandler(this.btnVisualizarProyectos_Click);
             // 
-            // panelContenedor
+            // btnExportarReportes
             // 
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(262, 45);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(928, 565);
-            this.panelContenedor.TabIndex = 21;
+            this.btnExportarReportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportarReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarReportes.Image = global::Vistas.Properties.Resources.Exportar_pequeño;
+            this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarReportes.Location = new System.Drawing.Point(13, 293);
+            this.btnExportarReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExportarReportes.Name = "btnExportarReportes";
+            this.btnExportarReportes.Size = new System.Drawing.Size(185, 56);
+            this.btnExportarReportes.TabIndex = 24;
+            this.btnExportarReportes.Text = "Exportar Reportes";
+            this.btnExportarReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExportarReportes.UseVisualStyleBackColor = false;
+            this.btnExportarReportes.Click += new System.EventHandler(this.btnExportarReportes_Click);
             // 
             // FormMenuOperario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1190, 610);
-            this.Controls.Add(this.panelContenedor);
-            this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.scOperario);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -237,9 +237,11 @@
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
-            this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.scOperario.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scOperario)).EndInit();
+            this.scOperario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,13 +251,12 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.PictureBox iconCerrar;
         private System.Windows.Forms.PictureBox iconMinimizar;
-        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.SplitContainer scOperario;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnSolicitarRetiroProyecto;
-        private System.Windows.Forms.Button bttLogOut;
-        private System.Windows.Forms.Button btnVisualizarProyectos;
         private System.Windows.Forms.Button btnExportarReportes;
-        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Button btnSolicitarRetiroProyecto;
+        private System.Windows.Forms.Button btnVisualizarProyectos;
+        private System.Windows.Forms.Button bttLogOut;
     }
 }

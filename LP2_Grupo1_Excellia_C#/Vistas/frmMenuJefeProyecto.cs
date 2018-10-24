@@ -16,11 +16,12 @@ namespace Vistas
     public partial class frmMenuJefeProyecto : Form
     {
         private JefeProyecto jp;
+        private bool menuEscodido;
         public frmMenuJefeProyecto(JefeProyecto jefeProyecto)
         {
             InitializeComponent();
             AbrirFormInPanel(new FormVisualizarProyectos(false));
-            //jp = new JefeProyecto();
+            menuEscodido = false;
             jp = jefeProyecto;
         }
 
@@ -30,10 +31,21 @@ namespace Vistas
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);        
         private void btnSlide_Click(object sender, EventArgs e)
         {
-            if (MenuVertical.Width == 240)
-                MenuVertical.Width = 0;
+            if (menuEscodido)
+            {
+                scJefeProyecto.Panel1.Show();
+                scJefeProyecto.SplitterDistance = 235;
+                scJefeProyecto.SplitterWidth = 4;
+                menuEscodido = false;
+
+            }
             else
-                MenuVertical.Width = 240;
+            {
+                scJefeProyecto.Panel1.Hide();
+                scJefeProyecto.SplitterDistance = 0;
+                scJefeProyecto.SplitterWidth = 85;
+                menuEscodido = true;
+            }
         }
 
         private void pbExit_Click(object sender, EventArgs e)
@@ -58,13 +70,13 @@ namespace Vistas
         }
         private void AbrirFormInPanel(object Formhijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
+            if (this.scJefeProyecto.Panel2.Controls.Count > 0)
+                this.scJefeProyecto.Panel2.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
+            this.scJefeProyecto.Panel2.Controls.Add(fh);
+            this.scJefeProyecto.Panel2.Tag = fh;
             fh.Show();
         }
         private void btnExportarReportes_Click(object sender, EventArgs e)
