@@ -24,11 +24,6 @@ namespace Vistas
             dgvEruProyecto.DataSource = eruBL.listarErusPendientes();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public ERU ERU { get => eru; set => eru = value; }
         private void btnEditar_Click(object sender, EventArgs e)
         {

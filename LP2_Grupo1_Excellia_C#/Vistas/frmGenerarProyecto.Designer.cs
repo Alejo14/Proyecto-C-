@@ -48,25 +48,24 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvEruProyecto.Location = new System.Drawing.Point(54, 75);
+            this.dgvEruProyecto.Location = new System.Drawing.Point(62, 108);
             this.dgvEruProyecto.Name = "dgvEruProyecto";
-            this.dgvEruProyecto.Size = new System.Drawing.Size(535, 211);
+            this.dgvEruProyecto.Size = new System.Drawing.Size(816, 318);
             this.dgvEruProyecto.TabIndex = 0;
             // 
             // lblGenerarProyecto
             // 
             this.lblGenerarProyecto.AutoSize = true;
             this.lblGenerarProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenerarProyecto.Location = new System.Drawing.Point(220, 28);
+            this.lblGenerarProyecto.Location = new System.Drawing.Point(367, 52);
             this.lblGenerarProyecto.Name = "lblGenerarProyecto";
             this.lblGenerarProyecto.Size = new System.Drawing.Size(197, 25);
             this.lblGenerarProyecto.TabIndex = 1;
             this.lblGenerarProyecto.Text = "Generar Proyecto";
-            this.lblGenerarProyecto.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(358, 323);
+            this.btnEditar.Location = new System.Drawing.Point(595, 461);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(86, 29);
             this.btnEditar.TabIndex = 2;
@@ -76,7 +75,7 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(225, 323);
+            this.btnRegresar.Location = new System.Drawing.Point(244, 461);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(86, 29);
             this.btnRegresar.TabIndex = 3;
@@ -95,31 +94,32 @@
             this.Column2.DataPropertyName = "Descripcion";
             this.Column2.HeaderText = "Nombre";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
+            this.Column2.Width = 300;
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "NombreCliente";
             this.Column3.HeaderText = "Cliente";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 130;
+            this.Column3.Width = 250;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "FechaSolicitud";
             this.Column4.HeaderText = "Fecha Solicitud";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 110;
+            this.Column4.Width = 120;
             // 
             // frmGenerarProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 383);
+            this.ClientSize = new System.Drawing.Size(934, 522);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.lblGenerarProyecto);
             this.Controls.Add(this.dgvEruProyecto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGenerarProyecto";
             this.Text = "frmGenerarProyecto";
             this.Load += new System.EventHandler(this.frmGenerarProyecto_Load);

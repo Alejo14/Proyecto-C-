@@ -427,5 +427,11 @@
   <ItemGroup>
     <None Include="Resources\Exportar_pequeño.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Evaluar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Derivar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

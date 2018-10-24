@@ -163,6 +163,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Derivar {
+            get {
+                object obj = ResourceManager.GetObject("Derivar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doc_document_new_note_icon_32 {
             get {
                 object obj = ResourceManager.GetObject("doc_document_new_note_icon_32", resourceCulture);
@@ -176,6 +186,16 @@ namespace Vistas.Properties {
         internal static System.Drawing.Bitmap doc_document_new_note_icon_48 {
             get {
                 object obj = ResourceManager.GetObject("doc_document_new_note_icon_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Evaluar {
+            get {
+                object obj = ResourceManager.GetObject("Evaluar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
