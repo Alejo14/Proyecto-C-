@@ -97,6 +97,7 @@ namespace AccesoDatos
                 else if (idTipo == 3)
                 {
                     Experto experto = new Experto();
+                    experto.IdTrabajador = idTrabajador;
                     experto.Dni = dni;
                     experto.Nombre = nombre;
                     experto.ApellidoPaterno = apellidoPaterno;
@@ -106,6 +107,7 @@ namespace AccesoDatos
                 else if (idTipo == 4)
                 {
                     JefeProyecto jefe = new JefeProyecto();
+                    jefe.IdTrabajador = idTrabajador;
                     jefe.Dni = dni;
                     jefe.Nombre = nombre;
                     jefe.ApellidoPaterno = apellidoPaterno;

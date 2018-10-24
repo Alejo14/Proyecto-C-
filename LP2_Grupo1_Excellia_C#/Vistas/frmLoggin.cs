@@ -46,7 +46,7 @@ namespace Vistas
             usuarioLogin.NomUsuario = txtUsuario.Text;
             usuarioLogin.Contrasena = txtContraseña.Text;
 
-            int tipoUsuario = cuentaUsuarioBL.validarUsuario(usuarioLogin);
+            int tipoUsuario = cuentaUsuarioBL.validarUsuario(ref usuarioLogin);
             if (tipoUsuario < 0)
             {
                 MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

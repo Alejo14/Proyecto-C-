@@ -23,10 +23,6 @@ namespace Vistas
             jp = new JefeProyecto();
             jp = jefeProyecto;
         }
-        public int IdJefe
-        {
-            get => jp.IdTrabajador;
-        }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -103,7 +99,7 @@ namespace Vistas
 
         private void button7_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmGenerarProyecto());
+            AbrirFormInPanel(new frmGenerarProyecto(jp));
         }
     }
 }

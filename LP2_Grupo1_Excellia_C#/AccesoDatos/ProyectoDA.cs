@@ -200,6 +200,44 @@ namespace AccesoDatos
             }
         }
 
+        public void CrearProyecto(Proyecto p)
+        {
+            try
+            {
+                int pri=0;
+                if(p.Prioridad == TipoPrioridad.ALTA)
+                {
+                    pri = 1;
+                }else if (p.Prioridad == TipoPrioridad.MEDIA)
+                {
+                    pri = 2;
+                }
+                else if (p.Prioridad == TipoPrioridad.BAJA)
+                {
+                    pri = 3;
+                }
+
+                MySqlConnection con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String cadenaI = p.FechaInicio.Year.ToString() + "-" + p.FechaInicio.Month.ToString() + "-" + p.FechaInicio.Day.ToString();
+                String cadenaF = p.FechaFinEstimada.Year.ToString() + "-" + p.FechaFinEstimada.Month.ToString() + "-" + p.FechaFinEstimada.Day.ToString();
+                String cadenaFR = p.FechaRealFin.Year.ToString() + "-" + p.FechaRealFin.Month.ToString() + "-" + p.FechaRealFin.Day.ToString();
+                
+                String sql = " INSERT INTO PROYECTO (ID_ERU, ID_TRABAJADOR_JEFE, NOMBRE, PRESUPUESTO, PRIORIDAD, ID_TIPO_FASE_PROYECTO, FECHA_INICIO, FECHA_FIN_ESTIMADA, FECHA_FIN_REAL)"+
+                    " VALUES ("+p.Eru.IdERU+", "+p.JefeProyecto.IdTrabajador+", '"+p.Nombre+"', "+p.Presupuesto+", "+pri+", 1, '"+ cadenaI +"', '"+ cadenaF +"', '"+ cadenaFR + "')";
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al crear el proyecto. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 }

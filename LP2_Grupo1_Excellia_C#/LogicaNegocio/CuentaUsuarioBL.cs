@@ -55,7 +55,7 @@ namespace LogicaNegocio
 
             return contrasena;
         }
-        public int validarUsuario (CuentaUsuario usuario) {
+        public int validarUsuario (ref CuentaUsuario usuario) {
 
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
 

@@ -24,11 +24,11 @@ namespace Modelo
         private TipoPrioridad prioridad;
         public Proyecto()
         {
-            //this.jefeProyecto = new JefeProyecto();
+            this.jefeProyecto = new JefeProyecto();
             //this.listaDetalleEntrega = new List<DetalleEntrega>();
             //this.listaOperario = new List<Operario>();
             //this.listaSolicitudRetiro = new List<SolicitudRetiro>();
-            //this.eru = new ERU();
+            this.eru = new ERU();
         }
 
         public Proyecto(int idProyecto, string nombre, TipoFaseProyecto etapa,

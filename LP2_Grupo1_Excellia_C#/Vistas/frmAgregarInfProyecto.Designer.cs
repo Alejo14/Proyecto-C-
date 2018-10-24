@@ -93,7 +93,7 @@
             // 
             this.lblFEstimada.AutoSize = true;
             this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFEstimada.Location = new System.Drawing.Point(68, 257);
+            this.lblFEstimada.Location = new System.Drawing.Point(68, 261);
             this.lblFEstimada.Name = "lblFEstimada";
             this.lblFEstimada.Size = new System.Drawing.Size(156, 16);
             this.lblFEstimada.TabIndex = 33;
@@ -123,7 +123,7 @@
             // 
             this.lblFecInicio.AutoSize = true;
             this.lblFecInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecInicio.Location = new System.Drawing.Point(68, 218);
+            this.lblFecInicio.Location = new System.Drawing.Point(68, 222);
             this.lblFecInicio.Name = "lblFecInicio";
             this.lblFecInicio.Size = new System.Drawing.Size(100, 16);
             this.lblFecInicio.TabIndex = 35;
@@ -142,18 +142,20 @@
             // dtpFInicio
             // 
             this.dtpFInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFInicio.Location = new System.Drawing.Point(242, 214);
+            this.dtpFInicio.Location = new System.Drawing.Point(242, 218);
             this.dtpFInicio.Name = "dtpFInicio";
             this.dtpFInicio.Size = new System.Drawing.Size(348, 20);
             this.dtpFInicio.TabIndex = 38;
+            this.dtpFInicio.ValueChanged += new System.EventHandler(this.dtpFInicio_ValueChanged);
             // 
             // dtpFFEstimada
             // 
             this.dtpFFEstimada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFFEstimada.Location = new System.Drawing.Point(242, 257);
+            this.dtpFFEstimada.Location = new System.Drawing.Point(242, 261);
             this.dtpFFEstimada.Name = "dtpFFEstimada";
             this.dtpFFEstimada.Size = new System.Drawing.Size(348, 20);
             this.dtpFFEstimada.TabIndex = 39;
+            this.dtpFFEstimada.ValueChanged += new System.EventHandler(this.dtpFFEstimada_ValueChanged);
             // 
             // dtpFFReal
             // 

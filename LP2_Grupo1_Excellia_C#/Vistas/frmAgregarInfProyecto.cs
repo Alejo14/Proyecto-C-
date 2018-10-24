@@ -16,9 +16,11 @@ namespace Vistas
     {
         private ProyectoBL proyectoBL;
         private ERU eru;
-        public frmAgregarInfProyecto(ERU e)
+        private int idJefe;
+        public frmAgregarInfProyecto(ERU e, int id)
         {
             InitializeComponent();
+            proyectoBL = new ProyectoBL();
             txtNombre.Text = e.Descripcion.ToString();
 
             cboPrioridad.Items.Add(TipoPrioridad.ALTA);
@@ -26,6 +28,10 @@ namespace Vistas
             cboPrioridad.Items.Add(TipoPrioridad.BAJA);
             dtpFInicio.Value = DateTime.Parse(e.FechaSolicitud.ToString());
             eru = e;
+            idJefe = id;
+
+            dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
+            dtpFFReal.MinDate = dtpFInicio.Value.AddDays(1);
             //dtpFInicio = e.FechaSolicitud;
         }
 
@@ -55,13 +61,25 @@ namespace Vistas
             }
 
             //MessageBox.Show(pro.Prioridad.ToString());
-            pro.FechaInicio = DateTime.Parse(dtpFInicio.ToString());
-            pro.FechaFinEstimada = DateTime.Parse(dtpFFEstimada.ToString());
-            pro.FechaRealFin = DateTime.Parse(dtpFFReal.ToString());
+            pro.FechaInicio = dtpFInicio.Value;
+            pro.FechaFinEstimada = dtpFFEstimada.Value;
+            pro.FechaRealFin = dtpFFReal.Value;
+            pro.JefeProyecto.IdTrabajador = idJefe;
 
-            // proyectoBL.crearProyecto(); 
+            proyectoBL.CrearProyecto(pro); 
             MessageBox.Show("Se realizó la creación del proyecto con exito", "Creación proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void dtpFFEstimada_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dtpFInicio_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
+            dtpFFReal.MinDate = dtpFInicio.Value.AddDays(1);
         }
     }
 }

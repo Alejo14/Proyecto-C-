@@ -45,5 +45,10 @@ namespace LogicaNegocio
         {
             proyectoDA.CancelarProyecto(id);
         }
+
+        public void CrearProyecto(Proyecto p)
+        {
+            proyectoDA.CrearProyecto(p);
+        }
     }
 }
