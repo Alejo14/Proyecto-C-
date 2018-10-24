@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisualizarProyectos = new System.Windows.Forms.DataGridView();
             this.colIdProyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,13 +37,11 @@
             this.colPrioridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaFinEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRegresar = new System.Windows.Forms.Button();
             this.lblProyectosEnCurso = new System.Windows.Forms.Label();
             this.dtpFechaComienzo = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.lblEtapa = new System.Windows.Forms.Label();
             this.cboEtapa = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnRetirarOperario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarProyectos)).BeginInit();
             this.SuspendLayout();
@@ -61,12 +59,11 @@
             this.colPrioridad,
             this.colFechaInicio,
             this.colFechaFinEstimada});
-            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(46, 145);
+            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(46, 168);
             this.dgvVisualizarProyectos.Name = "dgvVisualizarProyectos";
             this.dgvVisualizarProyectos.ReadOnly = true;
-            this.dgvVisualizarProyectos.Size = new System.Drawing.Size(843, 298);
+            this.dgvVisualizarProyectos.Size = new System.Drawing.Size(843, 266);
             this.dgvVisualizarProyectos.TabIndex = 0;
-            this.dgvVisualizarProyectos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisualizarProyectos_CellContentClick);
             this.dgvVisualizarProyectos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVisualizarProyectos_RowHeaderMouseDoubleClick);
             // 
             // colIdProyecto
@@ -95,9 +92,9 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "Presupuesto";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.HeaderText = "Presupuesto";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -126,32 +123,21 @@
             this.colFechaFinEstimada.ReadOnly = true;
             this.colFechaFinEstimada.Width = 125;
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Location = new System.Drawing.Point(46, 463);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(119, 33);
-            this.btnRegresar.TabIndex = 1;
-            this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
             // lblProyectosEnCurso
             // 
             this.lblProyectosEnCurso.AutoSize = true;
-            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProyectosEnCurso.Location = new System.Drawing.Point(341, 35);
+            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProyectosEnCurso.Location = new System.Drawing.Point(354, 51);
             this.lblProyectosEnCurso.Name = "lblProyectosEnCurso";
-            this.lblProyectosEnCurso.Size = new System.Drawing.Size(281, 31);
+            this.lblProyectosEnCurso.Size = new System.Drawing.Size(260, 32);
             this.lblProyectosEnCurso.TabIndex = 2;
             this.lblProyectosEnCurso.Text = "Visualizar Proyectos";
-            this.lblProyectosEnCurso.Click += new System.EventHandler(this.lblProyectosEnCurso_Click);
             // 
             // dtpFechaComienzo
             // 
             this.dtpFechaComienzo.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
             this.dtpFechaComienzo.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtpFechaComienzo.Location = new System.Drawing.Point(153, 111);
+            this.dtpFechaComienzo.Location = new System.Drawing.Point(166, 126);
             this.dtpFechaComienzo.Name = "dtpFechaComienzo";
             this.dtpFechaComienzo.Size = new System.Drawing.Size(202, 20);
             this.dtpFechaComienzo.TabIndex = 3;
@@ -160,20 +146,20 @@
             // lblFechaInicio
             // 
             this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.Location = new System.Drawing.Point(42, 111);
+            this.lblFechaInicio.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaInicio.Location = new System.Drawing.Point(42, 123);
             this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(108, 20);
+            this.lblFechaInicio.Size = new System.Drawing.Size(118, 22);
             this.lblFechaInicio.TabIndex = 4;
-            this.lblFechaInicio.Text = "Fecha Incio:";
+            this.lblFechaInicio.Text = "Fecha Inicio:";
             // 
             // lblEtapa
             // 
             this.lblEtapa.AutoSize = true;
-            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtapa.Location = new System.Drawing.Point(686, 111);
+            this.lblEtapa.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtapa.Location = new System.Drawing.Point(698, 123);
             this.lblEtapa.Name = "lblEtapa";
-            this.lblEtapa.Size = new System.Drawing.Size(62, 20);
+            this.lblEtapa.Size = new System.Drawing.Size(64, 22);
             this.lblEtapa.TabIndex = 5;
             this.lblEtapa.Text = "Etapa:";
             // 
@@ -181,26 +167,18 @@
             // 
             this.cboEtapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEtapa.FormattingEnabled = true;
-            this.cboEtapa.Location = new System.Drawing.Point(768, 110);
+            this.cboEtapa.Location = new System.Drawing.Point(768, 125);
             this.cboEtapa.Name = "cboEtapa";
             this.cboEtapa.Size = new System.Drawing.Size(121, 21);
             this.cboEtapa.TabIndex = 6;
             this.cboEtapa.SelectedIndexChanged += new System.EventHandler(this.cboEtapa_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(201, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(565, 2);
-            this.label1.TabIndex = 7;
-            // 
             // btnRetirarOperario
             // 
-            this.btnRetirarOperario.Location = new System.Drawing.Point(770, 463);
+            this.btnRetirarOperario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetirarOperario.Location = new System.Drawing.Point(736, 449);
             this.btnRetirarOperario.Name = "btnRetirarOperario";
-            this.btnRetirarOperario.Size = new System.Drawing.Size(119, 33);
+            this.btnRetirarOperario.Size = new System.Drawing.Size(153, 38);
             this.btnRetirarOperario.TabIndex = 9;
             this.btnRetirarOperario.Text = "Retirar Operario";
             this.btnRetirarOperario.UseVisualStyleBackColor = true;
@@ -213,13 +191,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(934, 522);
             this.Controls.Add(this.btnRetirarOperario);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cboEtapa);
             this.Controls.Add(this.lblEtapa);
             this.Controls.Add(this.lblFechaInicio);
             this.Controls.Add(this.dtpFechaComienzo);
             this.Controls.Add(this.lblProyectosEnCurso);
-            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.dgvVisualizarProyectos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -238,13 +214,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvVisualizarProyectos;
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label lblProyectosEnCurso;
         private System.Windows.Forms.DateTimePicker dtpFechaComienzo;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.Label lblEtapa;
         private System.Windows.Forms.ComboBox cboEtapa;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdProyecto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEtapa;

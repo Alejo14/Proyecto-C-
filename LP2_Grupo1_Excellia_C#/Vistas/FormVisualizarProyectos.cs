@@ -16,8 +16,7 @@ namespace Vistas
     {
         private ProyectoBL proyectoBL;
         private Proyecto proyecto;
-        //private ProyectoBL etapaBL;
-        public FormVisualizarProyectos()
+        public FormVisualizarProyectos(bool operario)
         {
             InitializeComponent();
             proyectoBL = new ProyectoBL();
@@ -25,22 +24,7 @@ namespace Vistas
             
             cboEtapa.DisplayMember = "NombreEtapa";
             cboEtapa.ValueMember = "IdEtapa";
-            //dtpFechaComienzo.MinDate = DateTime.Today;
-
-            //int id = 0;
-            //int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
-            //dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa);
-        }
-
-        private void dgvVisualizarProyectos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //frmInformacionProyecto iP = new frmInformacionProyecto();
-            //iP.Visible = true;
-        }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
+            if (operario) btnRetirarOperario.Visible = false;
         }
 
         public Proyecto Proyecto { get => proyecto; set => proyecto = value; }
@@ -50,14 +34,11 @@ namespace Vistas
             int dia = mifecha.Day;
             int mes = mifecha.Month;
             int anio = mifecha.Year;
-            //MessageBox.Show(dia.ToString()+" "+mes.ToString()+" "+anio.ToString());
             this.DialogResult = DialogResult.OK;
-            //Proyecto = new Proyecto();
             Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
             
             frmInformacionProyecto iP = new frmInformacionProyecto(Proyecto);
             iP.ShowDialog();
-            //iP.Visible = true;
             int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
             dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa, mifecha);
         }
@@ -81,14 +62,6 @@ namespace Vistas
 
         private void FormVisualizarProyectos_Load(object sender, EventArgs e)
         {
-            
-            //cboEtapa.DataSource = proyectoBL.listarEtapas();
-
-            //cboEtapa.DisplayMember = "NombreEtapa";
-            //cboEtapa.ValueMember = "IdEtapa";
-
-            //int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
-            //dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa);
 
         }
 
@@ -100,11 +73,6 @@ namespace Vistas
             int anio = mifecha.Year;
             int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
             dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa, mifecha);
-        }
-
-        private void lblProyectosEnCurso_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRetirarOperario_Click(object sender, EventArgs e)

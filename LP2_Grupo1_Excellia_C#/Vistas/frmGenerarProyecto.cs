@@ -41,12 +41,6 @@ namespace Vistas
 
         }
 
-        private void frmGenerarProyecto_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

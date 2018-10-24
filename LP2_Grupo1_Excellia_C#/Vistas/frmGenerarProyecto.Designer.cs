@@ -122,7 +122,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGenerarProyecto";
             this.Text = "frmGenerarProyecto";
-            this.Load += new System.EventHandler(this.frmGenerarProyecto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEruProyecto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

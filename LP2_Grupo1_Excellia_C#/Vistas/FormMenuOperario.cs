@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Modelo;
 
 namespace Vistas
 {
     public partial class FormMenuOperario : Form
     {
-        public FormMenuOperario()
+        private Operario op;
+        public FormMenuOperario(Operario operario)
         {
             InitializeComponent();
-            AbrirFormInPanel(new FormVisualizarProyectos());
+            AbrirFormInPanel(new FormVisualizarProyectos(true));
             pnlMenu.Width = 262;
+            op = new Operario();
+            op = operario;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -29,12 +33,7 @@ namespace Vistas
 
         private void btnVisualizarProyectos_Click(object sender, EventArgs e)
         {
-            /*FormVisualizarProyectos vP = new FormVisualizarProyectos();
-            if (vP.ShowDialog() == DialogResult.OK)
-            {
-
-            }*/
-            AbrirFormInPanel(new FormVisualizarProyectos());
+            AbrirFormInPanel(new FormVisualizarProyectos(true));
         }
         private void AbrirFormInPanel(object Formhijo)
         {
@@ -49,48 +48,12 @@ namespace Vistas
         }
         private void btnSolicitarRetiroProyecto_Click(object sender, EventArgs e)
         {
-            /*frmSolicitarRetiroDeProyecto retiro = new frmSolicitarRetiroDeProyecto();
-            if (retiro.ShowDialog() == DialogResult.OK)
-            {
-
-            }*/
             AbrirFormInPanel(new frmSolicitarRetiroDeProyecto());
         }
 
         private void btnExportarReportes_Click(object sender, EventArgs e)
         {
-            /*frmExportarReportes exportarReportes = new frmExportarReportes();
-            if (exportarReportes.ShowDialog() == DialogResult.OK)
-            {
-
-            }*/
             AbrirFormInPanel(new frmExportarReportes());
-        }
-
-        private void btnBuscarContacto_Click(object sender, EventArgs e)
-        {
-            /*frmBuscarTrabajador bc = new frmBuscarTrabajador(0);
-            if(bc.ShowDialog() == DialogResult.OK)
-            {
-
-            }*/
-            AbrirFormInPanel(new frmBuscarTrabajador(0));
-        }
-
-        private void btnRetirarOperario_Click(object sender, EventArgs e)
-        {
-            /*frmRetirarOperario br = new frmRetirarOperario();
-            if (br.ShowDialog() == DialogResult.OK)
-            {
-
-            }*/
-            AbrirFormInPanel(new frmRetirarOperario());
-        }
-
-        private void bttChat_Click(object sender, EventArgs e)
-        {
-            frmChat chat = new frmChat();
-            chat.Visible = true;
         }
 
         private void bttLogOut_Click(object sender, EventArgs e)
@@ -101,28 +64,12 @@ namespace Vistas
             {
                 lg.Visible = true;
             }
-            //Application.Exit();
-        }
-
-        private void tsbGestionarUsuario_Click(object sender, EventArgs e)
-        {
-            FormGestionarCuentasUsuario gCU = new FormGestionarCuentasUsuario();
-            if (gCU.ShowDialog() == DialogResult.OK)
-            {
-
-            }
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if (pnlMenu.Width == 262)
-            {
-                pnlMenu.Width = 0;
-            }
-            else
-            {
-                pnlMenu.Width = 262;
-            }
+            if (pnlMenu.Width == 262) pnlMenu.Width = 0;
+            else pnlMenu.Width = 262;
         }
 
         private void iconCerrar_Click(object sender, EventArgs e)

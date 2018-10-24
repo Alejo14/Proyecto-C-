@@ -9,16 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
+using Modelo;
 
 namespace Vistas
 {
     public partial class frmMenuJefeProyecto : Form
     {
-        public frmMenuJefeProyecto()
+        private JefeProyecto jp;
+        public frmMenuJefeProyecto(JefeProyecto jefeProyecto)
         {
             InitializeComponent();
-            AbrirFormInPanel(new FormVisualizarProyectos());
+            AbrirFormInPanel(new FormVisualizarProyectos(false));
+            jp = new JefeProyecto();
+            jp = jefeProyecto;
         }
+        public int IdJefe
+        {
+            get => jp.IdTrabajador;
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -26,10 +35,7 @@ namespace Vistas
         private void btnSlide_Click(object sender, EventArgs e)
         {
             if (MenuVertical.Width == 240)
-            {
                 MenuVertical.Width = 0;
-
-            }
             else
                 MenuVertical.Width = 240;
         }
@@ -72,7 +78,7 @@ namespace Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormVisualizarProyectos());
+            AbrirFormInPanel(new FormVisualizarProyectos(false));
         }
 
         private void button4_Click(object sender, EventArgs e)
