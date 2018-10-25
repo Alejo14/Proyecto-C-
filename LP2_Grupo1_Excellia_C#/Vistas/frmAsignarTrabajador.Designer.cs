@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvTrabajador = new System.Windows.Forms.DataGridView();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +46,12 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnForm_Buscar = new System.Windows.Forms.Button();
+            this.errorProviderDNI = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderNombre = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDNI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombre)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTrabajador
@@ -215,6 +220,14 @@
             this.btnForm_Buscar.UseVisualStyleBackColor = true;
             this.btnForm_Buscar.Click += new System.EventHandler(this.btnForm_Buscar_Click);
             // 
+            // errorProviderDNI
+            // 
+            this.errorProviderDNI.ContainerControl = this;
+            // 
+            // errorProviderNombre
+            // 
+            this.errorProviderNombre.ContainerControl = this;
+            // 
             // frmAsignarTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDNI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +275,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorProviderDNI;
+        private System.Windows.Forms.ErrorProvider errorProviderNombre;
     }
 }

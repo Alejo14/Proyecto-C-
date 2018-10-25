@@ -15,9 +15,43 @@ namespace Vistas
     public partial class frmAsignarTrabajador : Form
     {
         private TrabajadorBL trabajadorBL;
+
+        private Trabajador trabajadorAsignado;
         public frmAsignarTrabajador()
         {
             InitializeComponent();
+            trabajadorBL = new TrabajadorBL();
+            dgvTrabajador.AutoGenerateColumns = false;
+            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores("", "",
+                "", "", "", "", "");
+            txtDNI.Validating += TxtDNI_Validating;
+            txtNombre.Validating += TxtNombre_Validating;
+        }
+
+        private void TxtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            string nombre = txtNombre.Text.Trim().Replace("  ", " ");
+            bool valido = nombre.All(caracter => char.IsLetter(caracter) || char.IsWhiteSpace(caracter));
+            if (!valido)
+                errorProviderNombre.SetError(txtNombre, "El nombre debe tener solo letras y espacios en blanco");
+            else
+                errorProviderNombre.SetError(txtNombre, "");
+        }
+
+        private void TxtDNI_Validating(object sender, CancelEventArgs e)
+        {
+            string dni = txtDNI.Text.Trim();
+            bool esNumerico = dni.All(digito => char.IsDigit(digito));
+            bool tamanoCorrecto = (dni.Length == 8);
+            if (!esNumerico && !tamanoCorrecto) {
+                errorProviderDNI.SetError(txtDNI, "El DNI debe ser numérico y de temaño 8");
+            }
+            else if (!esNumerico)
+                errorProviderDNI.SetError(txtDNI, "El DNI debe ser numérico");
+            else if (!tamanoCorrecto)
+                errorProviderDNI.SetError(txtDNI, "El DNI debe ser de temaño 8");
+            else
+                errorProviderDNI.SetError(txtDNI, "");
         }
 
         private void btnAsignar_Click(object sender, EventArgs e)
@@ -45,9 +79,11 @@ namespace Vistas
 
         private void btnForm_Buscar_Click(object sender, EventArgs e)
         {
+            if (!validarDNI()) return;
+            if (!validarNombre()) return;
             trabajadorBL = new TrabajadorBL();
             dgvTrabajador.AutoGenerateColumns = false;
-            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(txtDNI.Text, txtNombre.Text,
+            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(txtDNI.Text.Trim(), txtNombre.Text.Trim().Replace("  ", " "),
                 "", "", "", "","");
         }
 
@@ -63,6 +99,33 @@ namespace Vistas
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private bool validarDNI() {
+            string dni = txtDNI.Text.Trim();
+            bool esNumerico = dni.All(digito => char.IsDigit(digito));
+            bool tamanoCorrecto = (dni.Length == 8);
+            bool valido = esNumerico && tamanoCorrecto;
+            if (!valido)
+            {
+                if (!esNumerico && !tamanoCorrecto)
+                {
+                    MessageBox.Show("El DNI debe ser numérico y de temaño 8");
+                }
+                else if (!esNumerico)
+                    MessageBox.Show("El DNI debe ser numérico");
+                else if (!tamanoCorrecto)
+                    MessageBox.Show("El DNI debe ser de temaño 8");
+            }
+            return valido;
+        }
+
+        private bool validarNombre() {
+            string nombre = txtNombre.Text.Trim().Replace("  ", " ");
+            bool valido = nombre.All(caracter => char.IsLetter(caracter) || char.IsWhiteSpace(caracter));
+            if (!valido)
+                MessageBox.Show("El nombre debe tener solo letras y espacios en blanco");
+            return valido;
         }
     }
 }
