@@ -15,17 +15,22 @@ namespace Vistas
     public partial class frmAsignarTrabajador : Form
     {
         private TrabajadorBL trabajadorBL;
-
-        private Trabajador trabajadorAsignado;
-        public frmAsignarTrabajador()
+        private ProyectoBL proyectoBL;
+        private Trabajador trabajador;
+        private Proyecto proyecto;
+        private Proyecto Proyecto { get => proyecto; set => proyecto = value; }
+        public frmAsignarTrabajador(Proyecto p)
         {
             InitializeComponent();
+            proyectoBL = new ProyectoBL();
             trabajadorBL = new TrabajadorBL();
-            dgvTrabajador.AutoGenerateColumns = false;
+            Proyecto = new Proyecto();
+            Proyecto = (Proyecto)p;
+            /*dgvTrabajador.AutoGenerateColumns = false;
             dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores("", "",
-                "", "", "", "", "");
-            txtDNI.Validating += TxtDNI_Validating;
-            txtNombre.Validating += TxtNombre_Validating;
+                "", "", "", "", "");*/
+            //txtDNI.Validating += TxtDNI_Validating;
+            //txtNombre.Validating += TxtNombre_Validating;
         }
 
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
@@ -59,11 +64,10 @@ namespace Vistas
             bool entre = false;
             if (dgvTrabajador.Rows.Count >= 1)
             {
-                DialogResult result = MessageBox.Show("Seguro que quiere asignar a estos trabajadores al proyecto.", "Advertencia",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
+                if (MessageBox.Show("¿Seguro que quiere asignar a estos trabajadores al proyecto.?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     entre = true;
+                    proyectoBL.AsignarTrabajador((Proyecto)Proyecto, (Trabajador)dgvTrabajador.CurrentRow.DataBoundItem);
                     MessageBox.Show("Correos enviados correctamente.", "Asignación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -74,13 +78,13 @@ namespace Vistas
             if (!entre)
             {
                 MessageBox.Show("Ningún trabajador seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }  
+            }
         }
 
         private void btnForm_Buscar_Click(object sender, EventArgs e)
         {
-            if (!validarDNI()) return;
-            if (!validarNombre()) return;
+            //if (!validarDNI()) return;
+            //if (!validarNombre()) return;
             trabajadorBL = new TrabajadorBL();
             dgvTrabajador.AutoGenerateColumns = false;
             dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(txtDNI.Text.Trim(), txtNombre.Text.Trim().Replace("  ", " "),

@@ -14,8 +14,9 @@ namespace Vistas
 {
     public partial class frmInformacionProyecto : Form
     {
-        //private Proyecto proyecto { get => proyecto; set => proyecto = value; }
         private ProyectoBL proyectoBL;
+        private Proyecto proyecto;
+        private Proyecto Proyecto { get => proyecto; set => proyecto = value; }
         public frmInformacionProyecto(Proyecto p)
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace Vistas
             cboPrioridad.Items.Add(TipoPrioridad.BAJA);
 
             cboPrioridad.SelectedIndex = p.PrioridadInt-1;
+            Proyecto = (Proyecto)p;
 
         }
 
@@ -92,7 +94,7 @@ namespace Vistas
 
         private void btnAsignarTrabajador_Click(object sender, EventArgs e)
         {
-            frmAsignarTrabajador at = new frmAsignarTrabajador();
+            frmAsignarTrabajador at = new frmAsignarTrabajador(Proyecto);
             if (at.ShowDialog() == DialogResult.OK)
             {
 

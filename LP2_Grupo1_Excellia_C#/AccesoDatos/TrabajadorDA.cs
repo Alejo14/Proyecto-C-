@@ -18,8 +18,8 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand();
-            comando.CommandText = "SELECT * FROM TIPO_TRABAJADOR TT, PERSONA P, TRABAJADOR T WHERE P.ID_PERSONA = T.ID_TRABAJADOR" +
-                " AND P.NOMBRE LIKE CONCAT('%" + nombre + "%') AND P.APELLIDO_PATERNO LIKE CONCAT('%" + apellidoP + 
+            comando.CommandText = "SELECT * FROM TIPO_TRABAJADOR TT, PERSONA P, TRABAJADOR T WHERE P.ID_PERSONA = T.ID_PERSONA" +
+                " AND P.NOMBRE LIKE CONCAT('%" + nombre + "%') AND P.APELLIDO_PATERNO LIKE CONCAT('%" + apellidoP +
                 "%') AND P.APELLIDO_MATERNO LIKE CONCAT('%" + apellidoM + "%') AND P.CORREO LIKE ('%" + correo +
                 "%') AND P.TELEFONO LIKE CONCAT ('%" + tel + "%') AND TT.DESCRIPCION LIKE CONCAT ('%" + rol + "%')" +
                 " AND (TT.ID_TIPO = 1 OR TT.ID_TIPO >= 4) AND T.ID_TIPO = TT.ID_TIPO;";

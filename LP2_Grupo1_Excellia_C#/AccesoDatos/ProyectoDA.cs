@@ -256,5 +256,27 @@ namespace AccesoDatos
             }
         }
 
+        public void AsignarTrabajador(Proyecto p, Trabajador t)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String sql = " insert into PROYECTO_X_TRABAJADOR(id_proyecto, id_trabajador, retirado) " +
+                                " values(" + p.IdProyecto + "," + t.IdTrabajador + ",0)";
+
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al asignar trabajador al proyeco ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

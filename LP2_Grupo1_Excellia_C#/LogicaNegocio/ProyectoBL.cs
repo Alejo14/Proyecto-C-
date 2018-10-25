@@ -55,5 +55,11 @@ namespace LogicaNegocio
         {
             proyectoDA.ActualizarERU(p);
         }
+
+        public void AsignarTrabajador(Proyecto p, Trabajador t)
+        {
+            proyectoDA.AsignarTrabajador(p, t);
+
+        }
     }
 }
