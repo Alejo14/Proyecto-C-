@@ -27,16 +27,19 @@ namespace Vistas
                 btnSeleccionar.Visible = false;
             }
             rolBL = new RolBL();
-            cmbRol.DataSource = rolBL.listarRoles();
+            TipoTrabajador todosTiposTrabajador = new TipoTrabajador();
+            todosTiposTrabajador.IdTipoTrabajador = 0;
+            todosTiposTrabajador.Descripcion = "Todos";
+            BindingList<TipoTrabajador> roles = rolBL.listarRoles();
+            roles.Insert(0, todosTiposTrabajador);
+            cmbRol.DataSource = roles;
             cmbRol.DisplayMember = "Descripcion";
             cmbRol.ValueMember = "IdTipoTrabajador";
-            cmbRol.SelectedIndex = -1;
+            cmbRol.SelectedIndex = 0;
+            cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
+        
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -51,7 +54,7 @@ namespace Vistas
 
             }
             BindingList<Trabajador> t;
-            if (rol == null)
+            if (rol.IdTipoTrabajador == 0)
             {
                 t = trabajadorBL.listarTrabajadores(txtDNI.Text, txtNombre.Text,
                     txtApPat.Text, txtApMat.Text, txtCorreo.Text, txtTelefono.Text, "");
