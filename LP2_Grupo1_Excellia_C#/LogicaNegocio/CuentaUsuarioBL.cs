@@ -107,15 +107,12 @@ namespace LogicaNegocio
                 {
                     idTipo = 2;
                 }
-                else
+                else if(trabajadorUsuario is Administrador)
                 {
-                    idTipo = 3;
+                    idTipo = 3;//Este es el administrador
                 }
             }
 
-            else {
-                idTipo = 4;//Esto indica que es administrador
-            }
 
             return idTipo;
         }

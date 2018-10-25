@@ -75,9 +75,14 @@ namespace Vistas
                     this.Hide();
                     mj.ShowDialog();
                     this.Close();
-                }else if(tipoUsuario == 4)
+                }else if(tipoUsuario == 3)
                 {
-                    MessageBox.Show("Falta implementar la vista de Administrador", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Administrador admin = (Administrador)usuarioLogin.Persona;
+                    FormGestionarCuentasUsuario gestionarCuentasUsuario = new FormGestionarCuentasUsuario();
+                    this.Hide();
+                    gestionarCuentasUsuario.ShowDialog();
+                    this.Close();
+                    //MessageBox.Show("Falta implementar la vista de Administrador", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

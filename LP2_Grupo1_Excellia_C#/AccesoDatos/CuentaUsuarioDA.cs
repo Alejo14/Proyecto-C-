@@ -48,6 +48,10 @@ namespace AccesoDatos
                 cli.Nombre = reader.GetString("NOMBRE");
                 cli.ApellidoPaterno = reader.GetString("APELLIDO_PATERNO");
                 cli.ApellidoMaterno = reader.GetString("APELLIDO_MATERNO");
+                cli.Sexo = reader.GetChar("SEXO");
+                cli.FechaNac = reader.GetDateTime("FECHA_NACIMIENTO");
+                cli.Correo = reader.GetString("CORREO");
+                cli.Telefono = reader.GetString("TELEFONO");
                 cu.Persona = cli;
                 cuentasUsuariosDA.Add(cu);
             }
@@ -72,7 +76,26 @@ namespace AccesoDatos
                 string nombre = reader.GetString("NOMBRE");
                 string apellidoPaterno = reader.GetString("APELLIDO_PATERNO");
                 string apellidoMaterno = reader.GetString("APELLIDO_MATERNO");
+                char sexo = reader.GetChar("SEXO");
+                DateTime fechaNacimiento = reader.GetDateTime("FECHA_NACIMIENTO");
+                string correo = reader.GetString("CORREO");
+                string telefono = reader.GetString("TELEFONO");
                 int idTipo = reader.GetInt32("ID_TIPO");
+
+                if (idTipo == 0)
+                {
+                    Administrador admin = new Administrador();
+                    admin.IdTrabajador = idTrabajador;
+                    admin.Dni = dni;
+                    admin.Nombre = nombre;
+                    admin.ApellidoPaterno = apellidoPaterno;
+                    admin.ApellidoMaterno = apellidoMaterno;
+                    admin.Sexo = sexo;
+                    admin.FechaNac = fechaNacimiento;
+                    admin.Correo = correo;
+                    admin.Telefono = telefono;
+                    cu.Persona = admin;
+                }
                 if (idTipo == 1)
                 {
                     Operario op = new Operario();
@@ -82,6 +105,10 @@ namespace AccesoDatos
                     op.Nombre = nombre;
                     op.ApellidoPaterno = apellidoPaterno;
                     op.ApellidoMaterno = apellidoMaterno;
+                    op.Sexo = sexo;
+                    op.FechaNac = fechaNacimiento;
+                    op.Correo = correo;
+                    op.Telefono = telefono;
                     cu.Persona = op;
                 }
                 else if (idTipo == 2)
@@ -92,6 +119,10 @@ namespace AccesoDatos
                     kam.Nombre = nombre;
                     kam.ApellidoPaterno = apellidoPaterno;
                     kam.ApellidoMaterno = apellidoMaterno;
+                    kam.Sexo = sexo;
+                    kam.FechaNac = fechaNacimiento;
+                    kam.Correo = correo;
+                    kam.Telefono = telefono;
                     cu.Persona = kam;
                 }
                 else if (idTipo == 3)
@@ -102,6 +133,10 @@ namespace AccesoDatos
                     experto.Nombre = nombre;
                     experto.ApellidoPaterno = apellidoPaterno;
                     experto.ApellidoMaterno = apellidoMaterno;
+                    experto.Sexo = sexo;
+                    experto.FechaNac = fechaNacimiento;
+                    experto.Correo = correo;
+                    experto.Telefono = telefono;
                     cu.Persona = experto;
                 }
                 else if (idTipo == 4)
@@ -112,6 +147,10 @@ namespace AccesoDatos
                     jefe.Nombre = nombre;
                     jefe.ApellidoPaterno = apellidoPaterno;
                     jefe.ApellidoMaterno = apellidoMaterno;
+                    jefe.Sexo = sexo;
+                    jefe.FechaNac = fechaNacimiento;
+                    jefe.Correo = correo;
+                    jefe.Telefono = telefono;
                     cu.Persona = jefe;
                 }
                 else if (idTipo == 5)
@@ -123,6 +162,10 @@ namespace AccesoDatos
                     op.Nombre = nombre;
                     op.ApellidoPaterno = apellidoPaterno;
                     op.ApellidoMaterno = apellidoMaterno;
+                    op.Sexo = sexo;
+                    op.FechaNac = fechaNacimiento;
+                    op.Correo = correo;
+                    op.Telefono = telefono;
                     cu.Persona = op;
                 }
                 else if (idTipo == 6)
@@ -134,6 +177,10 @@ namespace AccesoDatos
                     op.Nombre = nombre;
                     op.ApellidoPaterno = apellidoPaterno;
                     op.ApellidoMaterno = apellidoMaterno;
+                    op.Sexo = sexo;
+                    op.FechaNac = fechaNacimiento;
+                    op.Correo = correo;
+                    op.Telefono = telefono;
                     cu.Persona = op;
                 }
                 cuentasUsuariosDA.Add(cu);

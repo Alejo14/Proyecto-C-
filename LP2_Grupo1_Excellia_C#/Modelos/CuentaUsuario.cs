@@ -49,7 +49,7 @@ namespace Modelo
                     tipoString = "Experto";
                 else if (persona is Cliente)
                     tipoString = "Cliente";
-                else
+                else if (persona is Operario)
                 {
                     Operario op = (Operario)persona;
                     if (op.Cargo == TipoCargo.ANALISTA_DESARROLLO)
@@ -59,6 +59,9 @@ namespace Modelo
                     else
                         tipoString = "Tester";
                 }
+
+                else
+                    tipoString = "Administrador";
 
                 return tipoString;
             }

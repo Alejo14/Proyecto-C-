@@ -13,6 +13,7 @@ namespace AccesoDatos
             "password=Lwalx0;" +
             "database=inf282g1;" +
             "port=3306;" +
-            "SslMode=None";
+            "SslMode=None;" +
+            "convert zero datetime=True";
     }
 }
