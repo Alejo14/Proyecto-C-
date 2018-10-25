@@ -25,11 +25,8 @@ namespace Vistas
             trabajadorBL = new TrabajadorBL();
             Proyecto = new Proyecto();
             Proyecto = (Proyecto)p;
-            /*dgvTrabajador.AutoGenerateColumns = false;
-            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores("", "",
-                "", "", "", "", "");*/
-            //txtDNI.Validating += TxtDNI_Validating;
-            //txtNombre.Validating += TxtNombre_Validating;
+            txtDNI.Validating += TxtDNI_Validating;
+            txtNombre.Validating += TxtNombre_Validating;
         }
 
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
@@ -38,8 +35,8 @@ namespace Vistas
             bool valido = nombre.All(caracter => char.IsLetter(caracter) || char.IsWhiteSpace(caracter));
             if (!valido)
                 errorProviderNombre.SetError(txtNombre, "El nombre debe tener solo letras y espacios en blanco");
-            else
-                errorProviderNombre.SetError(txtNombre, "");
+            /*else
+                errorProviderNombre.SetError(txtNombre, "");*/
         }
 
         private void TxtDNI_Validating(object sender, CancelEventArgs e)
@@ -54,8 +51,8 @@ namespace Vistas
                 errorProviderDNI.SetError(txtDNI, "El DNI debe ser numérico");
             else if (!tamanoCorrecto)
                 errorProviderDNI.SetError(txtDNI, "El DNI debe ser de temaño 8");
-            else
-                errorProviderDNI.SetError(txtDNI, "");
+            /*else
+                errorProviderDNI.SetError(txtDNI, "");*/
         }
 
         private void btnAsignar_Click(object sender, EventArgs e)
@@ -82,8 +79,8 @@ namespace Vistas
 
         private void btnForm_Buscar_Click(object sender, EventArgs e)
         {
-            //if (!validarDNI()) return;
-            //if (!validarNombre()) return;
+            if (txtDNI.Text != "" && !validarDNI()) return;
+            if (txtNombre.Text != "" && !validarNombre()) return;
             trabajadorBL = new TrabajadorBL();
             dgvTrabajador.AutoGenerateColumns = false;
             dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(txtDNI.Text.Trim(), txtNombre.Text.Trim().Replace("  ", " "),

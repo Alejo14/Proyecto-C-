@@ -17,6 +17,7 @@ namespace Vistas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLoggin());
+            //Application.Run(new FormGestionarCuentasUsuario());
             //Application.Run(new frmMenuJefeProyecto());
             //Application.Run(new FormMenuOperario());
             //Application.Run(new frmGenerarProyecto());

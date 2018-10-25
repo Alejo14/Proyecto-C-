@@ -35,10 +35,10 @@
             this.scOperario = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSolicitarRetiroProyecto = new System.Windows.Forms.Button();
-            this.bttLogOut = new System.Windows.Forms.Button();
-            this.btnVisualizarProyectos = new System.Windows.Forms.Button();
             this.btnExportarReportes = new System.Windows.Forms.Button();
+            this.btnSolicitarRetiroProyecto = new System.Windows.Forms.Button();
+            this.btnVisualizarProyectos = new System.Windows.Forms.Button();
+            this.bttLogOut = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).BeginInit();
@@ -151,6 +151,24 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
+            // btnExportarReportes
+            // 
+            this.btnExportarReportes.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportarReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarReportes.Image = global::Vistas.Properties.Resources.Exportar_pequeño;
+            this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportarReportes.Location = new System.Drawing.Point(13, 293);
+            this.btnExportarReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExportarReportes.Name = "btnExportarReportes";
+            this.btnExportarReportes.Size = new System.Drawing.Size(185, 56);
+            this.btnExportarReportes.TabIndex = 24;
+            this.btnExportarReportes.Text = "Exportar Reportes";
+            this.btnExportarReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExportarReportes.UseVisualStyleBackColor = false;
+            this.btnExportarReportes.Click += new System.EventHandler(this.btnExportarReportes_Click);
+            // 
             // btnSolicitarRetiroProyecto
             // 
             this.btnSolicitarRetiroProyecto.BackColor = System.Drawing.Color.White;
@@ -169,23 +187,6 @@
             this.btnSolicitarRetiroProyecto.UseVisualStyleBackColor = false;
             this.btnSolicitarRetiroProyecto.Click += new System.EventHandler(this.btnSolicitarRetiroProyecto_Click);
             // 
-            // bttLogOut
-            // 
-            this.bttLogOut.BackColor = System.Drawing.Color.White;
-            this.bttLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.bttLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttLogOut.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttLogOut.Image = global::Vistas.Properties.Resources.LogOut;
-            this.bttLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bttLogOut.Location = new System.Drawing.Point(13, 412);
-            this.bttLogOut.Name = "bttLogOut";
-            this.bttLogOut.Size = new System.Drawing.Size(156, 46);
-            this.bttLogOut.TabIndex = 25;
-            this.bttLogOut.Text = "Cerrar Sesión";
-            this.bttLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bttLogOut.UseVisualStyleBackColor = false;
-            this.bttLogOut.Click += new System.EventHandler(this.bttLogOut_Click);
-            // 
             // btnVisualizarProyectos
             // 
             this.btnVisualizarProyectos.BackColor = System.Drawing.Color.Transparent;
@@ -203,23 +204,22 @@
             this.btnVisualizarProyectos.UseVisualStyleBackColor = false;
             this.btnVisualizarProyectos.Click += new System.EventHandler(this.btnVisualizarProyectos_Click);
             // 
-            // btnExportarReportes
+            // bttLogOut
             // 
-            this.btnExportarReportes.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportarReportes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExportarReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarReportes.Image = global::Vistas.Properties.Resources.Exportar_pequeño;
-            this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarReportes.Location = new System.Drawing.Point(13, 293);
-            this.btnExportarReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExportarReportes.Name = "btnExportarReportes";
-            this.btnExportarReportes.Size = new System.Drawing.Size(185, 56);
-            this.btnExportarReportes.TabIndex = 24;
-            this.btnExportarReportes.Text = "Exportar Reportes";
-            this.btnExportarReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExportarReportes.UseVisualStyleBackColor = false;
-            this.btnExportarReportes.Click += new System.EventHandler(this.btnExportarReportes_Click);
+            this.bttLogOut.BackColor = System.Drawing.Color.White;
+            this.bttLogOut.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.bttLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttLogOut.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttLogOut.Image = global::Vistas.Properties.Resources.LogOut;
+            this.bttLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttLogOut.Location = new System.Drawing.Point(13, 412);
+            this.bttLogOut.Name = "bttLogOut";
+            this.bttLogOut.Size = new System.Drawing.Size(156, 46);
+            this.bttLogOut.TabIndex = 25;
+            this.bttLogOut.Text = "Cerrar Sesión";
+            this.bttLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bttLogOut.UseVisualStyleBackColor = false;
+            this.bttLogOut.Click += new System.EventHandler(this.bttLogOut_Click);
             // 
             // FormMenuOperario
             // 

@@ -62,7 +62,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Image = global::Vistas.Properties.Resources.Yes;
-            this.btnGuardar.Location = new System.Drawing.Point(566, 257);
+            this.btnGuardar.Location = new System.Drawing.Point(554, 262);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(59, 48);
             this.btnGuardar.TabIndex = 1;
@@ -206,7 +206,7 @@
             this.btnCancelarProyecto.FlatAppearance.BorderSize = 0;
             this.btnCancelarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarProyecto.Image = global::Vistas.Properties.Resources.No;
-            this.btnCancelarProyecto.Location = new System.Drawing.Point(446, 257);
+            this.btnCancelarProyecto.Location = new System.Drawing.Point(437, 262);
             this.btnCancelarProyecto.Name = "btnCancelarProyecto";
             this.btnCancelarProyecto.Size = new System.Drawing.Size(53, 48);
             this.btnCancelarProyecto.TabIndex = 20;
@@ -230,8 +230,8 @@
             this.btnAsignarTrabajador.FlatAppearance.BorderSize = 0;
             this.btnAsignarTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignarTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignarTrabajador.Image = global::Vistas.Properties.Resources.User2;
-            this.btnAsignarTrabajador.Location = new System.Drawing.Point(199, 252);
+            this.btnAsignarTrabajador.Image = global::Vistas.Properties.Resources.Más;
+            this.btnAsignarTrabajador.Location = new System.Drawing.Point(175, 259);
             this.btnAsignarTrabajador.Name = "btnAsignarTrabajador";
             this.btnAsignarTrabajador.Size = new System.Drawing.Size(54, 53);
             this.btnAsignarTrabajador.TabIndex = 25;
@@ -246,7 +246,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = global::Vistas.Properties.Resources.Evaluar;
-            this.btnEditar.Location = new System.Drawing.Point(338, 260);
+            this.btnEditar.Location = new System.Drawing.Point(320, 265);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(43, 40);
             this.btnEditar.TabIndex = 22;
@@ -260,7 +260,7 @@
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.Image = global::Vistas.Properties.Resources.Back;
-            this.btnAtras.Location = new System.Drawing.Point(33, 260);
+            this.btnAtras.Location = new System.Drawing.Point(30, 263);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 46);
             this.btnAtras.TabIndex = 0;
@@ -271,7 +271,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(154, 308);
+            this.label1.Location = new System.Drawing.Point(128, 311);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 18);
             this.label1.TabIndex = 27;
@@ -281,7 +281,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 308);
+            this.label2.Location = new System.Drawing.Point(317, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 28;
@@ -291,7 +291,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(409, 308);
+            this.label3.Location = new System.Drawing.Point(397, 310);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 18);
             this.label3.TabIndex = 29;
@@ -301,7 +301,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(563, 308);
+            this.label4.Location = new System.Drawing.Point(551, 310);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 30;
@@ -311,7 +311,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 308);
+            this.label5.Location = new System.Drawing.Point(27, 310);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 18);
             this.label5.TabIndex = 31;
@@ -347,10 +347,11 @@
             this.Controls.Add(this.lblTituloInfProyecto);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAtras);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmInformacionProyecto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInformacionProyecto";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -38,8 +38,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,10 +58,12 @@
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::Vistas.Properties.Resources.Back;
-            this.btnRegresar.Location = new System.Drawing.Point(283, 426);
+            this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegresar.Location = new System.Drawing.Point(234, 426);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(59, 39);
+            this.btnRegresar.Size = new System.Drawing.Size(137, 47);
             this.btnRegresar.TabIndex = 15;
+            this.btnRegresar.Text = "Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -73,11 +73,15 @@
             this.btnRetirar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRetirar.FlatAppearance.BorderSize = 0;
             this.btnRetirar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetirar.Image = global::Vistas.Properties.Resources.Yes;
-            this.btnRetirar.Location = new System.Drawing.Point(539, 426);
+            this.btnRetirar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetirar.Location = new System.Drawing.Point(504, 426);
             this.btnRetirar.Name = "btnRetirar";
-            this.btnRetirar.Size = new System.Drawing.Size(49, 39);
+            this.btnRetirar.Size = new System.Drawing.Size(122, 47);
             this.btnRetirar.TabIndex = 14;
+            this.btnRetirar.Text = "Aceptar";
+            this.btnRetirar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRetirar.UseVisualStyleBackColor = true;
             this.btnRetirar.Click += new System.EventHandler(this.btnRetirar_Click);
             // 
@@ -154,33 +158,11 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Seleccionar un operario";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(280, 468);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 18);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Regresar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(509, 468);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 18);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Retirar Operario";
-            // 
             // frmRetirarOperarioXProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 512);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnRetirar);
@@ -209,7 +191,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRol;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

@@ -51,55 +51,5 @@ namespace Vistas
         {
             gdvBuscarReporte.Rows.Add("00264","Almacén Alicorp","Finalizado","6000.00","Alicorp");
         }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
-        private void gdvBuscarReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblIndicacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmpresa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEstado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cboEstado_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpFEstimada_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFEstimada_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFInicial_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTituloExportar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

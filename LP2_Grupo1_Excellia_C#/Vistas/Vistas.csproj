@@ -433,5 +433,11 @@
   <ItemGroup>
     <None Include="Resources\Derivar1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Más.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Más pequeño.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

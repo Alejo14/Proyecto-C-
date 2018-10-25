@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             this.dgvProyectos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSolicitarRetiro = new System.Windows.Forms.Button();
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.lblMotivo = new System.Windows.Forms.Label();
             this.lblSolicitarRetiro = new System.Windows.Forms.Label();
             this.lblIndicacion = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,16 +55,47 @@
             this.dgvProyectos.Size = new System.Drawing.Size(758, 182);
             this.dgvProyectos.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Etapa";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 165;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fecha de inicio";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
             // btnSolicitarRetiro
             // 
             this.btnSolicitarRetiro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSolicitarRetiro.FlatAppearance.BorderSize = 0;
             this.btnSolicitarRetiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitarRetiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarRetiro.Image = global::Vistas.Properties.Resources.Send;
-            this.btnSolicitarRetiro.Location = new System.Drawing.Point(822, 460);
+            this.btnSolicitarRetiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitarRetiro.Location = new System.Drawing.Point(568, 475);
             this.btnSolicitarRetiro.Name = "btnSolicitarRetiro";
-            this.btnSolicitarRetiro.Size = new System.Drawing.Size(47, 49);
+            this.btnSolicitarRetiro.Size = new System.Drawing.Size(116, 49);
             this.btnSolicitarRetiro.TabIndex = 1;
+            this.btnSolicitarRetiro.Text = "Enviar";
+            this.btnSolicitarRetiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSolicitarRetiro.UseVisualStyleBackColor = true;
             this.btnSolicitarRetiro.Click += new System.EventHandler(this.btnSolicitarRetiro_Click);
             // 
@@ -75,7 +104,7 @@
             this.txtMotivo.Location = new System.Drawing.Point(111, 376);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(758, 63);
+            this.txtMotivo.Size = new System.Drawing.Size(758, 77);
             this.txtMotivo.TabIndex = 2;
             // 
             // lblMotivo
@@ -113,67 +142,22 @@
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Vistas.Properties.Resources.No;
-            this.btnCancelar.Location = new System.Drawing.Point(723, 460);
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(305, 475);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(64, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(128, 49);
             this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(720, 512);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Cancelar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(820, 512);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 18);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Enviar";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Etapa";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 165;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fecha de inicio";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
             // 
             // frmSolicitarRetiroDeProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 577);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblIndicacion);
             this.Controls.Add(this.lblSolicitarRetiro);
@@ -207,8 +191,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
