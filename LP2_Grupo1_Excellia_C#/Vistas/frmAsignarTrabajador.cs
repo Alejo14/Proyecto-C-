@@ -16,7 +16,6 @@ namespace Vistas
     {
         private TrabajadorBL trabajadorBL;
         private ProyectoBL proyectoBL;
-        private Trabajador trabajador;
         private Proyecto proyecto;
         private Proyecto Proyecto { get => proyecto; set => proyecto = value; }
         public frmAsignarTrabajador(Proyecto p)
