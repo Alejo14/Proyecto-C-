@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblTituloInfProyecto = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
@@ -46,120 +45,114 @@
             this.cboPrioridad = new System.Windows.Forms.ComboBox();
             this.btnCancelarProyecto = new System.Windows.Forms.Button();
             this.cboEtapa = new System.Windows.Forms.ComboBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnAsignarTrabajador = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtras.Location = new System.Drawing.Point(217, 255);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
-            this.btnAtras.TabIndex = 0;
-            this.btnAtras.Text = "Regresar";
-            this.btnAtras.UseVisualStyleBackColor = true;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Enabled = false;
-            this.btnGuardar.Location = new System.Drawing.Point(394, 255);
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Image = global::Vistas.Properties.Resources.Yes;
+            this.btnGuardar.Location = new System.Drawing.Point(566, 257);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(59, 48);
             this.btnGuardar.TabIndex = 1;
-            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblTituloInfProyecto
             // 
             this.lblTituloInfProyecto.AutoSize = true;
-            this.lblTituloInfProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloInfProyecto.Location = new System.Drawing.Point(219, 23);
+            this.lblTituloInfProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInfProyecto.Location = new System.Drawing.Point(205, 30);
             this.lblTituloInfProyecto.Name = "lblTituloInfProyecto";
-            this.lblTituloInfProyecto.Size = new System.Drawing.Size(242, 24);
+            this.lblTituloInfProyecto.Size = new System.Drawing.Size(249, 25);
             this.lblTituloInfProyecto.TabIndex = 2;
             this.lblTituloInfProyecto.Text = "Información del Proyecto";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(33, 126);
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(27, 138);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(25, 16);
+            this.lblId.Size = new System.Drawing.Size(23, 18);
             this.lblId.TabIndex = 3;
             this.lblId.Text = "Id:";
-            this.lblId.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(33, 94);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(27, 100);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(67, 16);
+            this.lblNombre.Size = new System.Drawing.Size(66, 18);
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblFInicial
             // 
             this.lblFInicial.AutoSize = true;
-            this.lblFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFInicial.Location = new System.Drawing.Point(33, 161);
+            this.lblFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFInicial.Location = new System.Drawing.Point(27, 167);
             this.lblFInicial.Name = "lblFInicial";
-            this.lblFInicial.Size = new System.Drawing.Size(100, 16);
+            this.lblFInicial.Size = new System.Drawing.Size(93, 18);
             this.lblFInicial.TabIndex = 5;
             this.lblFInicial.Text = "Fecha inicial:";
             // 
             // lblPresupuesto
             // 
             this.lblPresupuesto.AutoSize = true;
-            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPresupuesto.Location = new System.Drawing.Point(313, 132);
+            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresupuesto.Location = new System.Drawing.Point(307, 138);
             this.lblPresupuesto.Name = "lblPresupuesto";
-            this.lblPresupuesto.Size = new System.Drawing.Size(99, 16);
+            this.lblPresupuesto.Size = new System.Drawing.Size(96, 18);
             this.lblPresupuesto.TabIndex = 6;
             this.lblPresupuesto.Text = "Presupuesto:";
             // 
             // lblEtapa
             // 
             this.lblEtapa.AutoSize = true;
-            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtapa.Location = new System.Drawing.Point(33, 196);
+            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtapa.Location = new System.Drawing.Point(27, 202);
             this.lblEtapa.Name = "lblEtapa";
-            this.lblEtapa.Size = new System.Drawing.Size(53, 16);
+            this.lblEtapa.Size = new System.Drawing.Size(50, 18);
             this.lblEtapa.TabIndex = 7;
             this.lblEtapa.Text = "Etapa:";
             // 
             // lblFEstimada
             // 
             this.lblFEstimada.AutoSize = true;
-            this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFEstimada.Location = new System.Drawing.Point(313, 163);
+            this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFEstimada.Location = new System.Drawing.Point(307, 169);
             this.lblFEstimada.Name = "lblFEstimada";
-            this.lblFEstimada.Size = new System.Drawing.Size(156, 16);
+            this.lblFEstimada.Size = new System.Drawing.Size(147, 18);
             this.lblFEstimada.TabIndex = 8;
             this.lblFEstimada.Text = "Fecha final estimada:";
             // 
             // lblPrioridad
             // 
             this.lblPrioridad.AutoSize = true;
-            this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(313, 196);
+            this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrioridad.Location = new System.Drawing.Point(307, 202);
             this.lblPrioridad.Name = "lblPrioridad";
-            this.lblPrioridad.Size = new System.Drawing.Size(76, 16);
+            this.lblPrioridad.Size = new System.Drawing.Size(71, 18);
             this.lblPrioridad.TabIndex = 10;
             this.lblPrioridad.Text = "Prioridad:";
-            this.lblPrioridad.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(137, 127);
+            this.txtId.Location = new System.Drawing.Point(131, 133);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(156, 20);
             this.txtId.TabIndex = 11;
@@ -167,7 +160,7 @@
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(135, 90);
+            this.txtNombre.Location = new System.Drawing.Point(129, 96);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(493, 20);
             this.txtNombre.TabIndex = 12;
@@ -175,7 +168,7 @@
             // txtFInicial
             // 
             this.txtFInicial.Enabled = false;
-            this.txtFInicial.Location = new System.Drawing.Point(137, 161);
+            this.txtFInicial.Location = new System.Drawing.Point(131, 167);
             this.txtFInicial.Name = "txtFInicial";
             this.txtFInicial.Size = new System.Drawing.Size(156, 20);
             this.txtFInicial.TabIndex = 13;
@@ -183,7 +176,7 @@
             // txtPresupuesto
             // 
             this.txtPresupuesto.Enabled = false;
-            this.txtPresupuesto.Location = new System.Drawing.Point(472, 127);
+            this.txtPresupuesto.Location = new System.Drawing.Point(466, 133);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(156, 20);
             this.txtPresupuesto.TabIndex = 14;
@@ -191,7 +184,7 @@
             // txtFEstimada
             // 
             this.txtFEstimada.Enabled = false;
-            this.txtFEstimada.Location = new System.Drawing.Point(472, 161);
+            this.txtFEstimada.Location = new System.Drawing.Point(466, 167);
             this.txtFEstimada.Name = "txtFEstimada";
             this.txtFEstimada.Size = new System.Drawing.Size(156, 20);
             this.txtFEstimada.TabIndex = 18;
@@ -202,20 +195,21 @@
             this.cboPrioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrioridad.Enabled = false;
             this.cboPrioridad.FormattingEnabled = true;
-            this.cboPrioridad.Location = new System.Drawing.Point(472, 191);
+            this.cboPrioridad.Location = new System.Drawing.Point(466, 197);
             this.cboPrioridad.Name = "cboPrioridad";
             this.cboPrioridad.Size = new System.Drawing.Size(156, 21);
             this.cboPrioridad.TabIndex = 19;
-            this.cboPrioridad.SelectedIndexChanged += new System.EventHandler(this.cboPrioridad_SelectedIndexChanged);
             // 
             // btnCancelarProyecto
             // 
             this.btnCancelarProyecto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarProyecto.Location = new System.Drawing.Point(483, 255);
+            this.btnCancelarProyecto.FlatAppearance.BorderSize = 0;
+            this.btnCancelarProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarProyecto.Image = global::Vistas.Properties.Resources.No;
+            this.btnCancelarProyecto.Location = new System.Drawing.Point(446, 257);
             this.btnCancelarProyecto.Name = "btnCancelarProyecto";
-            this.btnCancelarProyecto.Size = new System.Drawing.Size(117, 23);
+            this.btnCancelarProyecto.Size = new System.Drawing.Size(53, 48);
             this.btnCancelarProyecto.TabIndex = 20;
-            this.btnCancelarProyecto.Text = "Cancelar proyecto";
             this.btnCancelarProyecto.UseVisualStyleBackColor = true;
             this.btnCancelarProyecto.Click += new System.EventHandler(this.btnCancelarProyecto_Click);
             // 
@@ -225,51 +219,115 @@
             this.cboEtapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEtapa.Enabled = false;
             this.cboEtapa.FormattingEnabled = true;
-            this.cboEtapa.Location = new System.Drawing.Point(135, 194);
+            this.cboEtapa.Location = new System.Drawing.Point(129, 200);
             this.cboEtapa.Name = "cboEtapa";
             this.cboEtapa.Size = new System.Drawing.Size(156, 21);
             this.cboEtapa.TabIndex = 21;
-            this.cboEtapa.SelectedIndexChanged += new System.EventHandler(this.cboEtapa_SelectedIndexChanged);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Location = new System.Drawing.Point(306, 255);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 22;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(565, 2);
-            this.label2.TabIndex = 24;
             // 
             // btnAsignarTrabajador
             // 
             this.btnAsignarTrabajador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsignarTrabajador.Location = new System.Drawing.Point(89, 255);
+            this.btnAsignarTrabajador.FlatAppearance.BorderSize = 0;
+            this.btnAsignarTrabajador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarTrabajador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarTrabajador.Image = global::Vistas.Properties.Resources.User2;
+            this.btnAsignarTrabajador.Location = new System.Drawing.Point(199, 252);
             this.btnAsignarTrabajador.Name = "btnAsignarTrabajador";
-            this.btnAsignarTrabajador.Size = new System.Drawing.Size(115, 23);
+            this.btnAsignarTrabajador.Size = new System.Drawing.Size(54, 53);
             this.btnAsignarTrabajador.TabIndex = 25;
-            this.btnAsignarTrabajador.Text = "Asignar Trabajador";
+            this.btnAsignarTrabajador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAsignarTrabajador.UseVisualStyleBackColor = true;
             this.btnAsignarTrabajador.Click += new System.EventHandler(this.btnAsignarTrabajador_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::Vistas.Properties.Resources.Evaluar;
+            this.btnEditar.Location = new System.Drawing.Point(338, 260);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(43, 40);
+            this.btnEditar.TabIndex = 22;
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Image = global::Vistas.Properties.Resources.Back;
+            this.btnAtras.Location = new System.Drawing.Point(33, 260);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(47, 46);
+            this.btnAtras.TabIndex = 0;
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(154, 308);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 18);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Asignar Trabajadores";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(335, 308);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Editar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(409, 308);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 18);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Cancelar Proyecto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(563, 308);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Guardar";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 18);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Regresar";
             // 
             // frmInformacionProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(669, 313);
-            this.Controls.Add(this.btnAsignarTrabajador);
+            this.ClientSize = new System.Drawing.Size(660, 365);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAsignarTrabajador);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.cboEtapa);
             this.Controls.Add(this.btnCancelarProyecto);
@@ -294,7 +352,6 @@
             this.MinimizeBox = false;
             this.Name = "frmInformacionProyecto";
             this.Text = "frmInformacionProyecto";
-            this.Load += new System.EventHandler(this.frmInformacionProyecto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,7 +378,11 @@
         private System.Windows.Forms.Button btnCancelarProyecto;
         private System.Windows.Forms.ComboBox cboEtapa;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAsignarTrabajador;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

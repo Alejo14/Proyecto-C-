@@ -7,32 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Modelo;
 
 namespace Vistas
 {
     public partial class frmSolicitarRetiroDeProyecto : Form
     {
+        private Operario op;
         public frmSolicitarRetiroDeProyecto()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(string.IsNullOrEmpty(txtMotivo.Text))
-                MessageBox.Show("Debe de ingresar el motivo de la solicitud de retiro");
-            else
-                MessageBox.Show("Se ha registrado la solicitud de retiro y se ha enviado un correo al Jefe de Proyecto");
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void frmSolicitarRetiroDeProyecto_Load(object sender, EventArgs e)
@@ -43,9 +27,12 @@ namespace Vistas
             dgvProyectos.Rows.Add("False", "00278","Inclusíón de número electronico de SUNAT en Liquidación de Compra", "Finalizado", "03/05/2018");
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void btnSolicitarRetiro_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            if (string.IsNullOrEmpty(txtMotivo.Text))
+                MessageBox.Show("Debe de ingresar el motivo de la solicitud de retiro");
+            else
+                MessageBox.Show("Se ha registrado la solicitud de retiro y se ha enviado un correo al Jefe de Proyecto");
         }
     }
 }

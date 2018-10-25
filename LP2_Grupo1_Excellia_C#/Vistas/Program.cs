@@ -20,6 +20,7 @@ namespace Vistas
             //Application.Run(new frmMenuJefeProyecto());
             //Application.Run(new FormMenuOperario());
             //Application.Run(new frmGenerarProyecto());
+            //Application.Run(new FormAgregarUsuario());
         }
     }
 }

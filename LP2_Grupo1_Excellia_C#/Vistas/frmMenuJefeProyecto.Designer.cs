@@ -37,7 +37,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnBuscarContacto = new System.Windows.Forms.Button();
-            this.btnRetirarOperario = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
             this.btnExportarReportes = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1190, 50);
+            this.panel2.Size = new System.Drawing.Size(1190, 44);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -70,9 +69,9 @@
             // 
             this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimizar.Image = global::Vistas.Properties.Resources.icon_minimizar;
-            this.pbMinimizar.Location = new System.Drawing.Point(1102, 8);
+            this.pbMinimizar.Location = new System.Drawing.Point(1101, 8);
             this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(39, 34);
+            this.pbMinimizar.Size = new System.Drawing.Size(32, 30);
             this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimizar.TabIndex = 3;
             this.pbMinimizar.TabStop = false;
@@ -82,9 +81,9 @@
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::Vistas.Properties.Resources.icon_cerrar2;
-            this.pbExit.Location = new System.Drawing.Point(1147, 8);
+            this.pbExit.Location = new System.Drawing.Point(1151, 8);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(40, 32);
+            this.pbExit.Size = new System.Drawing.Size(27, 30);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 1;
             this.pbExit.TabStop = false;
@@ -104,7 +103,7 @@
             // 
             this.scJefeProyecto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scJefeProyecto.IsSplitterFixed = true;
-            this.scJefeProyecto.Location = new System.Drawing.Point(0, 50);
+            this.scJefeProyecto.Location = new System.Drawing.Point(0, 44);
             this.scJefeProyecto.Name = "scJefeProyecto";
             // 
             // scJefeProyecto.Panel1
@@ -114,12 +113,11 @@
             this.scJefeProyecto.Panel1.Controls.Add(this.pictureBox4);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnCerrarSesion);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnBuscarContacto);
-            this.scJefeProyecto.Panel1.Controls.Add(this.btnRetirarOperario);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnChat);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnExportarReportes);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnHome);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnlogoInicio);
-            this.scJefeProyecto.Size = new System.Drawing.Size(1190, 560);
+            this.scJefeProyecto.Size = new System.Drawing.Size(1190, 566);
             this.scJefeProyecto.SplitterDistance = 235;
             this.scJefeProyecto.TabIndex = 2;
             // 
@@ -130,7 +128,7 @@
             this.btnGenerarProyecto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarProyecto.Image = global::Vistas.Properties.Resources.Derivar;
             this.btnGenerarProyecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarProyecto.Location = new System.Drawing.Point(8, 149);
+            this.btnGenerarProyecto.Location = new System.Drawing.Point(8, 178);
             this.btnGenerarProyecto.Name = "btnGenerarProyecto";
             this.btnGenerarProyecto.Size = new System.Drawing.Size(213, 41);
             this.btnGenerarProyecto.TabIndex = 17;
@@ -169,28 +167,13 @@
             this.btnBuscarContacto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarContacto.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnBuscarContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarContacto.Location = new System.Drawing.Point(8, 303);
+            this.btnBuscarContacto.Location = new System.Drawing.Point(8, 283);
             this.btnBuscarContacto.Name = "btnBuscarContacto";
             this.btnBuscarContacto.Size = new System.Drawing.Size(213, 41);
             this.btnBuscarContacto.TabIndex = 14;
             this.btnBuscarContacto.Text = "Buscar Contacto";
             this.btnBuscarContacto.UseVisualStyleBackColor = true;
             this.btnBuscarContacto.Click += new System.EventHandler(this.btnBuscarContacto_Click);
-            // 
-            // btnRetirarOperario
-            // 
-            this.btnRetirarOperario.FlatAppearance.BorderSize = 0;
-            this.btnRetirarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetirarOperario.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetirarOperario.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
-            this.btnRetirarOperario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetirarOperario.Location = new System.Drawing.Point(8, 196);
-            this.btnRetirarOperario.Name = "btnRetirarOperario";
-            this.btnRetirarOperario.Size = new System.Drawing.Size(213, 43);
-            this.btnRetirarOperario.TabIndex = 13;
-            this.btnRetirarOperario.Text = "Retirar Operario";
-            this.btnRetirarOperario.UseVisualStyleBackColor = true;
-            this.btnRetirarOperario.Click += new System.EventHandler(this.btnRetirarOperario_Click);
             // 
             // btnChat
             // 
@@ -199,7 +182,7 @@
             this.btnChat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChat.Image = global::Vistas.Properties.Resources.Chat1;
             this.btnChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChat.Location = new System.Drawing.Point(8, 350);
+            this.btnChat.Location = new System.Drawing.Point(8, 330);
             this.btnChat.Name = "btnChat";
             this.btnChat.Size = new System.Drawing.Size(135, 50);
             this.btnChat.TabIndex = 12;
@@ -213,7 +196,7 @@
             this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportarReportes.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarReportes.Location = new System.Drawing.Point(8, 245);
+            this.btnExportarReportes.Location = new System.Drawing.Point(8, 225);
             this.btnExportarReportes.Name = "btnExportarReportes";
             this.btnExportarReportes.Size = new System.Drawing.Size(225, 46);
             this.btnExportarReportes.TabIndex = 11;
@@ -228,7 +211,7 @@
             this.btnHome.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(8, 93);
+            this.btnHome.Location = new System.Drawing.Point(8, 122);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(148, 50);
             this.btnHome.TabIndex = 10;
@@ -279,7 +262,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnBuscarContacto;
-        private System.Windows.Forms.Button btnRetirarOperario;
         private System.Windows.Forms.Button btnChat;
         private System.Windows.Forms.Button btnExportarReportes;
         private System.Windows.Forms.Button btnHome;

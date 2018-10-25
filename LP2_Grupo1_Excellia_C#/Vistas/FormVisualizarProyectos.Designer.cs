@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisualizarProyectos = new System.Windows.Forms.DataGridView();
             this.colIdProyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             this.colPrioridad,
             this.colFechaInicio,
             this.colFechaFinEstimada});
-            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(46, 168);
+            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(58, 163);
             this.dgvVisualizarProyectos.Name = "dgvVisualizarProyectos";
             this.dgvVisualizarProyectos.ReadOnly = true;
             this.dgvVisualizarProyectos.Size = new System.Drawing.Size(843, 266);
@@ -92,9 +92,9 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "Presupuesto";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column1.HeaderText = "Presupuesto";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -126,10 +126,10 @@
             // lblProyectosEnCurso
             // 
             this.lblProyectosEnCurso.AutoSize = true;
-            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProyectosEnCurso.Location = new System.Drawing.Point(354, 51);
+            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProyectosEnCurso.Location = new System.Drawing.Point(382, 65);
             this.lblProyectosEnCurso.Name = "lblProyectosEnCurso";
-            this.lblProyectosEnCurso.Size = new System.Drawing.Size(260, 32);
+            this.lblProyectosEnCurso.Size = new System.Drawing.Size(208, 25);
             this.lblProyectosEnCurso.TabIndex = 2;
             this.lblProyectosEnCurso.Text = "Visualizar Proyectos";
             // 
@@ -137,7 +137,7 @@
             // 
             this.dtpFechaComienzo.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
             this.dtpFechaComienzo.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtpFechaComienzo.Location = new System.Drawing.Point(166, 126);
+            this.dtpFechaComienzo.Location = new System.Drawing.Point(163, 125);
             this.dtpFechaComienzo.Name = "dtpFechaComienzo";
             this.dtpFechaComienzo.Size = new System.Drawing.Size(202, 20);
             this.dtpFechaComienzo.TabIndex = 3;
@@ -146,20 +146,20 @@
             // lblFechaInicio
             // 
             this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.Location = new System.Drawing.Point(42, 123);
+            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblFechaInicio.Location = new System.Drawing.Point(55, 125);
             this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(118, 22);
+            this.lblFechaInicio.Size = new System.Drawing.Size(91, 18);
             this.lblFechaInicio.TabIndex = 4;
             this.lblFechaInicio.Text = "Fecha Inicio:";
             // 
             // lblEtapa
             // 
             this.lblEtapa.AutoSize = true;
-            this.lblEtapa.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtapa.Location = new System.Drawing.Point(698, 123);
+            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtapa.Location = new System.Drawing.Point(710, 127);
             this.lblEtapa.Name = "lblEtapa";
-            this.lblEtapa.Size = new System.Drawing.Size(64, 22);
+            this.lblEtapa.Size = new System.Drawing.Size(50, 18);
             this.lblEtapa.TabIndex = 5;
             this.lblEtapa.Text = "Etapa:";
             // 
@@ -167,7 +167,7 @@
             // 
             this.cboEtapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEtapa.FormattingEnabled = true;
-            this.cboEtapa.Location = new System.Drawing.Point(768, 125);
+            this.cboEtapa.Location = new System.Drawing.Point(780, 126);
             this.cboEtapa.Name = "cboEtapa";
             this.cboEtapa.Size = new System.Drawing.Size(121, 21);
             this.cboEtapa.TabIndex = 6;
@@ -175,12 +175,17 @@
             // 
             // btnRetirarOperario
             // 
+            this.btnRetirarOperario.FlatAppearance.BorderSize = 0;
+            this.btnRetirarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRetirarOperario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetirarOperario.Location = new System.Drawing.Point(736, 449);
+            this.btnRetirarOperario.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
+            this.btnRetirarOperario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetirarOperario.Location = new System.Drawing.Point(740, 452);
             this.btnRetirarOperario.Name = "btnRetirarOperario";
-            this.btnRetirarOperario.Size = new System.Drawing.Size(153, 38);
+            this.btnRetirarOperario.Size = new System.Drawing.Size(161, 38);
             this.btnRetirarOperario.TabIndex = 9;
             this.btnRetirarOperario.Text = "Retirar Operario";
+            this.btnRetirarOperario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRetirarOperario.UseVisualStyleBackColor = true;
             this.btnRetirarOperario.Click += new System.EventHandler(this.btnRetirarOperario_Click);
             // 

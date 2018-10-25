@@ -95,12 +95,6 @@
     <Compile Include="FormMenuOperario.designer.cs">
       <DependentUpon>FormMenuOperario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSolicitudRetiro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSolicitudRetiro.designer.cs">
-      <DependentUpon>FormSolicitudRetiro.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSubirArchivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,12 +179,6 @@
     <Compile Include="frmRecuperarContraseña.designer.cs">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRetirarOperario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRetirarOperario.designer.cs">
-      <DependentUpon>frmRetirarOperario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRetirarOperarioXProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuOperario.resx">
       <DependentUpon>FormMenuOperario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSolicitudRetiro.resx">
-      <DependentUpon>FormSolicitudRetiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSubirArchivos.resx">
       <DependentUpon>FormSubirArchivos.cs</DependentUpon>
@@ -265,8 +250,8 @@
     <EmbeddedResource Include="frmRecuperarContraseña.resx">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRetirarOperario.resx">
-      <DependentUpon>frmRetirarOperario.cs</DependentUpon>
+    <EmbeddedResource Include="frmRetirarOperarioXProyecto.resx">
+      <DependentUpon>frmRetirarOperarioXProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitarRetiroDeProyecto.resx">
       <DependentUpon>frmSolicitarRetiroDeProyecto.cs</DependentUpon>
@@ -432,6 +417,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Derivar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Derivar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

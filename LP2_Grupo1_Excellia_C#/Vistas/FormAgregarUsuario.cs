@@ -14,9 +14,6 @@ namespace Vistas
 {
     public partial class FormAgregarUsuario : Form
     {
-
-        //private static int iDNuevo = 1;
-
         private CuentaUsuario usuario;
         private CuentaUsuarioBL cuentaUsuarioBL;
         public CuentaUsuario Usuario { get => usuario; set => usuario = value; }
@@ -154,30 +151,8 @@ namespace Vistas
                 errorProviderNombPersona.SetError(txtNombrePersona, "");
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtNombUsuario.Text == "") {
-                MessageBox.Show("Debe ingresar nombre de usuario");
-                return;
-            }
-
-            if (txtNombUsuario.Text.Length < 3 && txtNombUsuario.Text.Length > 8)
-            {
-                MessageBox.Show("Nombre de usuario debe tener entre 3 y 8 caracteres");
-                return;
-            }
-
-            if (txtNombUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter)) != 0)
-            {
-                MessageBox.Show("Nombre de usuario debe tener solo numeros y letras");
-                return;
-            }
-
             if (txtDni.Text == "")
             {
                 MessageBox.Show("Debe ingresar DNI");
@@ -268,10 +243,29 @@ namespace Vistas
                 return;
             }
 
+            if (txtNombUsuario.Text == "")
+            {
+                MessageBox.Show("Debe ingresar nombre de usuario");
+                return;
+            }
+
+            if (txtNombUsuario.Text.Length < 3 && txtNombUsuario.Text.Length > 8)
+            {
+                MessageBox.Show("Nombre de usuario debe tener entre 3 y 8 caracteres");
+                return;
+            }
+
+            if (txtNombUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter)) != 0)
+            {
+                MessageBox.Show("Nombre de usuario debe tener solo numeros y letras");
+                return;
+            }
+
             usuario.NomUsuario = txtNombUsuario.Text.Trim().Replace("  ", " ");
             usuario.Bloqueado = false;
 
             Persona per = new Persona();
+
             if (cbTipoUsuario.SelectedIndex == 0)
                 per = new Operario(TipoCargo.ANALISTA_DESARROLLO, (Dominio)cboDominio.SelectedItem);
             else if (cbTipoUsuario.SelectedIndex == 1)
@@ -303,31 +297,7 @@ namespace Vistas
             usuario.Persona = per;
 
             string contrasena = cuentaUsuarioBL.insertarUsuario(usuario);
-            /*usuario.IdCuenta = iDNuevo;
-            iDNuevo++;
-            usuario.NomUsuario = txtNombUsuario.Text;
-            usuario.Contrasena = txtContrasena.Text;
-            usuario.Bloqueado = false;
-
-            Persona per;
-            if (cbTipoUsuario.SelectedIndex == 1)
-                per = new Trabajador();
-            else
-                per = new Cliente();
-
-            per.Dni = txtDni.Text;
-            per.Nombre = txtNombrePersona.Text;
-            per.ApellidoPaterno = txtApellidoPaterno.Text;
-            per.ApellidoMaterno = txtApellidoMaterno.Text;
-            if (cbSexo.SelectedIndex == 0)
-                per.Sexo = 'H';
-            else
-                per.Sexo = 'M';
-
-            per.FechaNac = DateTime.Parse(dtpFechaNacimiento.Text);
-
-            usuario.Persona = per;*/
-
+            
             if (contrasena == "")
             {
                 MessageBox.Show("Error al ingresar usuario en base de datos");

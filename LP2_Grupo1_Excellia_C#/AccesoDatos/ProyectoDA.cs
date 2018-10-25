@@ -28,7 +28,6 @@ namespace AccesoDatos
                 Proyecto pro = new Proyecto();
                 pro.IdProyecto = lector.GetInt32("ID_PROYECTO");
                 pro.Nombre = lector.GetString("NOMBRE");
-                //MessageBox.Show(pro.Nombre);
                 proyectos.Add(pro);
             }
             con.Close();
@@ -42,8 +41,8 @@ namespace AccesoDatos
                 MySqlConnection con = new MySqlConnection(DBManager.cadena);
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand();
-                String sql = " update PROYECTO_X_TRABAJADOR set retirado = 0 where ID_PROYECTO ="+ p.IdProyecto +
-                    " and ID_TRABAJADOR ="+t.IdTrabajador;
+                String sql = "UPDATE PROYECTO_X_TRABAJADOR set retirado = 0 WHERE ID_PROYECTO ="+ p.IdProyecto +
+                    " AND ID_TRABAJADOR ="+t.IdTrabajador;
                 cmd.CommandText = sql;
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
@@ -61,8 +60,6 @@ namespace AccesoDatos
             BindingList<Proyecto> proyectos = new BindingList<Proyecto>();
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
-            //MessageBox.Show(e);
-            //int etapaSelecc = int.Parse(e);
             int dia = mifecha.Day;
             int mes = mifecha.Month;
             int anio = mifecha.Year;

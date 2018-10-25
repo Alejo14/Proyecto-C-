@@ -82,7 +82,10 @@ namespace Vistas
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
                 frmRetirarOperarioXProyecto frm = new frmRetirarOperarioXProyecto(Proyecto);
-                frm.ShowDialog();
+                if(frm.ShowDialog() == DialogResult.OK)
+                {
+
+                }
             }
             else
             {

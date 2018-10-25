@@ -43,12 +43,7 @@ namespace Vistas
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Dispose();
-        }
-
-        private void frmRetirarOperarioXProyecto_Load(object sender, EventArgs e)
-        {
-
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

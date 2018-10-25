@@ -89,11 +89,6 @@ namespace Vistas
             AbrirFormInPanel(new FormVisualizarProyectos(false));
         }
 
-        private void btnRetirarOperario_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new frmRetirarOperario());
-        }
-
         private void btnBuscarContacto_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmBuscarTrabajador(0));

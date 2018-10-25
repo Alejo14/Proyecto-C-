@@ -48,7 +48,7 @@
             // 
             this.lblAgregarInformación.AutoSize = true;
             this.lblAgregarInformación.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregarInformación.Location = new System.Drawing.Point(150, 35);
+            this.lblAgregarInformación.Location = new System.Drawing.Point(154, 36);
             this.lblAgregarInformación.Name = "lblAgregarInformación";
             this.lblAgregarInformación.Size = new System.Drawing.Size(361, 25);
             this.lblAgregarInformación.TabIndex = 0;
