@@ -16,14 +16,14 @@ namespace Vistas
     {
         private EruBL eruBL;
         private ERU eru;
-        private JefeProyecto jp;
-        public frmGenerarProyecto(JefeProyecto jefeProyecto)
+        private int id;
+        public frmGenerarProyecto(int id_jefeProyecto)
         {
             InitializeComponent();
             dgvEruProyecto.AutoGenerateColumns = false;
             eruBL = new EruBL();
             dgvEruProyecto.DataSource = eruBL.listarErusPendientes();
-            jp = new JefeProyecto();
+            id = id_jefeProyecto;
         }
 
         public ERU ERU { get => eru; set => eru = value; }
@@ -33,9 +33,10 @@ namespace Vistas
             if (dgvEruProyecto.SelectedRows.Count > 0)
             {
                 ERU = (ERU)dgvEruProyecto.CurrentRow.DataBoundItem;
-                frmAgregarInfProyecto frm = new frmAgregarInfProyecto(ERU, jp.IdTrabajador);
+                frmAgregarInfProyecto frm = new frmAgregarInfProyecto(ERU, id);
                 
                 frm.ShowDialog();
+                dgvEruProyecto.DataSource = eruBL.listarErusPendientes();
             }
             else
             {

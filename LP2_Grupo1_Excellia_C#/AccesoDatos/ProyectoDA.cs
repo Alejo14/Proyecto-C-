@@ -239,5 +239,25 @@ namespace AccesoDatos
         }
 
 
+        public void ActualizarERU(Proyecto p)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String sql = " update ERU set  ESTADO=3 where ID_ERU=" + p.Eru.IdERU;
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar la ERU. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

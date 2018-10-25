@@ -66,7 +66,8 @@ namespace Vistas
             pro.FechaRealFin = dtpFFReal.Value;
             pro.JefeProyecto.IdTrabajador = idJefe;
 
-            proyectoBL.CrearProyecto(pro); 
+            proyectoBL.CrearProyecto(pro);
+            proyectoBL.ActualizarERU(pro);
             MessageBox.Show("Se realizó la creación del proyecto con exito", "Creación proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
