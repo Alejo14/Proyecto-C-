@@ -32,7 +32,39 @@ namespace Vistas
 
             dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
             dtpFFReal.MinDate = dtpFInicio.Value.AddDays(1);
+
+            txtNombre.Validating += TxtNombre_Validating;
+            txtPresupuesto.Validating += TxtPresupuesto_Validating;
             //dtpFInicio = e.FechaSolicitud;
+        }
+
+        private void TxtNombre_Validating(object sender, CancelEventArgs e)
+        {
+            string nombreProyecto = txtNombre.Text.Trim().Replace("  ", " ");
+            bool valido = nombreProyecto.All(caracter => char.IsLetterOrDigit(caracter) || char.IsWhiteSpace(caracter));
+            if (valido)
+                errorProviderNombProyecto.SetError(txtNombre, "");
+            else
+                errorProviderNombProyecto.SetError(txtNombre, "El nombre debe estar compuesto por letras, espacios en blanco y números");
+        }
+
+        private void TxtPresupuesto_Validating(object sender, CancelEventArgs e)
+        {
+            double presupuesto = 0.0;
+            try
+            {
+                presupuesto = double.Parse(txtPresupuesto.Text.Trim());
+
+                if (presupuesto <= 0.0) {
+                    errorProviderPresupuesto.SetError(txtPresupuesto, "El presupuesto debe ser mayor que 0");
+                }
+                else
+                    errorProviderPresupuesto.SetError(txtPresupuesto, "");
+            }
+            catch
+            {
+                errorProviderPresupuesto.SetError(txtPresupuesto, "El presupuesto debe ser un valor real");
+            }
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -42,8 +74,11 @@ namespace Vistas
 
         private void btnCrearProyecto_Click(object sender, EventArgs e)
         {
+            if (!validarNombreProyecto()) return;
+            if (!validarPresupuesto()) return;
+
             Proyecto pro = new Proyecto();
-            pro.Nombre = txtNombre.Text.Trim();
+            pro.Nombre = txtNombre.Text.Trim().Replace("  ", " ");
             pro.Presupuesto = Int32.Parse(txtPresupuesto.Text.Trim());
             ERU eruPro = new ERU();
             eruPro.IdERU = Int32.Parse(eru.IdERU.ToString());
@@ -66,7 +101,8 @@ namespace Vistas
             pro.FechaRealFin = dtpFFReal.Value;
             pro.JefeProyecto.IdTrabajador = idJefe;
 
-            proyectoBL.CrearProyecto(pro); 
+            proyectoBL.CrearProyecto(pro);
+            proyectoBL.ActualizarERU(pro);
             MessageBox.Show("Se realizó la creación del proyecto con exito", "Creación proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -80,6 +116,36 @@ namespace Vistas
         {
             dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
             dtpFFReal.MinDate = dtpFInicio.Value.AddDays(1);
+        }
+        private bool validarNombreProyecto() {
+            string nombreProyecto = txtNombre.Text.Trim().Replace("  ", " ");
+            bool valido = nombreProyecto.All(caracter => char.IsLetterOrDigit(caracter) || char.IsWhiteSpace(caracter));
+            if (!valido)
+                MessageBox.Show("El nombre debe estar compuesto por letras, espacios en blanco y números");
+
+            return valido;
+        }
+
+        private bool validarPresupuesto() {
+            double presupuesto = 0.0;
+            bool valido = false;
+            try
+            {
+                presupuesto = double.Parse(txtPresupuesto.Text.Trim());
+
+                valido = (presupuesto > 0.0);
+
+                if (!valido)
+                {
+                    MessageBox.Show("El presupuesto debe ser mayor que 0");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("El presupuesto debe ser un valor real");
+            }
+
+            return valido;
         }
     }
 }

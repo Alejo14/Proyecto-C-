@@ -50,5 +50,10 @@ namespace LogicaNegocio
         {
             proyectoDA.CrearProyecto(p);
         }
+
+        public void ActualizarERU(Proyecto p)
+        {
+            proyectoDA.ActualizarERU(p);
+        }
     }
 }

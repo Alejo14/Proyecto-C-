@@ -15,14 +15,14 @@ namespace Vistas
 {
     public partial class frmMenuJefeProyecto : Form
     {
-        private JefeProyecto jp;
+        private int id_jefe;
         private bool menuEscodido;
         public frmMenuJefeProyecto(JefeProyecto jefeProyecto)
         {
             InitializeComponent();
             AbrirFormInPanel(new FormVisualizarProyectos(false));
             menuEscodido = false;
-            jp = jefeProyecto;
+            id_jefe = jefeProyecto.IdTrabajador;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -106,7 +106,7 @@ namespace Vistas
 
         private void btnGenerarProyecto_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmGenerarProyecto(jp));
+            AbrirFormInPanel(new frmGenerarProyecto(id_jefe));
         }
     }
 }

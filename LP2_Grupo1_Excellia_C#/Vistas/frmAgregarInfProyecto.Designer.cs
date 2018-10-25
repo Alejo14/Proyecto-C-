@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAgregarInformación = new System.Windows.Forms.Label();
             this.cboPrioridad = new System.Windows.Forms.ComboBox();
             this.txtPresupuesto = new System.Windows.Forms.TextBox();
@@ -42,6 +43,10 @@
             this.dtpFFEstimada = new System.Windows.Forms.DateTimePicker();
             this.dtpFFReal = new System.Windows.Forms.DateTimePicker();
             this.btnCrearProyecto = new System.Windows.Forms.Button();
+            this.errorProviderPresupuesto = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderNombProyecto = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPresupuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombProyecto)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAgregarInformación
@@ -175,6 +180,14 @@
             this.btnCrearProyecto.UseVisualStyleBackColor = true;
             this.btnCrearProyecto.Click += new System.EventHandler(this.btnCrearProyecto_Click);
             // 
+            // errorProviderPresupuesto
+            // 
+            this.errorProviderPresupuesto.ContainerControl = this;
+            // 
+            // errorProviderNombProyecto
+            // 
+            this.errorProviderNombProyecto.ContainerControl = this;
+            // 
             // frmAgregarInfProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +209,8 @@
             this.Controls.Add(this.lblAgregarInformación);
             this.Name = "frmAgregarInfProyecto";
             this.Text = "frmAgregarInfProyecto";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPresupuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombProyecto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +232,7 @@
         private System.Windows.Forms.DateTimePicker dtpFFEstimada;
         private System.Windows.Forms.DateTimePicker dtpFFReal;
         private System.Windows.Forms.Button btnCrearProyecto;
+        private System.Windows.Forms.ErrorProvider errorProviderPresupuesto;
+        private System.Windows.Forms.ErrorProvider errorProviderNombProyecto;
     }
 }
