@@ -37,6 +37,10 @@ namespace Vistas
             cboEmpresa.DataSource = empresaBL.obtenerEmpresas();
             cboDominio.Enabled = false;
             cboEmpresa.Enabled = false;
+            cboDominio.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboEmpresa.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTipoUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbSexo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void TxtNombUsuario_Validating(object sender, CancelEventArgs e)
@@ -303,7 +307,7 @@ namespace Vistas
                 MessageBox.Show("Error al ingresar usuario en base de datos");
                 return;
             }
-            MessageBox.Show("Usuario registrado exitosamente");
+            MessageBox.Show("Usuario registrado exitosamente" + Environment.NewLine + "Se enviaron credenciales al correo " + usuario.Persona.Correo);
 
             DialogResult = DialogResult.OK;
             

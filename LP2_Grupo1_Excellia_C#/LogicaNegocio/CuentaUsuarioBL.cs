@@ -53,6 +53,10 @@ namespace LogicaNegocio
                 if (idOperario < 0) return "";
             }
 
+            string mensajeBienvenida = obtenerMensajeBienvenidaSistema(usuario, contrasena);
+
+            EmailSender.enviarEmail(usuario.Persona.Correo, "Bienvenida sistema Excellia", mensajeBienvenida);
+
             return contrasena;
         }
         public int validarUsuario (ref CuentaUsuario usuario) {
@@ -115,6 +119,14 @@ namespace LogicaNegocio
 
 
             return idTipo;
+        }
+
+        private string obtenerMensajeBienvenidaSistema(CuentaUsuario usuario, string contrasena) {
+            string mensaje = "Estimado/a " + usuario.Persona.Nombre + ",\r\nMediante la presente, le damos la bienvenida " +
+                "al sistema de Excellia. Adjunto, encontrará sus credenciales para poder ingresar al sistema:\r\n\r\n" +
+                "Usuario: " + usuario.NomUsuario + "\r\nContraseña: " + contrasena +
+                "\r\n\r\nAtentamente,\r\n\r\nEl equipo de Excellia";
+            return mensaje;
         }
     }
 }

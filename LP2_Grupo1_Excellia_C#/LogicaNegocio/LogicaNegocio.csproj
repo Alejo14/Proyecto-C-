@@ -46,6 +46,7 @@
     <Compile Include="ClienteBL.cs" />
     <Compile Include="CuentaUsuarioBL.cs" />
     <Compile Include="DominioBL.cs" />
+    <Compile Include="EmailSender.cs" />
     <Compile Include="EmpresaBL.cs" />
     <Compile Include="EruBL.cs" />
     <Compile Include="EtapaProyectoBL.cs" />
