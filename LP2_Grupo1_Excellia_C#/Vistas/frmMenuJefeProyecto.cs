@@ -58,11 +58,6 @@ namespace Vistas
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

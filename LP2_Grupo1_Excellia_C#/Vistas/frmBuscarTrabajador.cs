@@ -21,9 +21,13 @@ namespace Vistas
             InitializeComponent();
             if(seleccionar == 1)
             {
+                btnRegresar.Visible = true;
+                this.FormBorderStyle = FormBorderStyle.FixedDialog;
                 btnSeleccionar.Visible = true;
-            }else if(seleccionar == 0)
+            }
+            else if(seleccionar == 0)
             {
+                btnRegresar.Visible = false;
                 btnSeleccionar.Visible = false;
             }
             rolBL = new RolBL();
@@ -106,29 +110,9 @@ namespace Vistas
             }
         }
 
-        private void txtApPat_TextChanged(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cmbRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDNI_TextChanged(object sender, EventArgs e)
-        {
-
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
