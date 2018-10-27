@@ -32,6 +32,11 @@
             this.cboEmpresa = new System.Windows.Forms.ComboBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.gdvBuscarReporte = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFEstimada = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblFInicial = new System.Windows.Forms.Label();
@@ -39,11 +44,6 @@
             this.dtpFInicial = new System.Windows.Forms.DateTimePicker();
             this.dtpFEstimada = new System.Windows.Forms.DateTimePicker();
             this.lblIndicacion = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gdvBuscarReporte)).BeginInit();
@@ -82,6 +82,8 @@
             // 
             // gdvBuscarReporte
             // 
+            this.gdvBuscarReporte.AllowUserToAddRows = false;
+            this.gdvBuscarReporte.AllowUserToDeleteRows = false;
             this.gdvBuscarReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdvBuscarReporte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -91,8 +93,43 @@
             this.Column5});
             this.gdvBuscarReporte.Location = new System.Drawing.Point(171, 308);
             this.gdvBuscarReporte.Name = "gdvBuscarReporte";
+            this.gdvBuscarReporte.ReadOnly = true;
             this.gdvBuscarReporte.Size = new System.Drawing.Size(639, 181);
             this.gdvBuscarReporte.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 90;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre del Proyecto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 185;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Estado";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Presupuesto";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 110;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Empresa cliente";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 110;
             // 
             // lblFEstimada
             // 
@@ -160,40 +197,6 @@
             this.lblIndicacion.Size = new System.Drawing.Size(406, 20);
             this.lblIndicacion.TabIndex = 15;
             this.lblIndicacion.Text = "Seleccione uno o más criterios para realizar la búsqueda";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 90;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre del Proyecto";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 185;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Estado";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Presupuesto";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 110;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Empresa cliente";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 110;
             // 
             // btnBuscar
             // 

@@ -352,7 +352,7 @@
             this.MinimizeBox = false;
             this.Name = "frmInformacionProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmInformacionProyecto";
+            this.Text = "Información del Proyecto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

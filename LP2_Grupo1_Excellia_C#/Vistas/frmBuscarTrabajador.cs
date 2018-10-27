@@ -72,10 +72,6 @@ namespace Vistas
             {
                 dgvTrabajadores.DataSource = t;
             }
-            else
-            {
-               // dgvTrabajadores
-            }
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

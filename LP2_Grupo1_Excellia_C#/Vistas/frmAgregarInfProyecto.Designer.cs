@@ -52,10 +52,10 @@
             // lblAgregarInformación
             // 
             this.lblAgregarInformación.AutoSize = true;
-            this.lblAgregarInformación.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregarInformación.Location = new System.Drawing.Point(154, 36);
+            this.lblAgregarInformación.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregarInformación.Location = new System.Drawing.Point(160, 40);
             this.lblAgregarInformación.Name = "lblAgregarInformación";
-            this.lblAgregarInformación.Size = new System.Drawing.Size(361, 25);
+            this.lblAgregarInformación.Size = new System.Drawing.Size(329, 25);
             this.lblAgregarInformación.TabIndex = 0;
             this.lblAgregarInformación.Text = "Agregar información del proyecto";
             // 
@@ -64,21 +64,21 @@
             this.cboPrioridad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboPrioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrioridad.FormattingEnabled = true;
-            this.cboPrioridad.Location = new System.Drawing.Point(242, 178);
+            this.cboPrioridad.Location = new System.Drawing.Point(233, 183);
             this.cboPrioridad.Name = "cboPrioridad";
             this.cboPrioridad.Size = new System.Drawing.Size(348, 21);
             this.cboPrioridad.TabIndex = 27;
             // 
             // txtPresupuesto
             // 
-            this.txtPresupuesto.Location = new System.Drawing.Point(242, 137);
+            this.txtPresupuesto.Location = new System.Drawing.Point(233, 142);
             this.txtPresupuesto.Name = "txtPresupuesto";
             this.txtPresupuesto.Size = new System.Drawing.Size(348, 20);
             this.txtPresupuesto.TabIndex = 25;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(242, 101);
+            this.txtNombre.Location = new System.Drawing.Point(233, 106);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(348, 20);
             this.txtNombre.TabIndex = 23;
@@ -87,67 +87,67 @@
             // lblPrioridad
             // 
             this.lblPrioridad.AutoSize = true;
-            this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(68, 178);
+            this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrioridad.Location = new System.Drawing.Point(59, 183);
             this.lblPrioridad.Name = "lblPrioridad";
-            this.lblPrioridad.Size = new System.Drawing.Size(76, 16);
+            this.lblPrioridad.Size = new System.Drawing.Size(75, 20);
             this.lblPrioridad.TabIndex = 34;
             this.lblPrioridad.Text = "Prioridad:";
             // 
             // lblFEstimada
             // 
             this.lblFEstimada.AutoSize = true;
-            this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFEstimada.Location = new System.Drawing.Point(68, 261);
+            this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFEstimada.Location = new System.Drawing.Point(59, 266);
             this.lblFEstimada.Name = "lblFEstimada";
-            this.lblFEstimada.Size = new System.Drawing.Size(156, 16);
+            this.lblFEstimada.Size = new System.Drawing.Size(160, 20);
             this.lblFEstimada.TabIndex = 33;
             this.lblFEstimada.Text = "Fecha final estimada:";
             // 
             // lblPresupuesto
             // 
             this.lblPresupuesto.AutoSize = true;
-            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPresupuesto.Location = new System.Drawing.Point(68, 141);
+            this.lblPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPresupuesto.Location = new System.Drawing.Point(59, 146);
             this.lblPresupuesto.Name = "lblPresupuesto";
-            this.lblPresupuesto.Size = new System.Drawing.Size(136, 16);
+            this.lblPresupuesto.Size = new System.Drawing.Size(140, 20);
             this.lblPresupuesto.TabIndex = 31;
             this.lblPresupuesto.Text = "Presupuesto (S/.) :";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(68, 102);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(59, 107);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(159, 16);
+            this.lblNombre.Size = new System.Drawing.Size(160, 20);
             this.lblNombre.TabIndex = 29;
             this.lblNombre.Text = "Nombre del Proyecto:";
             // 
             // lblFecInicio
             // 
             this.lblFecInicio.AutoSize = true;
-            this.lblFecInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecInicio.Location = new System.Drawing.Point(68, 222);
+            this.lblFecInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecInicio.Location = new System.Drawing.Point(59, 227);
             this.lblFecInicio.Name = "lblFecInicio";
-            this.lblFecInicio.Size = new System.Drawing.Size(100, 16);
+            this.lblFecInicio.Size = new System.Drawing.Size(102, 20);
             this.lblFecInicio.TabIndex = 35;
             this.lblFecInicio.Text = "Fecha Inicial:";
             // 
             // lblFFReal
             // 
             this.lblFFReal.AutoSize = true;
-            this.lblFFReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFFReal.Location = new System.Drawing.Point(68, 301);
+            this.lblFFReal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFFReal.Location = new System.Drawing.Point(59, 306);
             this.lblFFReal.Name = "lblFFReal";
-            this.lblFFReal.Size = new System.Drawing.Size(119, 16);
+            this.lblFFReal.Size = new System.Drawing.Size(121, 20);
             this.lblFFReal.TabIndex = 37;
             this.lblFFReal.Text = "Fecha final real:";
             // 
             // dtpFInicio
             // 
             this.dtpFInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFInicio.Location = new System.Drawing.Point(242, 218);
+            this.dtpFInicio.Location = new System.Drawing.Point(233, 223);
             this.dtpFInicio.Name = "dtpFInicio";
             this.dtpFInicio.Size = new System.Drawing.Size(348, 20);
             this.dtpFInicio.TabIndex = 38;
@@ -156,7 +156,7 @@
             // dtpFFEstimada
             // 
             this.dtpFFEstimada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFFEstimada.Location = new System.Drawing.Point(242, 261);
+            this.dtpFFEstimada.Location = new System.Drawing.Point(233, 266);
             this.dtpFFEstimada.Name = "dtpFFEstimada";
             this.dtpFFEstimada.Size = new System.Drawing.Size(348, 20);
             this.dtpFFEstimada.TabIndex = 39;
@@ -165,18 +165,24 @@
             // dtpFFReal
             // 
             this.dtpFFReal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFFReal.Location = new System.Drawing.Point(242, 301);
+            this.dtpFFReal.Location = new System.Drawing.Point(233, 306);
             this.dtpFFReal.Name = "dtpFFReal";
             this.dtpFFReal.Size = new System.Drawing.Size(348, 20);
             this.dtpFFReal.TabIndex = 40;
             // 
             // btnCrearProyecto
             // 
-            this.btnCrearProyecto.Location = new System.Drawing.Point(274, 348);
+            this.btnCrearProyecto.FlatAppearance.BorderSize = 0;
+            this.btnCrearProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearProyecto.Image = global::Vistas.Properties.Resources.Yes;
+            this.btnCrearProyecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrearProyecto.Location = new System.Drawing.Point(419, 357);
             this.btnCrearProyecto.Name = "btnCrearProyecto";
-            this.btnCrearProyecto.Size = new System.Drawing.Size(113, 23);
+            this.btnCrearProyecto.Size = new System.Drawing.Size(162, 43);
             this.btnCrearProyecto.TabIndex = 41;
             this.btnCrearProyecto.Text = "Crear Proyecto";
+            this.btnCrearProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCrearProyecto.UseVisualStyleBackColor = true;
             this.btnCrearProyecto.Click += new System.EventHandler(this.btnCrearProyecto_Click);
             // 
@@ -192,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 450);
+            this.ClientSize = new System.Drawing.Size(637, 420);
             this.Controls.Add(this.btnCrearProyecto);
             this.Controls.Add(this.dtpFFReal);
             this.Controls.Add(this.dtpFFEstimada);
@@ -207,8 +213,9 @@
             this.Controls.Add(this.txtPresupuesto);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblAgregarInformación);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAgregarInfProyecto";
-            this.Text = "frmAgregarInfProyecto";
+            this.Text = "Información del Proyecto";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPresupuesto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombProyecto)).EndInit();
             this.ResumeLayout(false);

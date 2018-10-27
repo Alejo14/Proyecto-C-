@@ -87,7 +87,14 @@ namespace Vistas
 
         private void iconCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Desea salir sin cerrar sesión.", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void iconMinimizar_Click(object sender, EventArgs e)

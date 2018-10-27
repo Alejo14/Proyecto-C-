@@ -140,9 +140,6 @@ namespace AccesoDatos
             cmd.CommandText = sql;
             cmd.Connection = con;
             MySqlDataReader lector = cmd.ExecuteReader();
-            //MySqlDataAdapter da1 = new MySqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da1.Fill(dt);
             while (lector.Read())
             {
             Etapa et = new Etapa();
@@ -151,7 +148,6 @@ namespace AccesoDatos
             etapas.Add(et);
             }
             con.Close();
-            //return dt;
             return etapas;
         }
 
@@ -173,7 +169,8 @@ namespace AccesoDatos
             }
             catch
             {
-                MessageBox.Show("Error al realizar la actualización del proyecto "+id.ToString()+" con prioridad "+pri.ToString()+" y etapa "+et.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al realizar la actualización del proyecto "+id.ToString()+" con prioridad "+pri.ToString()+" y etapa "+et.ToString(), 
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

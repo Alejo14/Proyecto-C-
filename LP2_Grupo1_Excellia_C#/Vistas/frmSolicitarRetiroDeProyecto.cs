@@ -13,9 +13,11 @@ namespace Vistas
 {
     public partial class frmSolicitarRetiroDeProyecto : Form
     {
-        private Operario op;
+        private Operario operario;
         public frmSolicitarRetiroDeProyecto()
         {
+            //necesito un operario para poder buscar sus proyectos
+            //la lista de proyectos se muestra
             InitializeComponent();
         }
 
@@ -29,6 +31,8 @@ namespace Vistas
 
         private void btnSolicitarRetiro_Click(object sender, EventArgs e)
         {
+            //Enviar un correo electronico al jefe para que pueda determinar
+            //Actualizar el estado del proyecto para ese trabajador
             if (string.IsNullOrEmpty(txtMotivo.Text))
                 MessageBox.Show("Debe de ingresar el motivo de la solicitud de retiro");
             else
