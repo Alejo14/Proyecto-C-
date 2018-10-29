@@ -40,6 +40,7 @@ namespace Modelo
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public string NomEmpresa { get => nomEmpresa; set => nomEmpresa = value; }
         public Empresa Empresa { get => empresa; set => empresa = value; }
+        public string NombreEmpresa { get => Empresa.RazonSocial; }
         public List<ERU> ListaEru { get => listaEru; set => listaEru = value; }
         public List<DetalleEntrega> ListaDetalleEntrega { get => listaDetalleEntrega; set => listaDetalleEntrega = value; }
     }

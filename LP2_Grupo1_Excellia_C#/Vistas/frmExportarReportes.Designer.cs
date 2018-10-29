@@ -64,9 +64,9 @@
             this.cboEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(289, 160);
+            this.cboEmpresa.Location = new System.Drawing.Point(304, 160);
             this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(121, 21);
+            this.cboEmpresa.Size = new System.Drawing.Size(162, 21);
             this.cboEmpresa.TabIndex = 1;
             this.cboEmpresa.SelectedIndexChanged += new System.EventHandler(this.cboEmpresa_SelectedIndexChanged);
             // 
@@ -75,9 +75,9 @@
             this.cboEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(689, 163);
+            this.cboEstado.Location = new System.Drawing.Point(663, 163);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(121, 21);
+            this.cboEstado.Size = new System.Drawing.Size(162, 21);
             this.cboEstado.TabIndex = 2;
             // 
             // gdvBuscarReporte
@@ -91,11 +91,12 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.gdvBuscarReporte.Location = new System.Drawing.Point(171, 308);
+            this.gdvBuscarReporte.Location = new System.Drawing.Point(173, 308);
             this.gdvBuscarReporte.Name = "gdvBuscarReporte";
             this.gdvBuscarReporte.ReadOnly = true;
             this.gdvBuscarReporte.Size = new System.Drawing.Size(639, 181);
             this.gdvBuscarReporte.TabIndex = 6;
+            this.gdvBuscarReporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvBuscarReporte_CellContentClick);
             // 
             // Column1
             // 
@@ -135,7 +136,7 @@
             // 
             this.lblFEstimada.AutoSize = true;
             this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFEstimada.Location = new System.Drawing.Point(509, 212);
+            this.lblFEstimada.Location = new System.Drawing.Point(483, 212);
             this.lblFEstimada.Name = "lblFEstimada";
             this.lblFEstimada.Size = new System.Drawing.Size(160, 20);
             this.lblFEstimada.TabIndex = 8;
@@ -145,11 +146,11 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(509, 161);
+            this.lblEstado.Location = new System.Drawing.Point(483, 161);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(64, 20);
+            this.lblEstado.Size = new System.Drawing.Size(56, 20);
             this.lblEstado.TabIndex = 9;
-            this.lblEstado.Text = "Estado:";
+            this.lblEstado.Text = "Etapa:";
             // 
             // lblFInicial
             // 
@@ -167,25 +168,25 @@
             this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpresa.Location = new System.Drawing.Point(167, 158);
             this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(77, 20);
+            this.lblEmpresa.Size = new System.Drawing.Size(127, 20);
             this.lblEmpresa.TabIndex = 11;
-            this.lblEmpresa.Text = "Empresa:";
+            this.lblEmpresa.Text = "Empresa cliente:";
             // 
             // dtpFInicial
             // 
             this.dtpFInicial.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFInicial.Location = new System.Drawing.Point(289, 213);
+            this.dtpFInicial.Location = new System.Drawing.Point(304, 213);
             this.dtpFInicial.Name = "dtpFInicial";
-            this.dtpFInicial.Size = new System.Drawing.Size(121, 20);
+            this.dtpFInicial.Size = new System.Drawing.Size(162, 20);
             this.dtpFInicial.TabIndex = 12;
             this.dtpFInicial.ValueChanged += new System.EventHandler(this.dtpFInicial_ValueChanged);
             // 
             // dtpFEstimada
             // 
             this.dtpFEstimada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFEstimada.Location = new System.Drawing.Point(689, 212);
+            this.dtpFEstimada.Location = new System.Drawing.Point(663, 212);
             this.dtpFEstimada.Name = "dtpFEstimada";
-            this.dtpFEstimada.Size = new System.Drawing.Size(121, 20);
+            this.dtpFEstimada.Size = new System.Drawing.Size(162, 20);
             this.dtpFEstimada.TabIndex = 13;
             // 
             // lblIndicacion

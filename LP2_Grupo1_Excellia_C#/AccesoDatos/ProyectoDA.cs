@@ -147,6 +147,10 @@ namespace AccesoDatos
             et.NombreEtapa = lector.GetString("DESCRIPCION");
             etapas.Add(et);
             }
+            Etapa e = new Etapa();
+            e.IdEtapa = 0;
+            e.NombreEtapa = "---Seleccionar---";
+            etapas.Insert(0,e);
             con.Close();
             return etapas;
         }
@@ -273,6 +277,35 @@ namespace AccesoDatos
             {
                 MessageBox.Show("Error al asignar trabajador al proyeco ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        //
+        public BindingList<Cliente> listarEmpresasClientes()
+        {
+            BindingList<Cliente> clientes = new BindingList<Cliente>();
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT C.*, E.RAZON_SOCIAL from CLIENTE C, EMPRESA E WHERE C.ID_EMPRESA=E.ID_EMPRESA ";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            while (lector.Read())
+            {
+                Cliente cli = new Cliente();
+                cli.IdCliente = lector.GetInt32("ID_CLIENTE");
+                Empresa emp = new Empresa();
+                emp.IdEmpresa = lector.GetInt32("ID_EMPRESA");
+                emp.RazonSocial = lector.GetString("RAZON_SOCIAL");
+                cli.Empresa = emp;
+                clientes.Add(cli);
+            }
+            Cliente c = new Cliente();
+            c.IdCliente = 0;
+            c.Empresa.IdEmpresa = 0;
+            c.Empresa.RazonSocial = "---Seleccionar---";
+            clientes.Insert(0, c);
+            con.Close();
+            return clientes;
         }
 
     }

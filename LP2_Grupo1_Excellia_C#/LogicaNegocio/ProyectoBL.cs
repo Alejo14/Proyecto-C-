@@ -61,5 +61,11 @@ namespace LogicaNegocio
             proyectoDA.AsignarTrabajador(p, t);
 
         }
+
+        public BindingList<Cliente> listarEmpresasClientes()
+        {
+            return proyectoDA.listarEmpresasClientes();
+
+        }
     }
 }
