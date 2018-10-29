@@ -17,7 +17,7 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand();
-            comando.CommandText = "SELECT e.*, r.RAZON_SOCIAL FROM ERU e, EMPRESA r WHERE e.ESTADO=1 AND e.EVALUACION_KAM=1 AND e.EVALUACION_EXPERTO=1 and r.ID_EMPRESA=e.ID_CLIENTE";
+            comando.CommandText = "SELECT e.*, r.RAZON_SOCIAL FROM ERU e, EMPRESA r WHERE e.ESTADO=0 and r.ID_EMPRESA=e.ID_CLIENTE";
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
