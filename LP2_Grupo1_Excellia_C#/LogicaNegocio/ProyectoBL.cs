@@ -30,7 +30,7 @@ namespace LogicaNegocio
 
         public void registrarSolicitud(Proyecto p, Operario op, string justificacion)
         {
-            int id = 0;
+            int id = proyectoDA.buscarIdProyectoTrabajador(p, op);
             proyectoDA.registrarSolicitud(id, justificacion);
         }
 

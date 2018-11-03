@@ -27,25 +27,23 @@ namespace Vistas
         }
         private void btnSolicitarRetiro_Click(object sender, EventArgs e)
         {
-            //Enviar un correo electronico al jefe para que pueda determinar
-            //Actualizar el estado del proyecto para ese trabajador
             if (string.IsNullOrEmpty(txtMotivo.Text))
             {
                 MessageBox.Show("Debe de ingresar el motivo de la solicitud de retiro");
+                return;
+            }
+            if(dgvProyectos.CurrentRow != null)
+            {
+                proyecto = (Proyecto)dgvProyectos.CurrentRow.DataBoundItem;
             }
             else
             {
-                try
-                {
-                    proyecto = (Proyecto)dgvProyectos.CurrentRow.DataBoundItem;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Seleccione el proyecto del que desea retirarse.");
-                }
-                //proyectoBL.registrarSolicitud(operario, proyecto, txtMotivo.Text);
-                MessageBox.Show("Se ha registrado la solicitud de retiro y se ha enviado un correo al Jefe de Proyecto");
+                MessageBox.Show("Seleccione el proyecto del que desea retirarse.");
+                return;
             }
+            proyectoBL.registrarSolicitud(proyecto, operario, txtMotivo.Text);
+            MessageBox.Show("Se ha registrado la solicitud de retiro y se ha enviado un correo al Jefe de Proyecto");
+            
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Vistas
             try
             {
                 rol = (TipoTrabajador)cmbRol.SelectedItem;
-            } catch (Exception ex)
+            } catch
             {
 
             }
