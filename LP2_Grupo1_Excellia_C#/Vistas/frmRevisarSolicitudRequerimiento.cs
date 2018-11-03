@@ -16,10 +16,5 @@ namespace Vistas
         {
             InitializeComponent();
         }
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

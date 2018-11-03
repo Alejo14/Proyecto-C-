@@ -110,5 +110,10 @@ namespace Vistas
         {
             AbrirFormInPanel(new frmGenerarProyecto(id_jefe));
         }
+
+        private void btnGestionRequerimientos_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new frmRevisarSolicitudRequerimiento());
+        }
     }
 }
