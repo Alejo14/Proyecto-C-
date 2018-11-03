@@ -88,7 +88,7 @@ namespace LogicaNegocio
                 EmailSender.enviarEmail(cu.Persona.Correo, "Recuperación de Contraseña", recuperacion);
                 return true;
             }
-            catch (Exception ex)
+            catch
             {
                 return false;
             }

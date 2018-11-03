@@ -60,19 +60,37 @@ namespace AccesoDatos
 
         public int buscarIdProyectoTrabajador(Proyecto p, Operario op)
         {
-            return 1;
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT ID_PROYECTO_X_TRABAJADOR FROM PROYECTO_X_TRABAJADOR WHERE ID_PROYECTO = " + p.IdProyecto + " AND ID_TRABAJADOR = " + op.IdTrabajador + ";";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            lector.Read();
+            int id = lector.GetInt32("ID_PROYECTO_X_TRABAJADOR");
+            con.Close();
+            return id;
         }
 
         public void registrarSolicitud(int id, string descripcion)
         {
-            MySqlConnection con = new MySqlConnection(DBManager.cadena);
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand();
-            String sql = "INSERT INTO SOLICITUD_RETIRO (ID_PROYECTO_X_TRABAJADOR,DESCRIPCION,FECHA_SOLICITUD) VALUES (" + id + ", '" + descripcion + "', sysdate());";
-            cmd.CommandText = sql;
-            cmd.Connection = con;
-            cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String sql = "INSERT INTO SOLICITUD_RETIRO (ID_PROYECTO_X_TRABAJADOR,DESCRIPCION,FECHA_SOLICITUD) VALUES (" + id + ", '" + descripcion + "', sysdate());";
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("No se pudo registrar la solicitud de retiro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void retirarOperario(Proyecto p, Trabajador t)
@@ -92,7 +110,7 @@ namespace AccesoDatos
             }
             catch
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show("No se pudo realizar el retiro.", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -164,7 +182,6 @@ namespace AccesoDatos
                 pro.FechaInicio = lector.GetDateTime("FECHA_INICIO");
                 pro.FechaFinEstimada = lector.GetDateTime("FECHA_FIN_ESTIMADA");
                 pro.Presupuesto = lector.GetFloat("PRESUPUESTO");
-                //MessageBox.Show(pro.Nombre);
                 proyectos.Add(pro);
             }
             con.Close();

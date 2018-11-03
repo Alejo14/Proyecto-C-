@@ -28,7 +28,7 @@ namespace LogicaNegocio
 
                 return 0;
             }
-            catch (Exception ex)
+            catch
             {
                 return -1;
             }
