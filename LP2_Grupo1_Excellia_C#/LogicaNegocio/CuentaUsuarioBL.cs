@@ -12,6 +12,26 @@ namespace LogicaNegocio
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
             return cuentaUsuarioDA.obtenerCuentasUsuario();
         }
+
+        public CuentaUsuario obtenerCuentaUsuario(string nombre)
+        {
+            CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
+            BindingList<CuentaUsuario> cuentas = cuentaUsuarioDA.obtenerCuentasUsuario();
+            foreach(CuentaUsuario cu in cuentas)
+            {
+                if(!cu.Bloqueado && cu.NomUsuario == nombre)
+                {
+                    return cu;
+                }
+                else if (cu.Bloqueado)
+                {
+                    return null;
+                }
+            }
+            return null;
+
+        }
+
         public string insertarUsuario(CuentaUsuario usuario) {
             string contrasena = CreatePassword(10);
             usuario.Contrasena = contrasena;
@@ -59,6 +79,22 @@ namespace LogicaNegocio
 
             return contrasena;
         }
+
+        public bool recuperarContraseña(CuentaUsuario cu)
+        {
+            string recuperacion = obtenerMensajeRecuperacion(cu);
+            try
+            {
+                EmailSender.enviarEmail(cu.Persona.Correo, "Recuperación de Contraseña", recuperacion);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
+        }
+
         public int validarUsuario (ref CuentaUsuario usuario) {
 
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
@@ -126,6 +162,13 @@ namespace LogicaNegocio
                 "al sistema de Excellia. Adjunto, encontrará sus credenciales para poder ingresar al sistema:\r\n\r\n" +
                 "Usuario: " + usuario.NomUsuario + "\r\nContraseña: " + contrasena +
                 "\r\n\r\nAtentamente,\r\n\r\nEl equipo de Excellia";
+            return mensaje;
+        }
+
+        private string obtenerMensajeRecuperacion(CuentaUsuario cu)
+        {
+            string mensaje = "Estimado/a " + cu.Persona.Nombre + ",\r\nSu contraseña es: " +
+                 cu.Contrasena + "\r\n\r\nAtentamente,\r\n\r\nEl equipo de Excellia";
             return mensaje;
         }
     }

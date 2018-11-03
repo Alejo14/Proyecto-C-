@@ -72,7 +72,6 @@ namespace AccesoDatos
                 tc.Descripcion = lector.GetString("DESCRIPCION");
                 
                 tra.CargoTrabajador = tc;
-                //MessageBox.Show(tra.Nombre+" "+ tc.Descripcion);
                 operarios.Add(tra);
             }
             con.Close();
