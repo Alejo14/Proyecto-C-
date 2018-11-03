@@ -14,7 +14,7 @@ namespace Modelo
     public enum TipoCargo { ANALISTA_DESARROLLO, PROGRAMADOR, TESTER }
     public enum TipoRequerimiento { FUNCIONAL, NO_FUNCIONAL }
     public enum TipoEstadoMeta { }
-    public enum TipoEstadoSolicitud { ENVIADA, APROBADA, DESAPROBADA }
+    public enum TipoEstadoSolicitud { ENVIADA, APROBADA, DESAPROBADA, COMPLETADA }
 
     public enum TipoPrioridad { ALTA, MEDIA, BAJA }
 }
