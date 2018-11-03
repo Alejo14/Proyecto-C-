@@ -74,5 +74,21 @@ namespace LogicaNegocio
             return proyectoDA.listarEmpresasClientes();
 
         }
+
+        public void CancelarERU(int id)
+        {
+            proyectoDA.CancelarERU(id);
+        }
+
+        public int EruDeProyecto(int p)
+        {
+            return proyectoDA.EruDeProyecto(p);
+        }
+
+        public BindingList<Proyecto> listarReportes()
+        {
+            return proyectoDA.listarReportes();
+        }
+
     }
 }

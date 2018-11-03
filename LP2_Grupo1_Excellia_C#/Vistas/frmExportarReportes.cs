@@ -16,6 +16,7 @@ namespace Vistas
     public partial class frmExportarReportes : Form
     {
         private ProyectoBL proyectoBL;
+        private Proyecto proyecto;
         public frmExportarReportes()
         {
             InitializeComponent();
@@ -31,6 +32,10 @@ namespace Vistas
             cboEmpresa.DisplayMember = "NombreEmpresa";
             cboEmpresa.ValueMember = "IdCliente";
             //cboEmpresa.Items.Insert(0, "--Seleccionar--");
+            cboEmpresa.Enabled = false;
+            cboEstado.Enabled = false;
+            dtpFEstimada.Enabled = false;
+            dtpFInicial.Enabled = false;
         }
 
         
@@ -66,11 +71,53 @@ namespace Vistas
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //gdvBuscarReporte.Rows.Add("00264","Almacén Alicorp","Finalizado","6000.00","Alicorp");
+            proyecto = new Proyecto();
+            
+            gdvBuscarReporte.AutoGenerateColumns = false;
+            gdvBuscarReporte.DataSource = proyectoBL.listarReportes();
         }
 
         private void gdvBuscarReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ckbEmpresa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbEmpresa.Checked == true)
+            {
+                cboEmpresa.Enabled = true;
+            }
+            else
+            {
+                cboEmpresa.Enabled = false;
+            }
+        }
+
+        private void ckbEtapa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbEtapa.Checked == true)
+            {
+                cboEstado.Enabled = true;
+            }
+            else
+            {
+                cboEstado.Enabled = false;
+            }
+        }
+
+        private void ckFechas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbFechas.Checked == true)
+            {
+                dtpFEstimada.Enabled = true;
+                dtpFInicial.Enabled = true;
+            }
+            else
+            {
+                dtpFEstimada.Enabled = false;
+                dtpFInicial.Enabled = false;
+            }
         }
     }
 }

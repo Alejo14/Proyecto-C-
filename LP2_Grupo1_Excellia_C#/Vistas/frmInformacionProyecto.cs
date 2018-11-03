@@ -25,7 +25,7 @@ namespace Vistas
 
             cboEtapa.DisplayMember = "NombreEtapa";
             cboEtapa.ValueMember = "IdEtapa";
-            cboEtapa.SelectedIndex = p.EtapaInt-1;
+            cboEtapa.SelectedIndex = p.EtapaInt;
             txtId.Text = p.IdProyecto.ToString();
             txtNombre.Text = p.Nombre.ToString();
             txtPresupuesto.Text = p.Presupuesto.ToString();
@@ -45,9 +45,16 @@ namespace Vistas
         {
             int id = Int32.Parse(txtId.Text.Trim().ToString());
             int pri = Int32.Parse(cboPrioridad.SelectedIndex.ToString()) + 1;
-            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString()) + 1;
-            proyectoBL.ActualizarDatos(id, pri, et);
-            MessageBox.Show("Se han realizado los cambios satisfactoriamente");
+            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString());
+            if(Int32.Parse(cboEtapa.SelectedIndex.ToString()) == 7)
+            {
+                MessageBox.Show("No se puede cambiar la fase a cancelado");
+            }
+            else
+            {
+                proyectoBL.ActualizarDatos(id, pri, et);
+                MessageBox.Show("Se han realizado los cambios satisfactoriamente");
+            }
             cboEtapa.Enabled = false;
             cboPrioridad.Enabled = false;
             btnGuardar.Enabled = false;
@@ -56,11 +63,16 @@ namespace Vistas
 
         private void btnCancelarProyecto_Click(object sender, EventArgs e)
         {
-            if (((Etapa)cboEtapa.SelectedItem).IdEtapa != 1)
+            if (((Etapa)cboEtapa.SelectedItem).IdEtapa == 0)
             {
-                MessageBox.Show("No se pudo cancelar el proyecto. Solo se puede cancelar proyectos en etapa de Análisis", "Cancelar proyecto", 
+                MessageBox.Show("Seleccione la etapa en la que se encuentra el proyecto", "Cancelar proyecto", 
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+            }
+            else if (((Etapa)cboEtapa.SelectedItem).IdEtapa != 1)
+            {
+                MessageBox.Show("No se pudo cancelar el proyecto. Solo se puede cancelar proyectos en etapa de Análisis", "Cancelar proyecto",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else if (MessageBox.Show("¿Está seguro de realizar la cancelación del proyecto?","Cancelar proyecto", 
@@ -69,6 +81,8 @@ namespace Vistas
                 if(((Etapa)cboEtapa.SelectedItem).IdEtapa == 1)
                 {
                     proyectoBL.CancelarProyecto(int.Parse(txtId.Text));
+                    int eru = proyectoBL.EruDeProyecto(int.Parse(txtId.Text));
+                    proyectoBL.CancelarERU(eru);
                     MessageBox.Show("Se ha realizado la cancelación del proyecto");
                 }
                 else
@@ -99,6 +113,11 @@ namespace Vistas
             {
 
             }
+        }
+
+        private void cboEtapa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

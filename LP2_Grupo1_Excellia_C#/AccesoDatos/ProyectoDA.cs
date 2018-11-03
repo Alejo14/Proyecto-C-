@@ -349,5 +349,64 @@ namespace AccesoDatos
             return clientes;
         }
 
+        public void CancelarERU(int id)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(DBManager.cadena);
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String sql = " update ERU set  ESTADO=4 where ID_ERU=" + id;
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar el estado de la ERU. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public int EruDeProyecto(int p)
+        {
+            BindingList<Etapa> etapas = new BindingList<Etapa>();
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "select ID_ERU FROM PROYECTO WHERE ID_PROYECTO="+p;
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            int eru = 0;
+            while (lector.Read())
+            {
+                eru = lector.GetInt32("ID_ERU");
+            }
+
+            return eru;
+        }
+
+        public BindingList<Proyecto> listarReportes()
+        {
+            BindingList<Proyecto> proyectos = new BindingList<Proyecto>();
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT ID_TIPO_FASE_PROYECTO, DESCRIPCION FROM  TIPO_FASE_PROYECTO ";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            while (lector.Read())
+            {
+                Proyecto pro = new Proyecto();
+                //et.IdEtapa = lector.GetInt32("ID_TIPO_FASE_PROYECTO");
+                //et.NombreEtapa = lector.GetString("DESCRIPCION");
+                proyectos.Add(pro);
+            }
+            con.Close();
+            return proyectos;
+        }
     }
 }

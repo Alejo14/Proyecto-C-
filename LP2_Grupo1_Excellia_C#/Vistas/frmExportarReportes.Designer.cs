@@ -38,14 +38,14 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFEstimada = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblFInicial = new System.Windows.Forms.Label();
-            this.lblEmpresa = new System.Windows.Forms.Label();
             this.dtpFInicial = new System.Windows.Forms.DateTimePicker();
             this.dtpFEstimada = new System.Windows.Forms.DateTimePicker();
             this.lblIndicacion = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
+            this.ckbEmpresa = new System.Windows.Forms.CheckBox();
+            this.ckbEtapa = new System.Windows.Forms.CheckBox();
+            this.ckbFechas = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gdvBuscarReporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,9 +64,9 @@
             this.cboEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(304, 160);
+            this.cboEmpresa.Location = new System.Drawing.Point(382, 142);
             this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(162, 21);
+            this.cboEmpresa.Size = new System.Drawing.Size(248, 21);
             this.cboEmpresa.TabIndex = 1;
             this.cboEmpresa.SelectedIndexChanged += new System.EventHandler(this.cboEmpresa_SelectedIndexChanged);
             // 
@@ -75,9 +75,9 @@
             this.cboEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(663, 163);
+            this.cboEstado.Location = new System.Drawing.Point(382, 173);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(162, 21);
+            this.cboEstado.Size = new System.Drawing.Size(248, 21);
             this.cboEstado.TabIndex = 2;
             // 
             // gdvBuscarReporte
@@ -91,10 +91,10 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.gdvBuscarReporte.Location = new System.Drawing.Point(173, 308);
+            this.gdvBuscarReporte.Location = new System.Drawing.Point(173, 288);
             this.gdvBuscarReporte.Name = "gdvBuscarReporte";
             this.gdvBuscarReporte.ReadOnly = true;
-            this.gdvBuscarReporte.Size = new System.Drawing.Size(639, 181);
+            this.gdvBuscarReporte.Size = new System.Drawing.Size(639, 201);
             this.gdvBuscarReporte.TabIndex = 6;
             this.gdvBuscarReporte.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvBuscarReporte_CellContentClick);
             // 
@@ -136,57 +136,27 @@
             // 
             this.lblFEstimada.AutoSize = true;
             this.lblFEstimada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFEstimada.Location = new System.Drawing.Point(483, 212);
+            this.lblFEstimada.Location = new System.Drawing.Point(196, 235);
             this.lblFEstimada.Name = "lblFEstimada";
             this.lblFEstimada.Size = new System.Drawing.Size(160, 20);
             this.lblFEstimada.TabIndex = 8;
             this.lblFEstimada.Text = "Fecha final estimada:";
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(483, 161);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(56, 20);
-            this.lblEstado.TabIndex = 9;
-            this.lblEstado.Text = "Etapa:";
-            // 
-            // lblFInicial
-            // 
-            this.lblFInicial.AutoSize = true;
-            this.lblFInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFInicial.Location = new System.Drawing.Point(167, 213);
-            this.lblFInicial.Name = "lblFInicial";
-            this.lblFInicial.Size = new System.Drawing.Size(100, 20);
-            this.lblFInicial.TabIndex = 10;
-            this.lblFInicial.Text = "Fecha inicial:";
-            // 
-            // lblEmpresa
-            // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.Location = new System.Drawing.Point(167, 158);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(127, 20);
-            this.lblEmpresa.TabIndex = 11;
-            this.lblEmpresa.Text = "Empresa cliente:";
-            // 
             // dtpFInicial
             // 
             this.dtpFInicial.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFInicial.Location = new System.Drawing.Point(304, 213);
+            this.dtpFInicial.Location = new System.Drawing.Point(382, 207);
             this.dtpFInicial.Name = "dtpFInicial";
-            this.dtpFInicial.Size = new System.Drawing.Size(162, 20);
+            this.dtpFInicial.Size = new System.Drawing.Size(248, 20);
             this.dtpFInicial.TabIndex = 12;
             this.dtpFInicial.ValueChanged += new System.EventHandler(this.dtpFInicial_ValueChanged);
             // 
             // dtpFEstimada
             // 
             this.dtpFEstimada.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFEstimada.Location = new System.Drawing.Point(663, 212);
+            this.dtpFEstimada.Location = new System.Drawing.Point(382, 235);
             this.dtpFEstimada.Name = "dtpFEstimada";
-            this.dtpFEstimada.Size = new System.Drawing.Size(162, 20);
+            this.dtpFEstimada.Size = new System.Drawing.Size(248, 20);
             this.dtpFEstimada.TabIndex = 13;
             // 
             // lblIndicacion
@@ -207,7 +177,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Image = global::Vistas.Properties.Resources.Search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(698, 249);
+            this.btnBuscar.Location = new System.Drawing.Point(700, 212);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(112, 43);
             this.btnBuscar.TabIndex = 14;
@@ -233,18 +203,54 @@
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
+            // ckbEmpresa
+            // 
+            this.ckbEmpresa.AutoSize = true;
+            this.ckbEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbEmpresa.Location = new System.Drawing.Point(179, 143);
+            this.ckbEmpresa.Name = "ckbEmpresa";
+            this.ckbEmpresa.Size = new System.Drawing.Size(149, 24);
+            this.ckbEmpresa.TabIndex = 16;
+            this.ckbEmpresa.Text = "Empresa Cliente:";
+            this.ckbEmpresa.UseVisualStyleBackColor = true;
+            this.ckbEmpresa.CheckedChanged += new System.EventHandler(this.ckbEmpresa_CheckedChanged);
+            // 
+            // ckbEtapa
+            // 
+            this.ckbEtapa.AutoSize = true;
+            this.ckbEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbEtapa.Location = new System.Drawing.Point(179, 173);
+            this.ckbEtapa.Name = "ckbEtapa";
+            this.ckbEtapa.Size = new System.Drawing.Size(75, 24);
+            this.ckbEtapa.TabIndex = 17;
+            this.ckbEtapa.Text = "Etapa:";
+            this.ckbEtapa.UseVisualStyleBackColor = true;
+            this.ckbEtapa.CheckedChanged += new System.EventHandler(this.ckbEtapa_CheckedChanged);
+            // 
+            // ckbFechas
+            // 
+            this.ckbFechas.AutoSize = true;
+            this.ckbFechas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbFechas.Location = new System.Drawing.Point(179, 203);
+            this.ckbFechas.Name = "ckbFechas";
+            this.ckbFechas.Size = new System.Drawing.Size(121, 24);
+            this.ckbFechas.TabIndex = 18;
+            this.ckbFechas.Text = "Fecha Inicial:";
+            this.ckbFechas.UseVisualStyleBackColor = true;
+            this.ckbFechas.CheckedChanged += new System.EventHandler(this.ckFechas_CheckedChanged);
+            // 
             // frmExportarReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 585);
+            this.Controls.Add(this.ckbFechas);
+            this.Controls.Add(this.ckbEtapa);
+            this.Controls.Add(this.ckbEmpresa);
             this.Controls.Add(this.lblIndicacion);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dtpFEstimada);
             this.Controls.Add(this.dtpFInicial);
-            this.Controls.Add(this.lblEmpresa);
-            this.Controls.Add(this.lblFInicial);
-            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblFEstimada);
             this.Controls.Add(this.gdvBuscarReporte);
             this.Controls.Add(this.btnExportar);
@@ -272,9 +278,6 @@
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.DataGridView gdvBuscarReporte;
         private System.Windows.Forms.Label lblFEstimada;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblFInicial;
-        private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.DateTimePicker dtpFInicial;
         private System.Windows.Forms.DateTimePicker dtpFEstimada;
         private System.Windows.Forms.Button btnBuscar;
@@ -284,5 +287,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.CheckBox ckbEmpresa;
+        private System.Windows.Forms.CheckBox ckbEtapa;
+        private System.Windows.Forms.CheckBox ckbFechas;
     }
 }

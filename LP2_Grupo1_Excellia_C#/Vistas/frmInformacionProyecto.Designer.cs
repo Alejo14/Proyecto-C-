@@ -223,6 +223,7 @@
             this.cboEtapa.Name = "cboEtapa";
             this.cboEtapa.Size = new System.Drawing.Size(156, 21);
             this.cboEtapa.TabIndex = 21;
+            this.cboEtapa.SelectedIndexChanged += new System.EventHandler(this.cboEtapa_SelectedIndexChanged);
             // 
             // btnAsignarTrabajador
             // 
