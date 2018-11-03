@@ -185,11 +185,23 @@
     <Compile Include="frmRetirarOperarioXProyecto.Designer.cs">
       <DependentUpon>frmRetirarOperarioXProyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRevisarSolicitudRequerimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevisarSolicitudRequerimiento.Designer.cs">
+      <DependentUpon>frmRevisarSolicitudRequerimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSolicitarRetiroDeProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSolicitarRetiroDeProyecto.designer.cs">
       <DependentUpon>frmSolicitarRetiroDeProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSolicitudesModificacionRequerimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolicitudesModificacionRequerimientos.Designer.cs">
+      <DependentUpon>frmSolicitudesModificacionRequerimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,8 +265,14 @@
     <EmbeddedResource Include="frmRetirarOperarioXProyecto.resx">
       <DependentUpon>frmRetirarOperarioXProyecto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRevisarSolicitudRequerimiento.resx">
+      <DependentUpon>frmRevisarSolicitudRequerimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitarRetiroDeProyecto.resx">
       <DependentUpon>frmSolicitarRetiroDeProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolicitudesModificacionRequerimientos.resx">
+      <DependentUpon>frmSolicitudesModificacionRequerimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
