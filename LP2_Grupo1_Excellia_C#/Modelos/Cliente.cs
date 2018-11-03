@@ -39,6 +39,8 @@ namespace Modelo
 
         public int IdCliente { get => idCliente; set => idCliente = value; }
         public string NomEmpresa { get => nomEmpresa; set => nomEmpresa = value; }
+
+        public int IdEmpresa { get => Empresa.IdEmpresa; set => Empresa.IdEmpresa = value; }
         public Empresa Empresa { get => empresa; set => empresa = value; }
         public string NombreEmpresa { get => Empresa.RazonSocial; }
         public List<ERU> ListaEru { get => listaEru; set => listaEru = value; }

@@ -30,7 +30,7 @@ namespace Vistas
 
             cboEmpresa.DataSource = proyectoBL.listarEmpresasClientes();
             cboEmpresa.DisplayMember = "NombreEmpresa";
-            cboEmpresa.ValueMember = "IdCliente";
+            cboEmpresa.ValueMember = "IdEmpresa";
             //cboEmpresa.Items.Insert(0, "--Seleccionar--");
             cboEmpresa.Enabled = false;
             cboEstado.Enabled = false;
@@ -72,9 +72,34 @@ namespace Vistas
         {
             //gdvBuscarReporte.Rows.Add("00264","Almacén Alicorp","Finalizado","6000.00","Alicorp");
             proyecto = new Proyecto();
-            
-            gdvBuscarReporte.AutoGenerateColumns = false;
-            gdvBuscarReporte.DataSource = proyectoBL.listarReportes();
+            string empresa = "";
+            string etapa = "";
+            string fechaInicio = "";
+            string fechaFinal = "";
+
+            if (cboEmpresa.SelectedIndex != -1)
+            {
+                Cliente emp = (Cliente)cboEmpresa.SelectedItem;
+                if (ckbEmpresa.Checked)
+                {
+                    empresa = emp.IdEmpresa.ToString();
+                }
+            }
+            if(cboEstado.SelectedIndex != -1)
+            {
+                if (ckbEtapa.Checked)
+                {
+                    etapa = cboEstado.SelectedIndex.ToString();
+                }
+            }
+            if (ckbFechas.Checked)
+            {
+
+            }
+
+            //MessageBox.Show(empresa);
+            //gdvBuscarReporte.AutoGenerateColumns = false;
+            //gdvBuscarReporte.DataSource = proyectoBL.listarReportes();
         }
 
         private void gdvBuscarReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
