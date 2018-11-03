@@ -18,15 +18,22 @@ namespace LogicaNegocio
             proyectoDA = new ProyectoDA();
         }
 
-        public BindingList<Proyecto> listarProyectos()
+        public BindingList<Proyecto> listarProyectosOperario(int id)
         {
-            return proyectoDA.listarProyectos();
+            return proyectoDA.listarProyectosOperario(id);
         }
 
         public void retirarOperario(Proyecto p, Trabajador t)
         {
             proyectoDA.retirarOperario(p,t);
         }
+
+        public void registrarSolicitud(Proyecto p, Operario op, string justificacion)
+        {
+            int id = 0;
+            proyectoDA.registrarSolicitud(id, justificacion);
+        }
+
         public BindingList<Proyecto> listarProyectosEnCurso(int e, DateTime mifecha)
         {
             return proyectoDA.listarProyectosEnCurso(e, mifecha);

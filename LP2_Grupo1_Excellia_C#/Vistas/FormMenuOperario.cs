@@ -48,7 +48,7 @@ namespace Vistas
         }
         private void btnSolicitarRetiroProyecto_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmSolicitarRetiroDeProyecto());
+            AbrirFormInPanel(new frmSolicitarRetiroDeProyecto(op));
         }
 
         private void btnExportarReportes_Click(object sender, EventArgs e)

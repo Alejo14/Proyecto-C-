@@ -13,13 +13,16 @@ namespace AccesoDatos
 {
     public class ProyectoDA
     {
-        public BindingList<Proyecto> listarProyectos()
+        public BindingList<Proyecto> listarProyectosOperario(int idOperario)
         {
             BindingList<Proyecto> proyectos = new BindingList<Proyecto>();
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            String sql = "select ID_PROYECTO,NOMBRE from PROYECTO";
+            String sql = "select P.ID_PROYECTO, P.NOMBRE, F.DESCRIPCION, P.FECHA_INICIO " +
+                "from PROYECTO P, PROYECTO_X_TRABAJADOR PT, TIPO_FASE_PROYECTO F " +
+                "where  P.ID_PROYECTO = PT.ID_PROYECTO and F.ID_TIPO_FASE_PROYECTO = P.ID_TIPO_FASE_PROYECTO " +
+                "and PT.ID_TRABAJADOR = " + idOperario + ";";
             cmd.CommandText = sql;
             cmd.Connection = con;
             MySqlDataReader lector = cmd.ExecuteReader();
@@ -28,10 +31,48 @@ namespace AccesoDatos
                 Proyecto pro = new Proyecto();
                 pro.IdProyecto = lector.GetInt32("ID_PROYECTO");
                 pro.Nombre = lector.GetString("NOMBRE");
+                string etapa = lector.GetString("DESCRIPCION");
+                if (etapa == "Cancelado" || etapa == "Completado") break;
+                switch (etapa)
+                {
+                    case "Análisis":
+                        pro.Etapa = TipoFaseProyecto.ANALISIS;
+                        break;
+                    case "Desarrollo":
+                        pro.Etapa = TipoFaseProyecto.DESARROLLO;
+                        break;
+                    case "Pruebas":
+                        pro.Etapa = TipoFaseProyecto.PRUEBAS;
+                        break;
+                    case "Preparación":
+                        pro.Etapa = TipoFaseProyecto.PREPARACION;
+                        break;
+                    case "Post-producción":
+                        pro.Etapa = TipoFaseProyecto.POSTPRODUCCION;
+                        break;  
+                }
+                pro.FechaInicio = lector.GetDateTime("FECHA_INICIO");
                 proyectos.Add(pro);
             }
             con.Close();
             return proyectos;
+        }
+
+        public int buscarIdProyectoTrabajador(Proyecto p, Operario op)
+        {
+            return 1;
+        }
+
+        public void registrarSolicitud(int id, string descripcion)
+        {
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "INSERT INTO SOLICITUD_RETIRO (ID_PROYECTO_X_TRABAJADOR,DESCRIPCION,FECHA_SOLICITUD) VALUES (" + id + ", '" + descripcion + "', sysdate());";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public void retirarOperario(Proyecto p, Trabajador t)
