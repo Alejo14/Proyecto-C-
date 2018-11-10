@@ -83,8 +83,11 @@ namespace Vistas
             if (txtNombre.Text != "" && !validarNombre()) return;
             trabajadorBL = new TrabajadorBL();
             dgvTrabajador.AutoGenerateColumns = false;
-            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(txtDNI.Text.Trim(), txtNombre.Text.Trim().Replace("  ", " "),
-                "", "", "", "","");
+            Operario op = new Operario();
+            op.Dni = txtDNI.Text.Trim();
+            op.Nombre = txtNombre.Text.Trim().Replace("  ", " ");
+            op.ApellidoMaterno = op.ApellidoPaterno = op.Correo = op.Telefono = "";
+            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(op,"");
         }
 
         private void btnAvanzada_Click(object sender, EventArgs e)

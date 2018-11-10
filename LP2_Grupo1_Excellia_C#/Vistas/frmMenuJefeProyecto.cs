@@ -113,7 +113,7 @@ namespace Vistas
 
         private void btnGestionRequerimientos_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmRevisarSolicitudRequerimiento());
+            AbrirFormInPanel(new frmSolicitudesModificacionRequerimientos());
         }
     }
 }

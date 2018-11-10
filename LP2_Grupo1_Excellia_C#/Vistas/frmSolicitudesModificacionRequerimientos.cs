@@ -19,7 +19,11 @@ namespace Vistas
 
         private void btnRevisarSolicitud_Click(object sender, EventArgs e)
         {
+            frmRevisarSolicitudRequerimiento sr = new frmRevisarSolicitudRequerimiento();
+            if (sr.ShowDialog() == DialogResult.OK)
+            { 
 
+            }
         }
     }
 }

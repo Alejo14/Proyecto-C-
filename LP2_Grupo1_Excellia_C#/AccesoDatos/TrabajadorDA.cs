@@ -11,17 +11,16 @@ namespace AccesoDatos
 {
     public class TrabajadorDA
     {
-        public BindingList<Trabajador> listarTrabajadores(string dni, string nombre, string apellidoP, string apellidoM, 
-            string correo, string tel,string rol)
+        public BindingList<Trabajador> listarTrabajadores(Operario op,string rol)
         {
             BindingList<Trabajador> trabajadores = new BindingList<Trabajador>();
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand comando = new MySqlCommand();
             comando.CommandText = "SELECT * FROM TIPO_TRABAJADOR TT, PERSONA P, TRABAJADOR T WHERE P.ID_PERSONA = T.ID_PERSONA" +
-                " AND P.DNI LIKE CONCAT ('%" + dni + "%') AND P.NOMBRE LIKE CONCAT('%" + nombre + "%') AND P.APELLIDO_PATERNO LIKE CONCAT('%" + apellidoP +
-                "%') AND P.APELLIDO_MATERNO LIKE CONCAT('%" + apellidoM + "%') AND P.CORREO LIKE ('%" + correo +
-                "%') AND P.TELEFONO LIKE CONCAT ('%" + tel + "%') AND TT.DESCRIPCION LIKE CONCAT ('%" + rol + "%')" +
+                " AND P.DNI LIKE CONCAT ('%" + op.Dni + "%') AND P.NOMBRE LIKE CONCAT('%" + op.Nombre + "%') AND P.APELLIDO_PATERNO LIKE CONCAT('%" + op.ApellidoPaterno +
+                "%') AND P.APELLIDO_MATERNO LIKE CONCAT('%" + op.ApellidoMaterno + "%') AND P.CORREO LIKE ('%" + op.Correo +
+                "%') AND P.TELEFONO LIKE CONCAT ('%" + op.Telefono + "%') AND TT.DESCRIPCION LIKE CONCAT ('%" + rol + "%')" +
                 " AND (TT.ID_TIPO = 1 OR TT.ID_TIPO >= 4) AND T.ID_TIPO = TT.ID_TIPO;";
             comando.Connection = con;
             MySqlDataReader lector = comando.ExecuteReader();

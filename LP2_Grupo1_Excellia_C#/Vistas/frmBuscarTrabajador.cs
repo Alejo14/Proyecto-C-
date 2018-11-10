@@ -58,15 +58,20 @@ namespace Vistas
 
             }
             BindingList<Trabajador> t;
+            Operario op = new Operario();
+            op.Dni = txtDNI.Text;
+            op.Nombre = txtNombre.Text;
+            op.ApellidoPaterno = txtApPat.Text;
+            op.ApellidoMaterno = txtApMat.Text;
+            op.Correo = txtCorreo.Text;
+            op.Telefono = txtTelefono.Text;
             if (rol.IdTipoTrabajador == 0)
             {
-                t = trabajadorBL.listarTrabajadores(txtDNI.Text, txtNombre.Text,
-                    txtApPat.Text, txtApMat.Text, txtCorreo.Text, txtTelefono.Text, "");
+                t = trabajadorBL.listarTrabajadores(op, "");
             }
             else
             {
-                t = trabajadorBL.listarTrabajadores(txtDNI.Text, txtNombre.Text,
-                    txtApPat.Text, txtApMat.Text, txtCorreo.Text, txtTelefono.Text, rol.Descripcion);
+                t = trabajadorBL.listarTrabajadores(op, rol.Descripcion);
             }
             if (t != null)
             {

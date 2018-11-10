@@ -16,10 +16,9 @@ namespace LogicaNegocio
         {
             trabajadorDA = new TrabajadorDA();
         }
-        public BindingList<Trabajador> listarTrabajadores(string dni, string nombre, string apellidoP, string apellidoM, 
-            string correo, string telefono, string rol)
+        public BindingList<Trabajador> listarTrabajadores(Operario op, string rol)
         {
-            return trabajadorDA.listarTrabajadores(dni,nombre,apellidoP,apellidoM,correo,telefono,rol);
+            return trabajadorDA.listarTrabajadores(op,rol);
         }
         public BindingList<Trabajador> listarOperarios(Proyecto p)
         {
