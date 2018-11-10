@@ -65,12 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAgregarRequerimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAgregarRequerimiento.designer.cs">
-      <DependentUpon>FormAgregarRequerimiento.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +94,6 @@
     </Compile>
     <Compile Include="FormSubirArchivos.designer.cs">
       <DependentUpon>FormSubirArchivos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormularioModificacionRequerimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioModificacionRequerimiento.designer.cs">
-      <DependentUpon>FormularioModificacionRequerimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVisualizarProyectos.cs">
       <SubType>Form</SubType>
@@ -205,9 +193,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAgregarRequerimiento.resx">
-      <DependentUpon>FormAgregarRequerimiento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarUsuario.resx">
       <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,9 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSubirArchivos.resx">
       <DependentUpon>FormSubirArchivos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioModificacionRequerimiento.resx">
-      <DependentUpon>FormularioModificacionRequerimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVisualizarProyectos.resx">
       <DependentUpon>FormVisualizarProyectos.cs</DependentUpon>
