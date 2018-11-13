@@ -33,15 +33,14 @@
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.scJefeProyecto = new System.Windows.Forms.SplitContainer();
+            this.btnGestionRequerimientos = new System.Windows.Forms.Button();
             this.btnGenerarProyecto = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnChat = new System.Windows.Forms.Button();
+            this.btnBuscarContacto = new System.Windows.Forms.Button();
             this.btnExportarReportes = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnlogoInicio = new System.Windows.Forms.PictureBox();
-            this.btnBuscarContacto = new System.Windows.Forms.Button();
-            this.btnGestionRequerimientos = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -115,13 +114,28 @@
             this.scJefeProyecto.Panel1.Controls.Add(this.pictureBox4);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnCerrarSesion);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnBuscarContacto);
-            this.scJefeProyecto.Panel1.Controls.Add(this.btnChat);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnExportarReportes);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnHome);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnlogoInicio);
             this.scJefeProyecto.Size = new System.Drawing.Size(1190, 566);
             this.scJefeProyecto.SplitterDistance = 235;
             this.scJefeProyecto.TabIndex = 2;
+            // 
+            // btnGestionRequerimientos
+            // 
+            this.btnGestionRequerimientos.FlatAppearance.BorderSize = 0;
+            this.btnGestionRequerimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionRequerimientos.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionRequerimientos.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
+            this.btnGestionRequerimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionRequerimientos.Location = new System.Drawing.Point(8, 314);
+            this.btnGestionRequerimientos.Name = "btnGestionRequerimientos";
+            this.btnGestionRequerimientos.Size = new System.Drawing.Size(209, 41);
+            this.btnGestionRequerimientos.TabIndex = 18;
+            this.btnGestionRequerimientos.Text = "Gestión de Requisitos";
+            this.btnGestionRequerimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGestionRequerimientos.UseVisualStyleBackColor = true;
+            this.btnGestionRequerimientos.Click += new System.EventHandler(this.btnGestionRequerimientos_Click);
             // 
             // btnGenerarProyecto
             // 
@@ -162,19 +176,20 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
-            // btnChat
+            // btnBuscarContacto
             // 
-            this.btnChat.FlatAppearance.BorderSize = 0;
-            this.btnChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChat.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChat.Image = global::Vistas.Properties.Resources.Chat1;
-            this.btnChat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChat.Location = new System.Drawing.Point(8, 361);
-            this.btnChat.Name = "btnChat";
-            this.btnChat.Size = new System.Drawing.Size(135, 50);
-            this.btnChat.TabIndex = 12;
-            this.btnChat.Text = "Chat";
-            this.btnChat.UseVisualStyleBackColor = true;
+            this.btnBuscarContacto.FlatAppearance.BorderSize = 0;
+            this.btnBuscarContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarContacto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarContacto.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
+            this.btnBuscarContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarContacto.Location = new System.Drawing.Point(8, 264);
+            this.btnBuscarContacto.Name = "btnBuscarContacto";
+            this.btnBuscarContacto.Size = new System.Drawing.Size(213, 41);
+            this.btnBuscarContacto.TabIndex = 14;
+            this.btnBuscarContacto.Text = "Buscar Contacto";
+            this.btnBuscarContacto.UseVisualStyleBackColor = true;
+            this.btnBuscarContacto.Click += new System.EventHandler(this.btnBuscarContacto_Click);
             // 
             // btnExportarReportes
             // 
@@ -215,37 +230,6 @@
             this.btnlogoInicio.TabIndex = 9;
             this.btnlogoInicio.TabStop = false;
             // 
-            // btnBuscarContacto
-            // 
-            this.btnBuscarContacto.FlatAppearance.BorderSize = 0;
-            this.btnBuscarContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarContacto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarContacto.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
-            this.btnBuscarContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarContacto.Location = new System.Drawing.Point(8, 264);
-            this.btnBuscarContacto.Name = "btnBuscarContacto";
-            this.btnBuscarContacto.Size = new System.Drawing.Size(213, 41);
-            this.btnBuscarContacto.TabIndex = 14;
-            this.btnBuscarContacto.Text = "Buscar Contacto";
-            this.btnBuscarContacto.UseVisualStyleBackColor = true;
-            this.btnBuscarContacto.Click += new System.EventHandler(this.btnBuscarContacto_Click);
-            // 
-            // btnGestionRequerimientos
-            // 
-            this.btnGestionRequerimientos.FlatAppearance.BorderSize = 0;
-            this.btnGestionRequerimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionRequerimientos.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionRequerimientos.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
-            this.btnGestionRequerimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionRequerimientos.Location = new System.Drawing.Point(8, 314);
-            this.btnGestionRequerimientos.Name = "btnGestionRequerimientos";
-            this.btnGestionRequerimientos.Size = new System.Drawing.Size(209, 41);
-            this.btnGestionRequerimientos.TabIndex = 18;
-            this.btnGestionRequerimientos.Text = "Gestión de Requisitos";
-            this.btnGestionRequerimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGestionRequerimientos.UseVisualStyleBackColor = true;
-            this.btnGestionRequerimientos.Click += new System.EventHandler(this.btnGestionRequerimientos_Click);
-            // 
             // frmMenuJefeProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +263,6 @@
         private System.Windows.Forms.Button btnGenerarProyecto;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnChat;
         private System.Windows.Forms.Button btnExportarReportes;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.PictureBox btnlogoInicio;
