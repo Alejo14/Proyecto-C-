@@ -421,12 +421,25 @@ namespace AccesoDatos
             while (lector.Read())
             {
                 Proyecto pro = new Proyecto();
-                //et.IdEtapa = lector.GetInt32("ID_TIPO_FASE_PROYECTO");
-                //et.NombreEtapa = lector.GetString("DESCRIPCION");
                 proyectos.Add(pro);
             }
             con.Close();
             return proyectos;
+        }
+
+        public string obtenerPresupuesto(ERU e)
+        {
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT TOTAL_COSTO FROM ESTIMACION WHERE ERU_ID_ERU = " + e.IdERU + ";";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            lector.Read();
+            string presupuesto = lector.GetString("TOTAL_COSTO");
+            con.Close();
+            return presupuesto;
         }
     }
 }

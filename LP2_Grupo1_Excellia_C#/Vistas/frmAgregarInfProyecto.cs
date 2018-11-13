@@ -22,7 +22,7 @@ namespace Vistas
             InitializeComponent();
             proyectoBL = new ProyectoBL();
             txtNombre.Text = e.Descripcion.ToString();
-
+            txtPresupuesto.Text = proyectoBL.obtenerPresupuesto(e);
             cboPrioridad.Items.Add(TipoPrioridad.ALTA);
             cboPrioridad.Items.Add(TipoPrioridad.MEDIA);
             cboPrioridad.Items.Add(TipoPrioridad.BAJA);

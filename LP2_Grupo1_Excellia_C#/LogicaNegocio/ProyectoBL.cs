@@ -106,5 +106,10 @@ namespace LogicaNegocio
             return mensajeCorreo;
         }
 
+        public string obtenerPresupuesto(ERU e)
+        {
+            return proyectoDA.obtenerPresupuesto(e);
+        }
+
     }
 }
