@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProyectoBL.cs" />
     <Compile Include="RolBL.cs" />
+    <Compile Include="SolicitudCambioBL.cs" />
     <Compile Include="TrabajadorBL.cs" />
   </ItemGroup>
   <ItemGroup>

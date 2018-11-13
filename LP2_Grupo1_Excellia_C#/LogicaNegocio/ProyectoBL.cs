@@ -32,6 +32,10 @@ namespace LogicaNegocio
         {
             int id = proyectoDA.buscarIdProyectoTrabajador(p, op);
             proyectoDA.registrarSolicitud(id, justificacion);
+
+            string mensajeRetiro = obtenerMensajeCorreoRetiroProyecto(p, op);
+
+            EmailSender.enviarEmail(p.JefeProyecto.Correo, "Solicitud de retiro de operario de proyecto " + p.Nombre, mensajeRetiro);
         }
 
         public BindingList<Proyecto> listarProyectosEnCurso(int e, DateTime mifecha)
@@ -88,6 +92,18 @@ namespace LogicaNegocio
         public BindingList<Proyecto> listarReportes()
         {
             return proyectoDA.listarReportes();
+        }
+
+        public string obtenerMensajeCorreoRetiroProyecto(Proyecto proyectoOperarioRetiro, Operario operarioRetiro) {
+            string mensajeCorreo = "El presente correo es para notificar que el siguiente operario ha solicitado retirarse de un proyecto que usted lidera:\r\n" +
+                                  "Nombre del proyecto: " + proyectoOperarioRetiro.Nombre +
+                                    "\r\nNombre del operario: " + operarioRetiro.Nombre + " " +
+                                    operarioRetiro.ApellidoPaterno + " " + operarioRetiro.ApellidoMaterno +
+                                    "\r\nCargo: " + operarioRetiro.CargoOperarioStr +
+                                    "\r\n\r\nDeberá comunicarse con el operario y acordar si procede su retiro para registrarlo en el sistema." +
+                                    "\r\n\r\nAtentamente,\r\n\r\nSistema de apoyo a la gestión de proyectos de Excellia.";
+
+            return mensajeCorreo;
         }
 
     }

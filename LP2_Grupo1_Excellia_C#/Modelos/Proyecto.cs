@@ -118,6 +118,21 @@ namespace Modelo
                 }
                 return 0;
             }
+
+            set {
+                int prioridadInt = value;
+                switch (prioridadInt) {
+                    case 1:
+                        prioridad = TipoPrioridad.ALTA;
+                        break;
+                    case 2:
+                        prioridad = TipoPrioridad.MEDIA;
+                        break;
+                    case 3:
+                        prioridad = TipoPrioridad.BAJA;
+                        break;
+                }
+            }
         }
     }
 }

@@ -53,5 +53,25 @@ namespace Modelo
                 return idTipo;
             }
         }
+
+        public string CargoOperarioStr {
+            get {
+                string cargoStr = "";
+                switch (cargo)
+                {
+                    case TipoCargo.ANALISTA_DESARROLLO:
+                        cargoStr = "Analista desarrollo";
+                        break;
+                    case TipoCargo.PROGRAMADOR:
+                        cargoStr = "Programador";
+                        break;
+                    case TipoCargo.TESTER:
+                        cargoStr = "Tester";
+                        break;
+                }
+
+                return cargoStr;
+            }
+        }
     }
 }

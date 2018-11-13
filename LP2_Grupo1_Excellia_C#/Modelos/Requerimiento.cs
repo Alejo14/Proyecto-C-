@@ -31,8 +31,39 @@ namespace Modelo
         public int IdRequerimiento { get => idRequerimiento; set => idRequerimiento = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public DateTime FechaRequerimiento { get => fechaRequerimiento; set => fechaRequerimiento = value; }
-        internal TipoRequerimiento Tipo { get => tipo; set => tipo = value; }
-        internal ERU Eru { get => eru; set => eru = value; }
-        internal Estimacion Estimacion { get => estimacion; set => estimacion = value; }
+        public TipoRequerimiento Tipo { get => tipo; set => tipo = value; }
+        public ERU Eru { get => eru; set => eru = value; }
+        public Estimacion Estimacion { get => estimacion; set => estimacion = value; }
+
+        public int TipoInt {
+            set {
+                int idTipo = value;
+                switch (idTipo) {
+                    case 1:
+                        tipo = TipoRequerimiento.FUNCIONAL;
+                        break;
+                    case 2:
+                        tipo = TipoRequerimiento.NO_FUNCIONAL;
+                        break;
+                }
+            }
+        }
+
+        public string TipoStr {
+            get {
+                string tipoStr = "";
+
+                switch (tipo) {
+                    case TipoRequerimiento.FUNCIONAL:
+                        tipoStr = "Funcional";
+                        break;
+                    case TipoRequerimiento.NO_FUNCIONAL:
+                        tipoStr = "No funcional";
+                        break;
+                }
+
+                return tipoStr;
+            }
+        }
     }
 }

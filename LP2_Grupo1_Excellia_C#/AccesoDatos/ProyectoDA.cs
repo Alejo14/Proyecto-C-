@@ -19,12 +19,13 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            String sql = "select P.ID_PROYECTO, P.NOMBRE, F.DESCRIPCION, P.FECHA_INICIO " +
+            String sql = "select P.ID_PROYECTO, P.NOMBRE, F.DESCRIPCION, P.FECHA_INICIO, P.ID_TRABAJADOR_JEFE " +
                 "from PROYECTO P, PROYECTO_X_TRABAJADOR PT, TIPO_FASE_PROYECTO F " +
                 "where  P.ID_PROYECTO = PT.ID_PROYECTO and F.ID_TIPO_FASE_PROYECTO = P.ID_TIPO_FASE_PROYECTO " +
                 "and PT.ID_TRABAJADOR = " + idOperario + ";";
             cmd.CommandText = sql;
             cmd.Connection = con;
+            JefeProyectoDA jefeProyectoDA = new JefeProyectoDA();
             MySqlDataReader lector = cmd.ExecuteReader();
             while (lector.Read())
             {
@@ -52,6 +53,8 @@ namespace AccesoDatos
                         break;  
                 }
                 pro.FechaInicio = lector.GetDateTime("FECHA_INICIO");
+                int idJefeProyecto = lector.GetInt32("ID_TRABAJADOR_JEFE");
+                pro.JefeProyecto = jefeProyectoDA.obtenerJefeProyecto(idJefeProyecto);
                 proyectos.Add(pro);
             }
             con.Close();

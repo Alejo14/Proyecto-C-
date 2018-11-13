@@ -17,6 +17,7 @@ namespace Modelo
         private Requerimiento requerimiento;
         private KAM kam;
         private Cliente cliente;
+        private Proyecto proyecto;
         public SolicitudCambio()
         {
             this.estimacion = new Estimacion();
@@ -47,6 +48,8 @@ namespace Modelo
         public Requerimiento Requerimiento { get => requerimiento; set => requerimiento = value; }
         public KAM Kam { get => kam; set => kam = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
+        public Proyecto Proyecto { get => proyecto; set => proyecto = value; }
+
         public void setEstado(int idEstado) {
             switch (idEstado) {
                 case 0:
