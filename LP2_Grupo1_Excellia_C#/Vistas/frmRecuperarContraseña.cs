@@ -23,17 +23,12 @@ namespace Vistas
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (txtNombreUsuario.Text == "")
-            {
-                MessageBox.Show("Debe ingresar su nombre de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (txtCorreo.Text == "")
             {
                 MessageBox.Show("Debe ingresar su correo electrónico.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            CuentaUsuario cu = cuentasUsuarioBl.obtenerCuentaUsuario(txtNombreUsuario.Text);
+            CuentaUsuario cu = cuentasUsuarioBl.obtenerCuentaUsuario(txtCorreo.Text);
             if (cu == null)
             {
                 MessageBox.Show("No existe dicho nombre de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
