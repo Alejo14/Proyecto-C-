@@ -13,13 +13,13 @@ namespace LogicaNegocio
             return cuentaUsuarioDA.obtenerCuentasUsuario();
         }
 
-        public CuentaUsuario obtenerCuentaUsuario(string nombre)
+        public CuentaUsuario obtenerCuentaUsuario(string correo)
         {
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
             BindingList<CuentaUsuario> cuentas = cuentaUsuarioDA.obtenerCuentasUsuario();
             foreach(CuentaUsuario cu in cuentas)
             {
-                if(!cu.Bloqueado && cu.NomUsuario == nombre)
+                if(!cu.Bloqueado && cu.Persona.Correo == correo)
                 {
                     return cu;
                 }
