@@ -300,9 +300,15 @@ namespace Vistas
 
             usuario.Persona = per;
 
-            string contrasena = cuentaUsuarioBL.insertarUsuario(usuario);
-            
-            if (contrasena == "")
+            int resultado = cuentaUsuarioBL.insertarUsuario(usuario);
+
+            if (resultado == -4)
+            {
+                MessageBox.Show("Error al enviar correo, usuario no registrado");
+                return;
+            }
+
+            if (resultado > -4 && resultado < 0)
             {
                 MessageBox.Show("Error al ingresar usuario en base de datos");
                 return;

@@ -32,52 +32,54 @@ namespace LogicaNegocio
 
         }
 
-        public string insertarUsuario(CuentaUsuario usuario) {
+        public int insertarUsuario(CuentaUsuario usuario) {
             string contrasena = CreatePassword(10);
             usuario.Contrasena = contrasena;
+
+            string mensajeBienvenida = obtenerMensajeBienvenidaSistema(usuario, contrasena);
+
+            int resultado = EmailSender.enviarEmail(usuario.Persona.Correo, "Bienvenida sistema Excellia", mensajeBienvenida);
+
+            if (resultado < 0) return -4;
 
             CuentaUsuarioDA cuentaUsuarioDA = new CuentaUsuarioDA();
             int idCuenta = cuentaUsuarioDA.insertarCuentaUsuario(usuario);
 
-            if (idCuenta < 0) return "";
+            if (idCuenta < 0) return -1;
 
             PersonaDA personaDA = new PersonaDA();
 
             int idPersona = personaDA.insertarPersona(usuario.Persona, idCuenta);
 
-            if (idPersona < 0) return "";
+            if (idPersona < 0) return -2;
 
             if (usuario.Persona is Cliente) {
                 ClienteDA clienteDA = new ClienteDA();
                 int idCliente = clienteDA.insertarCliente((Cliente)usuario.Persona, idPersona);
-                if (idCliente < 0) return "";
+                if (idCliente < 0) return -3;
             }
             else if (usuario.Persona is Experto) {
                 ExpertoDA expertoDA = new ExpertoDA();
                 int idExperto = expertoDA.insertarExperto((Experto)usuario.Persona, idPersona);
-                if (idExperto < 0) return "";
+                if (idExperto < 0) return -3;
             }
             else if (usuario.Persona is JefeProyecto) {
                 JefeProyectoDA jefeProyectoDA = new JefeProyectoDA();
                 int idJefeProyecto = jefeProyectoDA.insertarJefeProyecto((JefeProyecto)usuario.Persona, idPersona);
-                if (idJefeProyecto < 0) return "";
+                if (idJefeProyecto < 0) return -3;
             }
             else if (usuario.Persona is KAM) {
                 KamDA kamDA = new KamDA();
                 int idKam = kamDA.insertarKam((KAM)usuario.Persona, idPersona);
-                if (idKam < 0) return "";
+                if (idKam < 0) return -3;
             }
             else if (usuario.Persona is Operario) {
                 OperarioDA operarioDA = new OperarioDA();
                 int idOperario = operarioDA.insertarOperario((Operario)usuario.Persona, idPersona);
-                if (idOperario < 0) return "";
+                if (idOperario < 0) return -3;
             }
 
-            string mensajeBienvenida = obtenerMensajeBienvenidaSistema(usuario, contrasena);
-
-            EmailSender.enviarEmail(usuario.Persona.Correo, "Bienvenida sistema Excellia", mensajeBienvenida);
-
-            return contrasena;
+            return 1;
         }
 
         public bool recuperarContraseña(CuentaUsuario cu)

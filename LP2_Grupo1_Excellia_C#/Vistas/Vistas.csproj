@@ -119,12 +119,6 @@
     <Compile Include="frmBuscarTrabajador.designer.cs">
       <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChat.designer.cs">
-      <DependentUpon>frmChat.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmExportarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarTrabajador.resx">
       <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmChat.resx">
-      <DependentUpon>frmChat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExportarReportes.resx">
       <DependentUpon>frmExportarReportes.cs</DependentUpon>
