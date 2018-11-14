@@ -11,7 +11,7 @@ namespace Modelo
         private int idProyecto;
         private string nombre;
         private TipoFaseProyecto etapa;
-        private float presupuesto;
+        private double presupuesto;
         private int codigoGestorProyecto;
         private DateTime fechaInicio;
         private DateTime fechaFinEstimada;
@@ -50,7 +50,7 @@ namespace Modelo
         }
         public int IdProyecto { get => idProyecto; set => idProyecto = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public float Presupuesto { get => presupuesto; set => presupuesto = value; }
+        public double Presupuesto { get => presupuesto; set => presupuesto = value; }
         public int CodigoGestorProyecto { get => codigoGestorProyecto; set => codigoGestorProyecto = value; }
         public DateTime FechaInicio { get => fechaInicio; set => fechaInicio = value; }
         public DateTime FechaFinEstimada { get => fechaFinEstimada; set => fechaFinEstimada = value; }

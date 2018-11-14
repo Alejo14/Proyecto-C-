@@ -30,11 +30,21 @@ namespace Vistas
             eru = e;
             idJefe = id;
 
-            dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
-            dtpFFReal.MinDate = dtpFInicio.Value.AddDays(1);
+            //dtpFFEstimada.MinDate = dtpFInicio.Value.AddDays(1);
+            string date = proyectoBL.obtenerFFEstimado(e);
+
+            if (!date.Equals(""))
+            {
+                dtpFFEstimada.Value = DateTime.Parse(date);
+                dtpFFReal.Value = dtpFFEstimada.Value;
+            }
+            
 
             txtNombre.Validating += TxtNombre_Validating;
             txtPresupuesto.Validating += TxtPresupuesto_Validating;
+            txtPresupuesto.Enabled = false;
+            dtpFFEstimada.Enabled = false;
+            dtpFInicio.Enabled = false;
             //dtpFInicio = e.FechaSolicitud;
         }
 
@@ -79,7 +89,7 @@ namespace Vistas
 
             Proyecto pro = new Proyecto();
             pro.Nombre = txtNombre.Text.Trim().Replace("  ", " ");
-            pro.Presupuesto = Int32.Parse(txtPresupuesto.Text.Trim());
+            pro.Presupuesto = Double.Parse(txtPresupuesto.Text.Trim());
             ERU eruPro = new ERU();
             eruPro.IdERU = Int32.Parse(eru.IdERU.ToString());
             pro.Eru = eruPro;

@@ -436,10 +436,25 @@ namespace AccesoDatos
             cmd.CommandText = sql;
             cmd.Connection = con;
             MySqlDataReader lector = cmd.ExecuteReader();
-            lector.Read();
-            string presupuesto = lector.GetString("TOTAL_COSTO");
+            string presupuesto = "";
+            if (lector.Read()) presupuesto = lector.GetDouble("TOTAL_COSTO").ToString();
             con.Close();
             return presupuesto;
+        }
+
+        public string obtenerFFEstimado(ERU e)
+        {
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT DISTINCT FECHA_ESTIMADA FROM REQUERIMIENTO WHERE ID_ERU = " + e.IdERU + ";";
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            string fecha = "";
+            if (lector.Read()) fecha = lector.GetDateTime("FECHA_ESTIMADA").ToString();
+            con.Close();
+            return fecha;
         }
     }
 }

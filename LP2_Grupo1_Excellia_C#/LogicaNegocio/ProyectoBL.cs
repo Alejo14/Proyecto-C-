@@ -111,5 +111,10 @@ namespace LogicaNegocio
             return proyectoDA.obtenerPresupuesto(e);
         }
 
+        public string obtenerFFEstimado(ERU e)
+        {
+            return proyectoDA.obtenerFFEstimado(e); ;
+        }
+
     }
 }
