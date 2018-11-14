@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvProyectos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSolicitarRetiro = new System.Windows.Forms.Button();
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.lblMotivo = new System.Windows.Forms.Label();
             this.lblSolicitarRetiro = new System.Windows.Forms.Label();
             this.lblIndicacion = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +57,37 @@
             this.dgvProyectos.Size = new System.Drawing.Size(758, 182);
             this.dgvProyectos.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "IdProyecto";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Nombre";
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Etapa";
+            this.Column3.HeaderText = "Etapa";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 165;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "FechaInicio";
+            this.Column4.HeaderText = "Fecha de inicio";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
+            // 
             // btnSolicitarRetiro
             // 
             this.btnSolicitarRetiro.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -66,7 +96,7 @@
             this.btnSolicitarRetiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarRetiro.Image = global::Vistas.Properties.Resources.Send;
             this.btnSolicitarRetiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitarRetiro.Location = new System.Drawing.Point(568, 475);
+            this.btnSolicitarRetiro.Location = new System.Drawing.Point(753, 475);
             this.btnSolicitarRetiro.Name = "btnSolicitarRetiro";
             this.btnSolicitarRetiro.Size = new System.Drawing.Size(116, 49);
             this.btnSolicitarRetiro.TabIndex = 1;
@@ -113,59 +143,11 @@
             this.lblIndicacion.TabIndex = 6;
             this.lblIndicacion.Text = "Seleccione el proyecto del que desee retirarse";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::Vistas.Properties.Resources.No;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(305, 475);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(128, 49);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "IdProyecto";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Nombre";
-            this.Column2.HeaderText = "Nombre";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Etapa";
-            this.Column3.HeaderText = "Etapa";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 165;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "FechaInicio";
-            this.Column4.HeaderText = "Fecha de inicio";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
             // frmSolicitarRetiroDeProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 577);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblIndicacion);
             this.Controls.Add(this.lblSolicitarRetiro);
             this.Controls.Add(this.lblMotivo);
@@ -192,7 +174,6 @@
         private System.Windows.Forms.Label lblMotivo;
         private System.Windows.Forms.Label lblSolicitarRetiro;
         private System.Windows.Forms.Label lblIndicacion;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

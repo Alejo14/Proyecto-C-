@@ -28,7 +28,7 @@ namespace Vistas
             txtApellidoMaterno.Validating += TxtApellidoMaterno_Validating;
             txtCorreo.Validating += TxtCorreo_Validating;
             txtTelefono.Validating += TxtTelefono_Validating;
-            dtpFechaNacimiento.MaxDate = DateTime.Today;
+            dtpFechaNacimiento.MaxDate = DateTime.Today.AddYears(-18);
             usuario = new CuentaUsuario();
             cuentaUsuarioBL = new CuentaUsuarioBL();
             DominioBL dominioBL = new DominioBL();
