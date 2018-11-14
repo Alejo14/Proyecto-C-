@@ -184,13 +184,13 @@
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Image = global::Vistas.Properties.Resources.No;
+            this.btnVolver.Image = global::Vistas.Properties.Resources.Back;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVolver.Location = new System.Drawing.Point(141, 501);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(119, 49);
+            this.btnVolver.Size = new System.Drawing.Size(131, 49);
             this.btnVolver.TabIndex = 20;
-            this.btnVolver.Text = "Cancelar";
+            this.btnVolver.Text = "Regresar";
             this.btnVolver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

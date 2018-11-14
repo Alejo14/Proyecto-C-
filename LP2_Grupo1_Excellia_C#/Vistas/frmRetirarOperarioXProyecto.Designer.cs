@@ -32,12 +32,12 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnRetirar = new System.Windows.Forms.Button();
             this.dgvOperarios = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,16 @@
             this.dgvOperarios.Size = new System.Drawing.Size(774, 289);
             this.dgvOperarios.TabIndex = 13;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 18);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Seleccionar un operario";
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "IdTrabajador";
@@ -141,22 +151,12 @@
             // 
             // colRol
             // 
-            this.colRol.DataPropertyName = "Obtener";
+            this.colRol.DataPropertyName = "Descripcion";
             this.colRol.Frozen = true;
             this.colRol.HeaderText = "Rol";
             this.colRol.Name = "colRol";
             this.colRol.ReadOnly = true;
             this.colRol.Width = 120;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 18);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Seleccionar un operario";
             // 
             // frmRetirarOperarioXProyecto
             // 
@@ -185,11 +185,11 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnRetirar;
         private System.Windows.Forms.DataGridView dgvOperarios;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRol;
-        private System.Windows.Forms.Label label1;
     }
 }

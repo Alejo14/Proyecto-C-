@@ -22,6 +22,7 @@ namespace Modelo
         public int IdTrabajador { get => idTrabajador; set => idTrabajador = value; }
         public Dominio Dominio { get => dominio; set => dominio = value; }
         public TipoTrabajador CargoTrabajador { get => cargo; set => cargo = value; }
+        public string Descripcion { get => cargo.Descripcion; set => cargo.Descripcion = value; }
         public int TipoTrabajador {
             get {
                 int idTipo = 0;

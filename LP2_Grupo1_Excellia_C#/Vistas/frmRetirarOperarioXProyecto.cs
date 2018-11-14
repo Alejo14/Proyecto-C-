@@ -27,7 +27,6 @@ namespace Vistas
             dgvOperarios.DataSource = trabajadorBL.listarOperarios(p);
             Proyecto = new Proyecto();
             Proyecto = (Proyecto)p;
-            
         }
 
         private void btnRetirar_Click(object sender, EventArgs e)

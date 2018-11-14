@@ -103,7 +103,7 @@ namespace AccesoDatos
                 MySqlConnection con = new MySqlConnection(DBManager.cadena);
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand();
-                String sql = "UPDATE PROYECTO_X_TRABAJADOR set retirado = 0 WHERE ID_PROYECTO ="+ p.IdProyecto +
+                String sql = "UPDATE PROYECTO_X_TRABAJADOR set retirado = 1 WHERE ID_PROYECTO ="+ p.IdProyecto +
                     " AND ID_TRABAJADOR ="+t.IdTrabajador;
                 cmd.CommandText = sql;
                 cmd.Connection = con;
