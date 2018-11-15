@@ -49,7 +49,7 @@ namespace AccesoDatos
                 solCambio.IdSolicitud = reader.GetInt32("ID_SOLICITUD");
                 solCambio.Descripcion = reader.GetString("DESCRIPCION_SOLICITUD");
                 solCambio.FechaSolicitud = reader.GetDateTime("FECHA_SOLICITUD");
-                int idEstado = reader.GetInt32("ID_TIPO_ESTADO_SOLICITUD");
+                int idEstado = 2;
                 solCambio.setEstado(idEstado);
                 Requerimiento req = new Requerimiento();
                 req.IdRequerimiento = reader.GetInt32("ID_REQUERIMIENTO");
