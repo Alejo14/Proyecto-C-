@@ -19,10 +19,10 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            String sql = "select P.ID_PROYECTO, P.NOMBRE, F.DESCRIPCION, P.FECHA_INICIO, P.ID_TRABAJADOR_JEFE " +
+            String sql = "select distinct P.ID_PROYECTO, P.NOMBRE, F.DESCRIPCION, P.FECHA_INICIO, P.ID_TRABAJADOR_JEFE " +
                 "from PROYECTO P, PROYECTO_X_TRABAJADOR PT, TIPO_FASE_PROYECTO F " +
                 "where  P.ID_PROYECTO = PT.ID_PROYECTO and F.ID_TIPO_FASE_PROYECTO = P.ID_TIPO_FASE_PROYECTO " +
-                "and PT.ID_TRABAJADOR = " + idOperario + ";";
+                "and PT.ID_TRABAJADOR = " + idOperario + " and PT.RETIRADO = 0;";
             cmd.CommandText = sql;
             cmd.Connection = con;
             JefeProyectoDA jefeProyectoDA = new JefeProyectoDA();
@@ -33,7 +33,7 @@ namespace AccesoDatos
                 pro.IdProyecto = lector.GetInt32("ID_PROYECTO");
                 pro.Nombre = lector.GetString("NOMBRE");
                 string etapa = lector.GetString("DESCRIPCION");
-                if (etapa == "Cancelado" || etapa == "Completado") break;
+                if (etapa == "Cancelado" || etapa == "Completado") continue;
                 switch (etapa)
                 {
                     case "Análisis":

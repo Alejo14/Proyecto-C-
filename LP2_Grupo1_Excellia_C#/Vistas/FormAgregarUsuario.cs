@@ -67,7 +67,7 @@ namespace Vistas
             }
 
             if (numValido != 0) {
-                errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numerico");
+                errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numerico, no agregar prefijo (+51)");
             }
             else
             {
@@ -248,7 +248,7 @@ namespace Vistas
             }
 
             if (txtTelefono.Text.Count(caracter => !char.IsDigit(caracter)) != 0) {
-                MessageBox.Show("Telefono debe ser numerico");
+                MessageBox.Show("Telefono debe ser numerico, no agregar prefijo (+51)");
                 return;
             }
 
