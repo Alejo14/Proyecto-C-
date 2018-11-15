@@ -19,7 +19,7 @@ namespace Modelo
         private Evaluacion evaluacion;
         public Estimacion()
         {
-            this.eru = new ERU();
+            //this.eru = new ERU();
             this.evaluacion = new Evaluacion();
             this.experto = new Experto();
             this.evaluacion = new Evaluacion();

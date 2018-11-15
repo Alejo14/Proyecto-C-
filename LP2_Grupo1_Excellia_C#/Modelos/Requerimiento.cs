@@ -17,7 +17,7 @@ namespace Modelo
         public Requerimiento()
         {
             this.eru = new ERU();
-            this.estimacion = new Estimacion();
+            //this.estimacion = new Estimacion();
         }
 
         public Requerimiento(int idRequerimiento, string descripcion, DateTime fechaRequerimiento,

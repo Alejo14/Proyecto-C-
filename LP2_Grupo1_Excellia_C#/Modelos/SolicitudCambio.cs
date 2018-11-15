@@ -20,7 +20,7 @@ namespace Modelo
         private Proyecto proyecto;
         public SolicitudCambio()
         {
-            this.estimacion = new Estimacion();
+            //this.estimacion = new Estimacion();
             this.requerimiento = new Requerimiento();
             this.kam = new KAM();
             this.cliente = new Cliente();

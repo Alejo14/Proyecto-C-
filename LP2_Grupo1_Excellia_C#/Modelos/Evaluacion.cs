@@ -16,7 +16,7 @@ namespace Modelo
         public Evaluacion()
         {
             this.eru = new ERU();
-            this.estimacion = new Estimacion();
+            //this.estimacion = new Estimacion();
         }
 
         public Evaluacion(bool resultado, DateTime fecha, string descripcion)
