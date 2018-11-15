@@ -43,7 +43,7 @@ namespace AccesoDatos
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
             con.Open();
             MySqlCommand cmd = new MySqlCommand();
-            String sql = "SELECT * FROM TRABAJADOR, PERSONA WHERE ID_TRABAJADOR = " + idJefeProyecto + ";";
+            String sql = "SELECT * FROM TRABAJADOR T, PERSONA P WHERE T.ID_PERSONA = P.ID_PERSONA AND T.ID_TRABAJADOR = " + idJefeProyecto + ";";
             cmd.CommandText = sql;
             cmd.Connection = con;
             MySqlDataReader lector = cmd.ExecuteReader();

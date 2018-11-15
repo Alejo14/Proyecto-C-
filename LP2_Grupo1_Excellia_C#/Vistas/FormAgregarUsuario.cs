@@ -207,6 +207,11 @@ namespace Vistas
                 return;
             }
 
+            if (cbSexo.SelectedIndex < 0) {
+                MessageBox.Show("Debe elegir un sexo");
+                return;
+            }
+
             if (txtCorreo.Text == "")
             {
                 MessageBox.Show("Debe ingresar Correo");
@@ -262,6 +267,11 @@ namespace Vistas
             if (txtNombUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter)) != 0)
             {
                 MessageBox.Show("Nombre de usuario debe tener solo numeros y letras");
+                return;
+            }
+
+            if (cbTipoUsuario.SelectedIndex < 0) {
+                MessageBox.Show("Debe elegir tipo de usuario");
                 return;
             }
 

@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisualizarProyectos = new System.Windows.Forms.DataGridView();
+            this.lblProyectosEnCurso = new System.Windows.Forms.Label();
+            this.dtpFechaComienzo = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.lblEtapa = new System.Windows.Forms.Label();
+            this.cboEtapa = new System.Windows.Forms.ComboBox();
+            this.btnRetirarOperario = new System.Windows.Forms.Button();
             this.colIdProyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEtapa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,12 +43,6 @@
             this.colPrioridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaFinEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblProyectosEnCurso = new System.Windows.Forms.Label();
-            this.dtpFechaComienzo = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.lblEtapa = new System.Windows.Forms.Label();
-            this.cboEtapa = new System.Windows.Forms.ComboBox();
-            this.btnRetirarOperario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarProyectos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,12 +59,85 @@
             this.colPrioridad,
             this.colFechaInicio,
             this.colFechaFinEstimada});
-            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(58, 163);
+            this.dgvVisualizarProyectos.Location = new System.Drawing.Point(77, 201);
+            this.dgvVisualizarProyectos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvVisualizarProyectos.Name = "dgvVisualizarProyectos";
             this.dgvVisualizarProyectos.ReadOnly = true;
-            this.dgvVisualizarProyectos.Size = new System.Drawing.Size(843, 266);
+            this.dgvVisualizarProyectos.Size = new System.Drawing.Size(1124, 327);
             this.dgvVisualizarProyectos.TabIndex = 0;
             this.dgvVisualizarProyectos.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVisualizarProyectos_RowHeaderMouseDoubleClick);
+            // 
+            // lblProyectosEnCurso
+            // 
+            this.lblProyectosEnCurso.AutoSize = true;
+            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProyectosEnCurso.Location = new System.Drawing.Point(509, 80);
+            this.lblProyectosEnCurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProyectosEnCurso.Name = "lblProyectosEnCurso";
+            this.lblProyectosEnCurso.Size = new System.Drawing.Size(261, 31);
+            this.lblProyectosEnCurso.TabIndex = 2;
+            this.lblProyectosEnCurso.Text = "Visualizar Proyectos";
+            // 
+            // dtpFechaComienzo
+            // 
+            this.dtpFechaComienzo.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
+            this.dtpFechaComienzo.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtpFechaComienzo.Location = new System.Drawing.Point(217, 154);
+            this.dtpFechaComienzo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaComienzo.Name = "dtpFechaComienzo";
+            this.dtpFechaComienzo.Size = new System.Drawing.Size(268, 22);
+            this.dtpFechaComienzo.TabIndex = 3;
+            this.dtpFechaComienzo.ValueChanged += new System.EventHandler(this.dtpFechaComienzo_ValueChanged);
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblFechaInicio.Location = new System.Drawing.Point(73, 154);
+            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(118, 24);
+            this.lblFechaInicio.TabIndex = 4;
+            this.lblFechaInicio.Text = "Fecha Inicio:";
+            // 
+            // lblEtapa
+            // 
+            this.lblEtapa.AutoSize = true;
+            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtapa.Location = new System.Drawing.Point(947, 156);
+            this.lblEtapa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEtapa.Name = "lblEtapa";
+            this.lblEtapa.Size = new System.Drawing.Size(63, 24);
+            this.lblEtapa.TabIndex = 5;
+            this.lblEtapa.Text = "Etapa:";
+            // 
+            // cboEtapa
+            // 
+            this.cboEtapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEtapa.FormattingEnabled = true;
+            this.cboEtapa.Location = new System.Drawing.Point(1040, 155);
+            this.cboEtapa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboEtapa.Name = "cboEtapa";
+            this.cboEtapa.Size = new System.Drawing.Size(160, 24);
+            this.cboEtapa.TabIndex = 6;
+            this.cboEtapa.SelectedIndexChanged += new System.EventHandler(this.cboEtapa_SelectedIndexChanged);
+            // 
+            // btnRetirarOperario
+            // 
+            this.btnRetirarOperario.FlatAppearance.BorderSize = 0;
+            this.btnRetirarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetirarOperario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetirarOperario.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
+            this.btnRetirarOperario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetirarOperario.Location = new System.Drawing.Point(987, 556);
+            this.btnRetirarOperario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRetirarOperario.Name = "btnRetirarOperario";
+            this.btnRetirarOperario.Size = new System.Drawing.Size(215, 47);
+            this.btnRetirarOperario.TabIndex = 9;
+            this.btnRetirarOperario.Text = "Retirar Operario";
+            this.btnRetirarOperario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetirarOperario.UseVisualStyleBackColor = true;
+            this.btnRetirarOperario.Click += new System.EventHandler(this.btnRetirarOperario_Click);
             // 
             // colIdProyecto
             // 
@@ -92,9 +165,10 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "Presupuesto";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column1.HeaderText = "Presupuesto";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -123,78 +197,12 @@
             this.colFechaFinEstimada.ReadOnly = true;
             this.colFechaFinEstimada.Width = 125;
             // 
-            // lblProyectosEnCurso
-            // 
-            this.lblProyectosEnCurso.AutoSize = true;
-            this.lblProyectosEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProyectosEnCurso.Location = new System.Drawing.Point(382, 65);
-            this.lblProyectosEnCurso.Name = "lblProyectosEnCurso";
-            this.lblProyectosEnCurso.Size = new System.Drawing.Size(208, 25);
-            this.lblProyectosEnCurso.TabIndex = 2;
-            this.lblProyectosEnCurso.Text = "Visualizar Proyectos";
-            // 
-            // dtpFechaComienzo
-            // 
-            this.dtpFechaComienzo.CalendarMonthBackground = System.Drawing.SystemColors.Menu;
-            this.dtpFechaComienzo.CalendarTitleBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtpFechaComienzo.Location = new System.Drawing.Point(163, 125);
-            this.dtpFechaComienzo.Name = "dtpFechaComienzo";
-            this.dtpFechaComienzo.Size = new System.Drawing.Size(202, 20);
-            this.dtpFechaComienzo.TabIndex = 3;
-            this.dtpFechaComienzo.ValueChanged += new System.EventHandler(this.dtpFechaComienzo_ValueChanged);
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblFechaInicio.Location = new System.Drawing.Point(55, 125);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(91, 18);
-            this.lblFechaInicio.TabIndex = 4;
-            this.lblFechaInicio.Text = "Fecha Inicio:";
-            // 
-            // lblEtapa
-            // 
-            this.lblEtapa.AutoSize = true;
-            this.lblEtapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEtapa.Location = new System.Drawing.Point(710, 127);
-            this.lblEtapa.Name = "lblEtapa";
-            this.lblEtapa.Size = new System.Drawing.Size(50, 18);
-            this.lblEtapa.TabIndex = 5;
-            this.lblEtapa.Text = "Etapa:";
-            // 
-            // cboEtapa
-            // 
-            this.cboEtapa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEtapa.FormattingEnabled = true;
-            this.cboEtapa.Location = new System.Drawing.Point(780, 126);
-            this.cboEtapa.Name = "cboEtapa";
-            this.cboEtapa.Size = new System.Drawing.Size(121, 21);
-            this.cboEtapa.TabIndex = 6;
-            this.cboEtapa.SelectedIndexChanged += new System.EventHandler(this.cboEtapa_SelectedIndexChanged);
-            // 
-            // btnRetirarOperario
-            // 
-            this.btnRetirarOperario.FlatAppearance.BorderSize = 0;
-            this.btnRetirarOperario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetirarOperario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetirarOperario.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
-            this.btnRetirarOperario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetirarOperario.Location = new System.Drawing.Point(740, 452);
-            this.btnRetirarOperario.Name = "btnRetirarOperario";
-            this.btnRetirarOperario.Size = new System.Drawing.Size(161, 38);
-            this.btnRetirarOperario.TabIndex = 9;
-            this.btnRetirarOperario.Text = "Retirar Operario";
-            this.btnRetirarOperario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetirarOperario.UseVisualStyleBackColor = true;
-            this.btnRetirarOperario.Click += new System.EventHandler(this.btnRetirarOperario_Click);
-            // 
             // FormVisualizarProyectos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(934, 522);
+            this.ClientSize = new System.Drawing.Size(1245, 642);
             this.Controls.Add(this.btnRetirarOperario);
             this.Controls.Add(this.cboEtapa);
             this.Controls.Add(this.lblEtapa);
@@ -203,6 +211,7 @@
             this.Controls.Add(this.lblProyectosEnCurso);
             this.Controls.Add(this.dgvVisualizarProyectos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormVisualizarProyectos";
@@ -224,6 +233,7 @@
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.Label lblEtapa;
         private System.Windows.Forms.ComboBox cboEtapa;
+        private System.Windows.Forms.Button btnRetirarOperario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdProyecto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEtapa;
@@ -231,6 +241,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrioridad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaFinEstimada;
-        private System.Windows.Forms.Button btnRetirarOperario;
     }
 }
