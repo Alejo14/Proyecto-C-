@@ -32,27 +32,31 @@ namespace Vistas
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
         {
             string nombre = txtNombre.Text.Trim().Replace("  ", " ");
-            bool valido = nombre.All(caracter => char.IsLetter(caracter) || char.IsWhiteSpace(caracter));
-            if (!valido)
+            bool solo_letras = nombre.All(caracter => char.IsLetter(caracter) || char.IsWhiteSpace(caracter));
+            bool tamanoCorrecto = (nombre.Length >= 2 || nombre.Length == 0);
+            if (!solo_letras)
                 errorProviderNombre.SetError(txtNombre, "El nombre debe tener solo letras y espacios en blanco");
-            /*else
-                errorProviderNombre.SetError(txtNombre, "");*/
+            else
+                errorProviderNombre.SetError(txtNombre, "");
+            if (!tamanoCorrecto)
+                errorProviderNombre.SetError(txtNombre, "El nombre debe ser mayor a dos caracteres");
+            else
+                errorProviderNombre.SetError(txtNombre, "");
         }
 
         private void TxtDNI_Validating(object sender, CancelEventArgs e)
         {
             string dni = txtDNI.Text.Trim();
             bool esNumerico = dni.All(digito => char.IsDigit(digito));
-            bool tamanoCorrecto = (dni.Length == 8);
-            if (!esNumerico && !tamanoCorrecto) {
-                errorProviderDNI.SetError(txtDNI, "El DNI debe ser numérico y de temaño 8");
-            }
-            else if (!esNumerico)
+            bool tamanoCorrecto = (dni.Length == 8 || dni.Length == 0);
+            if (!esNumerico)
                 errorProviderDNI.SetError(txtDNI, "El DNI debe ser numérico");
-            else if (!tamanoCorrecto)
+            else
+                errorProviderDNI.SetError(txtDNI, "");
+            if (!tamanoCorrecto)
                 errorProviderDNI.SetError(txtDNI, "El DNI debe ser de temaño 8");
-            /*else
-                errorProviderDNI.SetError(txtDNI, "");*/
+            else
+                errorProviderDNI.SetError(txtDNI, "");
         }
 
         private void btnAsignar_Click(object sender, EventArgs e)
