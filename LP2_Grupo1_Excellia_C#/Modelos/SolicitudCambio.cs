@@ -18,6 +18,7 @@ namespace Modelo
         private KAM kam;
         private Cliente cliente;
         private Proyecto proyecto;
+        private Evaluacion evaluacion;
         public SolicitudCambio()
         {
             //this.estimacion = new Estimacion();
@@ -49,6 +50,7 @@ namespace Modelo
         public KAM Kam { get => kam; set => kam = value; }
         public Cliente Cliente { get => cliente; set => cliente = value; }
         public Proyecto Proyecto { get => proyecto; set => proyecto = value; }
+        public Evaluacion Evaluacion { get => evaluacion; set => evaluacion = value; }
 
         public void setEstado(int idEstado) {
             switch (idEstado) {
@@ -106,5 +108,6 @@ namespace Modelo
                 return cliente.Empresa.RazonSocial;
             }
         }
+
     }
 }

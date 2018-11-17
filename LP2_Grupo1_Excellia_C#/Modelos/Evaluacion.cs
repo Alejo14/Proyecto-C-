@@ -15,7 +15,7 @@ namespace Modelo
         private Estimacion estimacion;
         public Evaluacion()
         {
-            this.eru = new ERU();
+            //this.eru = new ERU();
             //this.estimacion = new Estimacion();
         }
 
@@ -24,8 +24,8 @@ namespace Modelo
             this.resultado = resultado;
             this.fecha = fecha;
             this.descripcion = descripcion;
-            this.eru = new ERU();
-            this.estimacion = new Estimacion();
+            //this.eru = new ERU();
+            //this.estimacion = new Estimacion();
         }
         public bool Resultado { get => resultado; set => resultado = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }

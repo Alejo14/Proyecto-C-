@@ -119,6 +119,12 @@
     <Compile Include="frmBuscarTrabajador.designer.cs">
       <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEvaluacionSolicitudCambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvaluacionSolicitudCambio.Designer.cs">
+      <DependentUpon>frmEvaluacionSolicitudCambio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExportarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarTrabajador.resx">
       <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvaluacionSolicitudCambio.resx">
+      <DependentUpon>frmEvaluacionSolicitudCambio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExportarReportes.resx">
       <DependentUpon>frmExportarReportes.cs</DependentUpon>
