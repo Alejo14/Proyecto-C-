@@ -45,6 +45,7 @@
             this.btnCrearProyecto = new System.Windows.Forms.Button();
             this.errorProviderPresupuesto = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderNombProyecto = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnRegresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPresupuesto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombProyecto)).BeginInit();
             this.SuspendLayout();
@@ -82,13 +83,12 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(348, 20);
             this.txtNombre.TabIndex = 23;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblPrioridad
             // 
             this.lblPrioridad.AutoSize = true;
             this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(59, 183);
+            this.lblPrioridad.Location = new System.Drawing.Point(59, 186);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(75, 20);
             this.lblPrioridad.TabIndex = 34;
@@ -194,11 +194,28 @@
             // 
             this.errorProviderNombProyecto.ContainerControl = this;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Image = global::Vistas.Properties.Resources.Back;
+            this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegresar.Location = new System.Drawing.Point(63, 357);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(136, 43);
+            this.btnRegresar.TabIndex = 42;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
             // frmAgregarInfProyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 420);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnCrearProyecto);
             this.Controls.Add(this.dtpFFReal);
             this.Controls.Add(this.dtpFFEstimada);
@@ -241,5 +258,6 @@
         private System.Windows.Forms.Button btnCrearProyecto;
         private System.Windows.Forms.ErrorProvider errorProviderPresupuesto;
         private System.Windows.Forms.ErrorProvider errorProviderNombProyecto;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

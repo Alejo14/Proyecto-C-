@@ -56,6 +56,11 @@ namespace Vistas
                 errorProviderNombProyecto.SetError(txtNombre, "");
             else
                 errorProviderNombProyecto.SetError(txtNombre, "El nombre debe estar compuesto por letras, espacios en blanco y números");
+            bool valido2 = nombreProyecto.Length >= 6 && nombreProyecto.Length <= 30;
+            if (valido2)
+                errorProviderNombProyecto.SetError(txtNombre, "");
+            else
+                errorProviderNombProyecto.SetError(txtNombre, "El nombre no debe sobrepasar los 30 caracteres y ni ser menor a 6 caracteres");
         }
 
         private void TxtPresupuesto_Validating(object sender, CancelEventArgs e)
@@ -75,11 +80,6 @@ namespace Vistas
             {
                 errorProviderPresupuesto.SetError(txtPresupuesto, "El presupuesto debe ser un valor real");
             }
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCrearProyecto_Click(object sender, EventArgs e)
@@ -156,6 +156,11 @@ namespace Vistas
             }
 
             return valido;
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

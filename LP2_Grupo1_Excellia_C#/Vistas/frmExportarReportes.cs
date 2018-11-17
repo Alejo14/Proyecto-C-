@@ -74,8 +74,8 @@ namespace Vistas
             proyecto = new Proyecto();
             string empresa = "";
             string etapa = "";
-            string fechaInicio = "";
-            string fechaFinal = "";
+            //string fechaInicio = "";
+            //string fechaFinal = "";
 
             if (cboEmpresa.SelectedIndex != -1)
             {

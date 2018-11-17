@@ -31,13 +31,7 @@ namespace Vistas
             CuentaUsuario cu = cuentasUsuarioBl.obtenerCuentaUsuario(txtCorreo.Text);
             if (cu == null)
             {
-                MessageBox.Show("No existe dicho nombre de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
-            if (txtCorreo.Text != cu.Persona.Correo)
-            {
-                MessageBox.Show("Correo Incorrecto", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No existe dicho correo electrónico.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
                 

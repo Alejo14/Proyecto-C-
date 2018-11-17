@@ -50,7 +50,7 @@ namespace Vistas
             if (tipoUsuario < 0)
             {
                 if (tipoUsuario == -1)
-                    MessageBox.Show("contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                     MessageBox.Show("Usuario o contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
