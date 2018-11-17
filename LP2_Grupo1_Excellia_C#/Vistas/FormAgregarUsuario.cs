@@ -62,11 +62,16 @@ namespace Vistas
         {
             int numValido = txtTelefono.Text.Count(caracter => !char.IsDigit(caracter));
 
-            if (txtTelefono.Text.Length > 10) {
+            if (txtTelefono.Text.Length > 10 && numValido != 0)
+            {
+                errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numérico (sin prefijo) y tener a lo mas 10 numeros");
+            }
+
+            else if (txtTelefono.Text.Length > 10) {
                 errorProviderTelefono.SetError(txtTelefono, "Telefono debe tener a lo mas 10 numeros");
             }
 
-            if (numValido != 0) {
+            else if (numValido != 0) {
                 errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numerico, no agregar prefijo (+51)");
             }
             else

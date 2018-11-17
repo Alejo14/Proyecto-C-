@@ -89,5 +89,32 @@ namespace AccesoDatos
 
             return solicitudesCambioDA;
         }
+
+        public int registrarEvalucionSolicitud(SolicitudCambio solCambioEvaluada) {
+
+            MySqlConnection conn;
+            string cadena = DBManager.cadena;
+
+            try
+            {
+                conn = new MySqlConnection(cadena);
+            }
+            catch
+            {
+                return -1;
+            }
+            conn.Open();
+            BindingList<SolicitudCambio> solicitudesCambioDA = new BindingList<SolicitudCambio>();
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = conn;
+            string comando = "UPDATE SOLICITUD_CAMBIO SET ID_TIPO_ESTADO_SOLICITUD = " + solCambioEvaluada.EstadoInt + " WHERE ID_SOLICITUD = " + solCambioEvaluada.IdSolicitud + ";";//El estado de la solicitud ya ha sido cambiado en el BL
+            cmd.CommandText = comando;
+            
+            cmd.ExecuteNonQuery();
+
+            return 1;
+
+        }
     }
 }

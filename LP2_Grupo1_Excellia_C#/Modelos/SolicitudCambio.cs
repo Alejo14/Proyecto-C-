@@ -66,5 +66,45 @@ namespace Modelo
                     break;
             }
         }
+
+        public int EstadoInt {
+            get {
+                int idEstado = 0;
+                switch (estado) {
+                    case TipoEstadoSolicitud.APROBADA:
+                        idEstado = 0;
+                        break;
+                    case TipoEstadoSolicitud.DESAPROBADA:
+                        idEstado = 1;
+                        break;
+                    case TipoEstadoSolicitud.ENVIADA:
+                        idEstado = 2;
+                        break;
+                    case TipoEstadoSolicitud.COMPLETADA:
+                        idEstado = 3;
+                        break;
+                }
+
+                return idEstado;
+            }
+        }
+
+        public string NombreProyecto {
+            get {
+                return proyecto.Nombre;
+            }
+        }
+
+        public string NombreCliente {
+            get {
+                return cliente.Nombre;
+            }
+        }
+
+        public string NombreEmpresa {
+            get {
+                return cliente.Empresa.RazonSocial;
+            }
+        }
     }
 }

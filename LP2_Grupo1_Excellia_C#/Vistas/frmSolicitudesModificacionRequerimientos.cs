@@ -29,7 +29,7 @@ namespace Vistas
         private void btnRevisarSolicitud_Click(object sender, EventArgs e)
         {
             solicitudCambioForm = (SolicitudCambio)dgvSolicitudes.CurrentRow.DataBoundItem;
-            frmRevisarSolicitudRequerimiento sr = new frmRevisarSolicitudRequerimiento();
+            frmRevisarSolicitudRequerimiento sr = new frmRevisarSolicitudRequerimiento(solicitudCambioForm);
             if (sr.ShowDialog() == DialogResult.OK)
             { 
                 

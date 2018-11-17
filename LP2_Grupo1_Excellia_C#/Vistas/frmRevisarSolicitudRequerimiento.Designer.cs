@@ -42,7 +42,7 @@
             this.lblRequerimiento = new System.Windows.Forms.Label();
             this.txtRequerimiento = new System.Windows.Forms.TextBox();
             this.lblTipoRequerimiento = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTipoRequerimiento = new System.Windows.Forms.TextBox();
             this.btnAprobar = new System.Windows.Forms.Button();
             this.btnDesaprobar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(111, 372);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -118,6 +119,7 @@
             // 
             // txtProyecto
             // 
+            this.txtProyecto.Enabled = false;
             this.txtProyecto.Location = new System.Drawing.Point(230, 103);
             this.txtProyecto.Name = "txtProyecto";
             this.txtProyecto.Size = new System.Drawing.Size(233, 20);
@@ -125,6 +127,7 @@
             // 
             // txtCliente
             // 
+            this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(230, 138);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(233, 20);
@@ -132,6 +135,7 @@
             // 
             // txtEmpresa
             // 
+            this.txtEmpresa.Enabled = false;
             this.txtEmpresa.Location = new System.Drawing.Point(666, 138);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(205, 20);
@@ -139,6 +143,7 @@
             // 
             // txtFechaSolicitud
             // 
+            this.txtFechaSolicitud.Enabled = false;
             this.txtFechaSolicitud.Location = new System.Drawing.Point(666, 103);
             this.txtFechaSolicitud.Name = "txtFechaSolicitud";
             this.txtFechaSolicitud.Size = new System.Drawing.Size(205, 20);
@@ -156,6 +161,7 @@
             // 
             // txtRequerimiento
             // 
+            this.txtRequerimiento.Enabled = false;
             this.txtRequerimiento.Location = new System.Drawing.Point(111, 273);
             this.txtRequerimiento.Multiline = true;
             this.txtRequerimiento.Name = "txtRequerimiento";
@@ -172,12 +178,13 @@
             this.lblTipoRequerimiento.TabIndex = 14;
             this.lblTipoRequerimiento.Text = "Tipo de\r\nRequerimiento:";
             // 
-            // textBox1
+            // txtTipoRequerimiento
             // 
-            this.textBox1.Location = new System.Drawing.Point(230, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtTipoRequerimiento.Enabled = false;
+            this.txtTipoRequerimiento.Location = new System.Drawing.Point(230, 180);
+            this.txtTipoRequerimiento.Name = "txtTipoRequerimiento";
+            this.txtTipoRequerimiento.Size = new System.Drawing.Size(233, 20);
+            this.txtTipoRequerimiento.TabIndex = 5;
             // 
             // btnAprobar
             // 
@@ -193,6 +200,7 @@
             this.btnAprobar.Text = "Aprobar";
             this.btnAprobar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAprobar.UseVisualStyleBackColor = true;
+            this.btnAprobar.Click += new System.EventHandler(this.btnAprobar_Click);
             // 
             // btnDesaprobar
             // 
@@ -208,6 +216,7 @@
             this.btnDesaprobar.Text = "Desaprobar";
             this.btnDesaprobar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDesaprobar.UseVisualStyleBackColor = true;
+            this.btnDesaprobar.Click += new System.EventHandler(this.btnDesaprobar_Click);
             // 
             // btnRegresar
             // 
@@ -233,7 +242,7 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnDesaprobar);
             this.Controls.Add(this.btnAprobar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTipoRequerimiento);
             this.Controls.Add(this.lblTipoRequerimiento);
             this.Controls.Add(this.txtRequerimiento);
             this.Controls.Add(this.lblRequerimiento);
@@ -273,7 +282,7 @@
         private System.Windows.Forms.Label lblRequerimiento;
         private System.Windows.Forms.TextBox txtRequerimiento;
         private System.Windows.Forms.Label lblTipoRequerimiento;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTipoRequerimiento;
         private System.Windows.Forms.Button btnAprobar;
         private System.Windows.Forms.Button btnDesaprobar;
         private System.Windows.Forms.Button btnRegresar;

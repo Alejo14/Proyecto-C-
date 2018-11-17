@@ -15,5 +15,18 @@ namespace LogicaNegocio
             SolicitudCambioDA solicitudCambioDA = new SolicitudCambioDA();
             return solicitudCambioDA.obtenerSolicitudesDeCambio(idJefe);
         }
+
+        public int registrarEvalucionSolicitud(SolicitudCambio solCambioEvaluada, bool solicitudAprobada) {
+
+            if (solicitudAprobada)
+                solCambioEvaluada.Estado = TipoEstadoSolicitud.APROBADA;
+            else
+                solCambioEvaluada.Estado = TipoEstadoSolicitud.DESAPROBADA;
+
+            SolicitudCambioDA solicitudCambioDA = new SolicitudCambioDA();
+            int resultado = solicitudCambioDA.registrarEvalucionSolicitud(solCambioEvaluada);
+
+            return resultado;
+        }
     }
 }

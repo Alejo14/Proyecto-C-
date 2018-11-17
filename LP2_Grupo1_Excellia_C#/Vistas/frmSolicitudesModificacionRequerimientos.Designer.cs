@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
+            this.lblSolicitudesModificacionRequerimientos = new System.Windows.Forms.Label();
+            this.btnRevisarSolicitud = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.colProyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFechaSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblSolicitudesModificacionRequerimientos = new System.Windows.Forms.Label();
-            this.btnRevisarSolicitud = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,34 +54,6 @@
             this.dgvSolicitudes.ReadOnly = true;
             this.dgvSolicitudes.Size = new System.Drawing.Size(733, 280);
             this.dgvSolicitudes.TabIndex = 0;
-            // 
-            // colProyecto
-            // 
-            this.colProyecto.HeaderText = "Nombre Proyecto";
-            this.colProyecto.Name = "colProyecto";
-            this.colProyecto.ReadOnly = true;
-            this.colProyecto.Width = 190;
-            // 
-            // colCli
-            // 
-            this.colCli.HeaderText = "Cliente";
-            this.colCli.Name = "colCli";
-            this.colCli.ReadOnly = true;
-            this.colCli.Width = 200;
-            // 
-            // colEmpresa
-            // 
-            this.colEmpresa.HeaderText = "Empresa";
-            this.colEmpresa.Name = "colEmpresa";
-            this.colEmpresa.ReadOnly = true;
-            this.colEmpresa.Width = 150;
-            // 
-            // colFechaSolicitud
-            // 
-            this.colFechaSolicitud.HeaderText = "Fecha de solicitud";
-            this.colFechaSolicitud.Name = "colFechaSolicitud";
-            this.colFechaSolicitud.ReadOnly = true;
-            this.colFechaSolicitud.Width = 150;
             // 
             // lblSolicitudesModificacionRequerimientos
             // 
@@ -114,6 +86,38 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Seleccione una solicitud para proceder a la revisión";
             // 
+            // colProyecto
+            // 
+            this.colProyecto.DataPropertyName = "NombreProyecto";
+            this.colProyecto.HeaderText = "Nombre Proyecto";
+            this.colProyecto.Name = "colProyecto";
+            this.colProyecto.ReadOnly = true;
+            this.colProyecto.Width = 190;
+            // 
+            // colCli
+            // 
+            this.colCli.DataPropertyName = "NombreCliente";
+            this.colCli.HeaderText = "Cliente";
+            this.colCli.Name = "colCli";
+            this.colCli.ReadOnly = true;
+            this.colCli.Width = 200;
+            // 
+            // colEmpresa
+            // 
+            this.colEmpresa.DataPropertyName = "NombreEmpresa";
+            this.colEmpresa.HeaderText = "Empresa";
+            this.colEmpresa.Name = "colEmpresa";
+            this.colEmpresa.ReadOnly = true;
+            this.colEmpresa.Width = 150;
+            // 
+            // colFechaSolicitud
+            // 
+            this.colFechaSolicitud.DataPropertyName = "FechaSolicitud";
+            this.colFechaSolicitud.HeaderText = "Fecha de solicitud";
+            this.colFechaSolicitud.Name = "colFechaSolicitud";
+            this.colFechaSolicitud.ReadOnly = true;
+            this.colFechaSolicitud.Width = 150;
+            // 
             // frmSolicitudesModificacionRequerimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,10 +141,10 @@
         private System.Windows.Forms.DataGridView dgvSolicitudes;
         private System.Windows.Forms.Label lblSolicitudesModificacionRequerimientos;
         private System.Windows.Forms.Button btnRevisarSolicitud;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colProyecto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCli;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaSolicitud;
-        private System.Windows.Forms.Label label1;
     }
 }
