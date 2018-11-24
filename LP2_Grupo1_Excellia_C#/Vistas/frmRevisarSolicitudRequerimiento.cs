@@ -35,7 +35,9 @@ namespace Vistas
 
         private void btnAprobar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¡Confirma aprobación de la solicitud de modificación de requerimientos?", "Aprobar solicitud", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+            if (MessageBox.Show("¿Confirma aprobación de la solicitud de modificación de requerimientos?", "Aprobar solicitud", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                SolicitudCambioBL solicitudBL = new SolicitudCambioBL();
+                solicitudBL.registrarEvalucionSolicitud(solCambioForm, true);
                 MessageBox.Show("Aprobación realizada exitosamente");
                 DialogResult = DialogResult.OK;
             }
@@ -43,7 +45,11 @@ namespace Vistas
 
         private void btnDesaprobar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¡Confirma desaprobación de la solicitud de modificación de requerimientos?", "Desaprobar solicitud", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+            frmEvaluacionSolicitudCambio frmEvaluacion = new frmEvaluacionSolicitudCambio();
+            if (frmEvaluacion.ShowDialog() == DialogResult.OK) {
+                solCambioForm.Evaluacion = frmEvaluacion.EvaluacionRechazoForm;
+                SolicitudCambioBL solicitudBL = new SolicitudCambioBL();
+                solicitudBL.registrarEvalucionSolicitud(solCambioForm, false);
                 MessageBox.Show("Desaprobación realizada exitosamente");
                 DialogResult = DialogResult.OK;
             }

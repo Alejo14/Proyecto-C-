@@ -32,14 +32,16 @@ namespace Vistas
                 MessageBox.Show("El motivo no debe superar los 4000 caracteres");
                 return;
             }
+            
+            if (MessageBox.Show("¿Confirma desaprobación de la solicitud de modificación de requerimientos?", "Desaprobar solicitud", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                evaluacionRechazoForm = new Evaluacion();
 
-            evaluacionRechazoForm = new Evaluacion();
+                evaluacionRechazoForm.Descripcion = txtMotivoRechazo.Text;
+                evaluacionRechazoForm.Fecha = DateTime.Today;
+                evaluacionRechazoForm.Resultado = false;
 
-            evaluacionRechazoForm.Descripcion = txtMotivoRechazo.Text;
-            evaluacionRechazoForm.Fecha = DateTime.Today;
-            evaluacionRechazoForm.Resultado = false;
-
-            DialogResult = DialogResult.OK;
+                DialogResult = DialogResult.OK;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
