@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace Vistas
 
         private void btnAgregarArchivo_Click(object sender, EventArgs e)
         {
+            FileInfo fi = new FileInfo(FileUpload1.)
             ofdArchivo.ShowDialog();
             archivos.Add(new StringValue(ofdArchivo.FileName));
             
@@ -37,7 +39,7 @@ namespace Vistas
         {
             MessageBox.Show("Archivos subidos con éxito");
 
-            Dispose();
+            //Dispose();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

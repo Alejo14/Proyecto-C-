@@ -18,6 +18,7 @@ namespace Vistas
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLoggin());
             Application.Run(new FormSubirArchivos());
+
         }
     }
 }
