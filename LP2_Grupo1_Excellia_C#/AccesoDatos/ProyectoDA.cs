@@ -456,5 +456,34 @@ namespace AccesoDatos
             con.Close();
             return fecha;
         }
+
+
+        public BindingList<Etapa> listarEtapasxProyecto(int id)
+        {
+            BindingList<Etapa> etapas = new BindingList<Etapa>();
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "SELECT ID_TIPO_FASE_PROYECTO, DESCRIPCION FROM  TIPO_FASE_PROYECTO WHERE ID_TIPO_FASE_PROYECTO >="+id;
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            while (lector.Read())
+            {
+                Etapa et = new Etapa();
+                et.IdEtapa = lector.GetInt32("ID_TIPO_FASE_PROYECTO");
+                et.NombreEtapa = lector.GetString("DESCRIPCION");
+                if(id!= 1 && et.IdEtapa !=7)
+                    etapas.Add(et);
+                if(id == 1 || id==7)
+                    etapas.Add(et);
+            }
+            Etapa e = new Etapa();
+            //e.IdEtapa = 0;
+            //e.NombreEtapa = "---Seleccionar---";
+            //etapas.Insert(0, e);
+            con.Close();
+            return etapas;
+        }
     }
 }

@@ -96,7 +96,7 @@ namespace Modelo
                     case TipoFaseProyecto.COMPLETADO:
                         return 6;
                     case TipoFaseProyecto.CANCELADO:
-                        return 6;
+                        return 7;
                 }
                 return 0;
             }

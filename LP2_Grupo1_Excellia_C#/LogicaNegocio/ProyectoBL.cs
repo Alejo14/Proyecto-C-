@@ -116,5 +116,9 @@ namespace LogicaNegocio
             return proyectoDA.obtenerFFEstimado(e); ;
         }
 
+        public BindingList<Etapa> listarEtapasxProyecto(int id)
+        {
+            return proyectoDA.listarEtapasxProyecto(id);
+        }
     }
 }

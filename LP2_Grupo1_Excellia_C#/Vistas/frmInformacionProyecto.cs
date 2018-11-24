@@ -21,11 +21,11 @@ namespace Vistas
         {
             InitializeComponent();
             proyectoBL = new ProyectoBL();
-            cboEtapa.DataSource = proyectoBL.listarEtapas();
+            cboEtapa.DataSource = proyectoBL.listarEtapasxProyecto(p.EtapaInt);
 
             cboEtapa.DisplayMember = "NombreEtapa";
             cboEtapa.ValueMember = "IdEtapa";
-            cboEtapa.SelectedIndex = p.EtapaInt;
+            cboEtapa.SelectedIndex = 0;//p.EtapaInt;
             txtId.Text = p.IdProyecto.ToString();
             txtNombre.Text = p.Nombre.ToString();
             txtPresupuesto.Text = p.Presupuesto.ToString();
