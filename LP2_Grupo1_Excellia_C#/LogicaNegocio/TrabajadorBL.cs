@@ -24,5 +24,9 @@ namespace LogicaNegocio
         {
             return trabajadorDA.listarOperarios(p);
         }
+        public string obtenerDominio(int id)
+        {
+            return trabajadorDA.obtenerDominio(id);
+        }
     }
 }

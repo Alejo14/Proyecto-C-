@@ -52,7 +52,7 @@
             // 
             this.lblSolicitudModificacionRequerimiento.AutoSize = true;
             this.lblSolicitudModificacionRequerimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSolicitudModificacionRequerimiento.Location = new System.Drawing.Point(281, 35);
+            this.lblSolicitudModificacionRequerimiento.Location = new System.Drawing.Point(281, 39);
             this.lblSolicitudModificacionRequerimiento.Name = "lblSolicitudModificacionRequerimiento";
             this.lblSolicitudModificacionRequerimiento.Size = new System.Drawing.Size(417, 25);
             this.lblSolicitudModificacionRequerimiento.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(108, 338);
+            this.lblDescripcion.Location = new System.Drawing.Point(108, 346);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(96, 20);
             this.lblDescripcion.TabIndex = 1;
@@ -71,7 +71,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(111, 372);
+            this.txtDescripcion.Location = new System.Drawing.Point(111, 380);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(760, 90);
@@ -81,7 +81,7 @@
             // 
             this.lblProyecto.AutoSize = true;
             this.lblProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProyecto.Location = new System.Drawing.Point(107, 103);
+            this.lblProyecto.Location = new System.Drawing.Point(107, 111);
             this.lblProyecto.Name = "lblProyecto";
             this.lblProyecto.Size = new System.Drawing.Size(75, 20);
             this.lblProyecto.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(107, 138);
+            this.lblCliente.Location = new System.Drawing.Point(107, 146);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(62, 20);
             this.lblCliente.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.lblFechaSolicitud.AutoSize = true;
             this.lblFechaSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaSolicitud.Location = new System.Drawing.Point(516, 101);
+            this.lblFechaSolicitud.Location = new System.Drawing.Point(516, 109);
             this.lblFechaSolicitud.Name = "lblFechaSolicitud";
             this.lblFechaSolicitud.Size = new System.Drawing.Size(144, 20);
             this.lblFechaSolicitud.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.lblEmpresa.AutoSize = true;
             this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpresa.Location = new System.Drawing.Point(516, 136);
+            this.lblEmpresa.Location = new System.Drawing.Point(516, 144);
             this.lblEmpresa.Name = "lblEmpresa";
             this.lblEmpresa.Size = new System.Drawing.Size(77, 20);
             this.lblEmpresa.TabIndex = 7;
@@ -120,7 +120,7 @@
             // txtProyecto
             // 
             this.txtProyecto.Enabled = false;
-            this.txtProyecto.Location = new System.Drawing.Point(230, 103);
+            this.txtProyecto.Location = new System.Drawing.Point(230, 111);
             this.txtProyecto.Name = "txtProyecto";
             this.txtProyecto.Size = new System.Drawing.Size(233, 20);
             this.txtProyecto.TabIndex = 1;
@@ -128,7 +128,7 @@
             // txtCliente
             // 
             this.txtCliente.Enabled = false;
-            this.txtCliente.Location = new System.Drawing.Point(230, 138);
+            this.txtCliente.Location = new System.Drawing.Point(230, 146);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(233, 20);
             this.txtCliente.TabIndex = 3;
@@ -136,7 +136,7 @@
             // txtEmpresa
             // 
             this.txtEmpresa.Enabled = false;
-            this.txtEmpresa.Location = new System.Drawing.Point(666, 138);
+            this.txtEmpresa.Location = new System.Drawing.Point(666, 146);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(205, 20);
             this.txtEmpresa.TabIndex = 4;
@@ -144,7 +144,7 @@
             // txtFechaSolicitud
             // 
             this.txtFechaSolicitud.Enabled = false;
-            this.txtFechaSolicitud.Location = new System.Drawing.Point(666, 103);
+            this.txtFechaSolicitud.Location = new System.Drawing.Point(666, 111);
             this.txtFechaSolicitud.Name = "txtFechaSolicitud";
             this.txtFechaSolicitud.Size = new System.Drawing.Size(205, 20);
             this.txtFechaSolicitud.TabIndex = 2;
@@ -153,7 +153,7 @@
             // 
             this.lblRequerimiento.AutoSize = true;
             this.lblRequerimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRequerimiento.Location = new System.Drawing.Point(107, 238);
+            this.lblRequerimiento.Location = new System.Drawing.Point(107, 246);
             this.lblRequerimiento.Name = "lblRequerimiento";
             this.lblRequerimiento.Size = new System.Drawing.Size(117, 20);
             this.lblRequerimiento.TabIndex = 12;
@@ -162,7 +162,7 @@
             // txtRequerimiento
             // 
             this.txtRequerimiento.Enabled = false;
-            this.txtRequerimiento.Location = new System.Drawing.Point(111, 273);
+            this.txtRequerimiento.Location = new System.Drawing.Point(111, 281);
             this.txtRequerimiento.Multiline = true;
             this.txtRequerimiento.Name = "txtRequerimiento";
             this.txtRequerimiento.Size = new System.Drawing.Size(760, 46);
@@ -172,7 +172,7 @@
             // 
             this.lblTipoRequerimiento.AutoSize = true;
             this.lblTipoRequerimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoRequerimiento.Location = new System.Drawing.Point(107, 169);
+            this.lblTipoRequerimiento.Location = new System.Drawing.Point(107, 177);
             this.lblTipoRequerimiento.Name = "lblTipoRequerimiento";
             this.lblTipoRequerimiento.Size = new System.Drawing.Size(117, 40);
             this.lblTipoRequerimiento.TabIndex = 14;
@@ -181,7 +181,7 @@
             // txtTipoRequerimiento
             // 
             this.txtTipoRequerimiento.Enabled = false;
-            this.txtTipoRequerimiento.Location = new System.Drawing.Point(230, 180);
+            this.txtTipoRequerimiento.Location = new System.Drawing.Point(230, 188);
             this.txtTipoRequerimiento.Name = "txtTipoRequerimiento";
             this.txtTipoRequerimiento.Size = new System.Drawing.Size(233, 20);
             this.txtTipoRequerimiento.TabIndex = 5;
@@ -193,7 +193,7 @@
             this.btnAprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAprobar.Image = global::Vistas.Properties.Resources.Yes;
             this.btnAprobar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAprobar.Location = new System.Drawing.Point(755, 484);
+            this.btnAprobar.Location = new System.Drawing.Point(755, 492);
             this.btnAprobar.Name = "btnAprobar";
             this.btnAprobar.Size = new System.Drawing.Size(116, 44);
             this.btnAprobar.TabIndex = 8;
@@ -209,7 +209,7 @@
             this.btnDesaprobar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDesaprobar.Image = global::Vistas.Properties.Resources.No;
             this.btnDesaprobar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDesaprobar.Location = new System.Drawing.Point(587, 484);
+            this.btnDesaprobar.Location = new System.Drawing.Point(587, 492);
             this.btnDesaprobar.Name = "btnDesaprobar";
             this.btnDesaprobar.Size = new System.Drawing.Size(139, 44);
             this.btnDesaprobar.TabIndex = 9;
@@ -225,7 +225,7 @@
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::Vistas.Properties.Resources.Back;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(112, 484);
+            this.btnRegresar.Location = new System.Drawing.Point(112, 492);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(129, 44);
             this.btnRegresar.TabIndex = 10;

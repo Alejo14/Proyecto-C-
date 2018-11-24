@@ -65,6 +65,7 @@
             this.gbDatosPersonales = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombPersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderApellidoPaterno)).BeginInit();
@@ -74,13 +75,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombUsuario)).BeginInit();
             this.gbDatosPersonales.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAgregarUsuario
             // 
             this.lblAgregarUsuario.AutoSize = true;
+            this.lblAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblAgregarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblAgregarUsuario.Location = new System.Drawing.Point(237, 23);
+            this.lblAgregarUsuario.Location = new System.Drawing.Point(238, 43);
             this.lblAgregarUsuario.Name = "lblAgregarUsuario";
             this.lblAgregarUsuario.Size = new System.Drawing.Size(166, 26);
             this.lblAgregarUsuario.TabIndex = 0;
@@ -179,7 +182,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Vistas.Properties.Resources.No;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(152, 722);
+            this.btnCancelar.Location = new System.Drawing.Point(152, 763);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 41);
             this.btnCancelar.TabIndex = 14;
@@ -377,7 +380,7 @@
             this.gbDatosPersonales.Controls.Add(this.lblSexo);
             this.gbDatosPersonales.Controls.Add(this.cbSexo);
             this.gbDatosPersonales.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.gbDatosPersonales.Location = new System.Drawing.Point(36, 69);
+            this.gbDatosPersonales.Location = new System.Drawing.Point(36, 110);
             this.gbDatosPersonales.Name = "gbDatosPersonales";
             this.gbDatosPersonales.Size = new System.Drawing.Size(574, 386);
             this.gbDatosPersonales.TabIndex = 28;
@@ -395,7 +398,7 @@
             this.groupBox1.Controls.Add(this.cboDominio);
             this.groupBox1.Controls.Add(this.lblTipoUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.groupBox1.Location = new System.Drawing.Point(36, 470);
+            this.groupBox1.Location = new System.Drawing.Point(36, 511);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(574, 230);
             this.groupBox1.TabIndex = 29;
@@ -410,7 +413,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Image = global::Vistas.Properties.Resources.Yes;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(360, 722);
+            this.btnAceptar.Location = new System.Drawing.Point(360, 763);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(121, 41);
             this.btnAceptar.TabIndex = 13;
@@ -419,16 +422,26 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.lblAgregarUsuario);
+            this.panel1.Location = new System.Drawing.Point(-2, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(652, 92);
+            this.panel1.TabIndex = 30;
+            // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 777);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(647, 826);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbDatosPersonales);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.lblAgregarUsuario);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormAgregarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -444,8 +457,9 @@
             this.gbDatosPersonales.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -487,5 +501,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderNombUsuario;
         private System.Windows.Forms.GroupBox gbDatosPersonales;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

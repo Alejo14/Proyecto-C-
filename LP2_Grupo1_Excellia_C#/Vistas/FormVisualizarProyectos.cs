@@ -24,24 +24,15 @@ namespace Vistas
             
             cboEtapa.DisplayMember = "NombreEtapa";
             cboEtapa.ValueMember = "IdEtapa";
-            if (operario) btnRetirarOperario.Visible = false;
+            if (operario)
+            {
+                btnInformacionProyecto.Visible = false;
+                btnAsignar.Visible = false;
+                btnRetirarOperario.Visible = false;
+            }
         }
 
         public Proyecto Proyecto { get => proyecto; set => proyecto = value; }
-        private void dgvVisualizarProyectos_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            DateTime mifecha = dtpFechaComienzo.Value.Date;
-            int dia = mifecha.Day;
-            int mes = mifecha.Month;
-            int anio = mifecha.Year;
-            this.DialogResult = DialogResult.OK;
-            Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
-            
-            frmInformacionProyecto iP = new frmInformacionProyecto(Proyecto);
-            iP.ShowDialog();
-            int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
-            dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa, mifecha);
-        }
 
         private void cboEtapa_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -86,6 +77,47 @@ namespace Vistas
                 {
 
                 }
+            }
+            else
+            {
+                MessageBox.Show("Se debe de seleccionar un proyecto para retirar usuarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            {
+                Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
+                frmAsignarTrabajador at = new frmAsignarTrabajador(Proyecto);
+                if (at.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se debe de seleccionar un proyecto para retirar usuarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnInformacionProyecto_Click(object sender, EventArgs e)
+        {
+            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            {
+                DateTime mifecha = dtpFechaComienzo.Value.Date;
+                int dia = mifecha.Day;
+                int mes = mifecha.Month;
+                int anio = mifecha.Year;
+                this.DialogResult = DialogResult.OK;
+                Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
+
+
+                frmInformacionProyecto iP = new frmInformacionProyecto(Proyecto);
+                iP.ShowDialog();
+                int etapa = ((Etapa)cboEtapa.SelectedItem).IdEtapa;
+                dgvVisualizarProyectos.DataSource = proyectoBL.listarProyectosEnCurso(etapa, mifecha);
             }
             else
             {

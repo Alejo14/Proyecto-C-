@@ -122,12 +122,7 @@ namespace Vistas
 
         private void ptbUsuarios_Click(object sender, EventArgs e)
         {
-            Operario op = new Operario();
-            op.Nombre = jf.Nombre;
-            op.ApellidoMaterno = jf.ApellidoMaterno;
-            op.ApellidoPaterno = jf.ApellidoPaterno;
-            op.Correo = jf.Correo;
-            frmConfiguraciones conf = new frmConfiguraciones(op,1);
+            frmConfiguraciones conf = new frmConfiguraciones(jf,1);
             if(conf.ShowDialog() == DialogResult.OK)
             {
 

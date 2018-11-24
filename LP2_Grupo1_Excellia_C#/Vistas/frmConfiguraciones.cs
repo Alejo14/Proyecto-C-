@@ -16,26 +16,36 @@ namespace Vistas
     {
         private CuentaUsuarioBL cuentaUsuarioBL;
         private CuentaUsuario cu;
-        public frmConfiguraciones(Operario op, int seleccionador)
+        private TrabajadorBL trabajadorBL;
+        public frmConfiguraciones(Trabajador t, int seleccionador)
         {
             InitializeComponent();
-            txtNombre.Text = op.Nombre;
+            trabajadorBL = new TrabajadorBL();
+            txtNombre.Text = t.Nombre;
             txtNombre.Enabled = false;
-            txtApellidos.Text = op.ApellidoPaterno + " " + op.ApellidoMaterno;
+            txtApellidos.Text = t.ApellidoPaterno + " " + t.ApellidoMaterno;
             txtApellidos.Enabled = false;
-            txtTelefono.Text = op.Telefono;
+            txtTelefono.Text = t.Telefono;
             txtTelefono.Enabled = false;
-            txtSexo.Text = Convert.ToString(op.Sexo);
+            txtSexo.Text = Convert.ToString(t.Sexo);
             txtSexo.Enabled = false;
-            txtCorreo.Text = op.Correo;
-            txtFechaNacimiento.Text = Convert.ToString(op.FechaNac);
+            txtCorreo.Text = t.Correo;
+            txtFechaNacimiento.Text = Convert.ToString(t.FechaNac);
             txtFechaNacimiento.Enabled = false;
             cuentaUsuarioBL = new CuentaUsuarioBL();
-            cu = cuentaUsuarioBL.obtenerCuentaUsuario(op.Correo);
+            cu = cuentaUsuarioBL.obtenerCuentaUsuario(t.Correo);
             txtNombreUsuario.Text = cu.NomUsuario;
-            txtTipoUsuario.Text = Convert.ToString(op.Cargo);
+            if (seleccionador == 0)
+            {
+                Operario op = (Operario)t;
+                txtTipoUsuario.Text = Convert.ToString(op.Cargo);
+            }
+            else
+            {
+                txtTipoUsuario.Text = "JEFE DE PROYECTO";
+            }
             txtTipoUsuario.Enabled = false;
-            txtDominio.Text = Convert.ToString(op.Dominio);
+            txtDominio.Text = trabajadorBL.obtenerDominio(t.IdTrabajador);
             txtDominio.Enabled = false;  
         }
 
@@ -51,7 +61,11 @@ namespace Vistas
 
         private void btnCambiarContrseña_Click(object sender, EventArgs e)
         {
+            frmCambiarContraseña cc = new frmCambiarContraseña();
+            if (cc.ShowDialog() == DialogResult.OK)
+            {
 
+            }
         }
     }
 }

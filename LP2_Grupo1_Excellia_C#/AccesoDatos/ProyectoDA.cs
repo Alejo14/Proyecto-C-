@@ -479,9 +479,6 @@ namespace AccesoDatos
                     etapas.Add(et);
             }
             Etapa e = new Etapa();
-            //e.IdEtapa = 0;
-            //e.NombreEtapa = "---Seleccionar---";
-            //etapas.Insert(0, e);
             con.Close();
             return etapas;
         }

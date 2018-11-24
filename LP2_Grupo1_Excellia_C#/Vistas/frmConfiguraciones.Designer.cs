@@ -52,20 +52,22 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbDatosPersonales.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCambiarContrseña
             // 
             this.btnCambiarContrseña.FlatAppearance.BorderSize = 0;
             this.btnCambiarContrseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCambiarContrseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarContrseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarContrseña.Image = global::Vistas.Properties.Resources.Evaluar;
             this.btnCambiarContrseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCambiarContrseña.Location = new System.Drawing.Point(239, 523);
+            this.btnCambiarContrseña.Location = new System.Drawing.Point(247, 523);
             this.btnCambiarContrseña.Name = "btnCambiarContrseña";
-            this.btnCambiarContrseña.Size = new System.Drawing.Size(146, 53);
+            this.btnCambiarContrseña.Size = new System.Drawing.Size(138, 53);
             this.btnCambiarContrseña.TabIndex = 11;
             this.btnCambiarContrseña.Text = "Cambiar Contraseña";
             this.btnCambiarContrseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -75,10 +77,10 @@
             // txtPefil
             // 
             this.txtPefil.AutoSize = true;
-            this.txtPefil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPefil.Location = new System.Drawing.Point(34, 33);
+            this.txtPefil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPefil.Location = new System.Drawing.Point(243, 29);
             this.txtPefil.Name = "txtPefil";
-            this.txtPefil.Size = new System.Drawing.Size(67, 25);
+            this.txtPefil.Size = new System.Drawing.Size(61, 25);
             this.txtPefil.TabIndex = 1;
             this.txtPefil.Text = "Perfil";
             // 
@@ -277,12 +279,12 @@
             // 
             this.btnRegresar.FlatAppearance.BorderSize = 0;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.Image = global::Vistas.Properties.Resources.Back;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegresar.Location = new System.Drawing.Point(39, 523);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(134, 53);
+            this.btnRegresar.Size = new System.Drawing.Size(136, 53);
             this.btnRegresar.TabIndex = 12;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -293,29 +295,39 @@
             // 
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(413, 523);
+            this.btnGuardar.Location = new System.Drawing.Point(415, 523);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(122, 53);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 53);
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "Guardar\r\nCambios";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.txtPefil);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(560, 71);
+            this.panel1.TabIndex = 22;
+            // 
             // frmConfiguraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(558, 604);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.txtPefil);
             this.Controls.Add(this.btnCambiarContrseña);
             this.Controls.Add(this.gbDatosPersonales);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmConfiguraciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -324,8 +336,9 @@
             this.gbDatosPersonales.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -355,5 +368,6 @@
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

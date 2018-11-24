@@ -77,5 +77,23 @@ namespace AccesoDatos
             return operarios;
 
         }
+        public string obtenerDominio(int id)
+        {
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            String sql = "select D.DENOMINACION from DOMINIO D, TRABAJADOR T where D.ID_DOMINIO = T.ID_DOMINIO AND T.ID_TRABAJADOR = " + id;
+
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            MySqlDataReader lector = cmd.ExecuteReader();
+            string dominio = "";
+            if (lector.Read())
+            {
+                dominio = lector.GetString("DENOMINACION"); 
+            }
+            con.Close();
+            return dominio;
+        }
     }
 }

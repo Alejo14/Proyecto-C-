@@ -24,9 +24,13 @@ namespace Vistas
                 btnRegresar.Visible = true;
                 this.FormBorderStyle = FormBorderStyle.FixedDialog;
                 btnSeleccionar.Visible = true;
+                this.BackColor = Color.White;
+                this.pnlTitulo.BackColor = Color.DarkOrange;
+                this.lblTitulo.BackColor = Color.DarkOrange;
             }
             else if(seleccionar == 0)
             {
+                this.pnlTitulo.Visible = false;
                 btnRegresar.Visible = false;
                 btnSeleccionar.Visible = false;
             }

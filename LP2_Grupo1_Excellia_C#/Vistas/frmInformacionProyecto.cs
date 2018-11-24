@@ -45,7 +45,7 @@ namespace Vistas
         {
             int id = Int32.Parse(txtId.Text.Trim().ToString());
             int pri = Int32.Parse(cboPrioridad.SelectedIndex.ToString()) + 1;
-            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString());
+            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString())+1;
             if(Int32.Parse(cboEtapa.SelectedIndex.ToString()) == 7)
             {
                 MessageBox.Show("No se puede cambiar la fase a cancelado");
@@ -104,20 +104,6 @@ namespace Vistas
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
-        }
-
-        private void btnAsignarTrabajador_Click(object sender, EventArgs e)
-        {
-            frmAsignarTrabajador at = new frmAsignarTrabajador(Proyecto);
-            if (at.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
-
-        private void cboEtapa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

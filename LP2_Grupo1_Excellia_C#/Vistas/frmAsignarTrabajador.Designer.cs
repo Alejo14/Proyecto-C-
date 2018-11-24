@@ -48,6 +48,7 @@
             this.btnAvanzada = new System.Windows.Forms.Button();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.btnForm_Buscar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNombre)).BeginInit();
@@ -65,7 +66,7 @@
             this.ApellidoMaterno,
             this.Correo,
             this.Telefono});
-            this.dgvTrabajador.Location = new System.Drawing.Point(39, 275);
+            this.dgvTrabajador.Location = new System.Drawing.Point(39, 290);
             this.dgvTrabajador.Name = "dgvTrabajador";
             this.dgvTrabajador.ReadOnly = true;
             this.dgvTrabajador.Size = new System.Drawing.Size(643, 211);
@@ -115,7 +116,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(239, 131);
+            this.txtDNI.Location = new System.Drawing.Point(239, 146);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(333, 20);
@@ -124,9 +125,9 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(259, 46);
+            this.lblTitulo.Location = new System.Drawing.Point(259, 33);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(218, 25);
             this.lblTitulo.TabIndex = 15;
@@ -136,7 +137,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 129);
+            this.label1.Location = new System.Drawing.Point(126, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 18);
             this.label1.TabIndex = 16;
@@ -146,7 +147,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 175);
+            this.label2.Location = new System.Drawing.Point(126, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 18);
             this.label2.TabIndex = 17;
@@ -154,7 +155,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(239, 176);
+            this.txtNombre.Location = new System.Drawing.Point(239, 191);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(333, 20);
@@ -172,7 +173,7 @@
             // 
             this.lblIndicacion.AutoSize = true;
             this.lblIndicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndicacion.Location = new System.Drawing.Point(125, 92);
+            this.lblIndicacion.Location = new System.Drawing.Point(125, 107);
             this.lblIndicacion.Name = "lblIndicacion";
             this.lblIndicacion.Size = new System.Drawing.Size(406, 20);
             this.lblIndicacion.TabIndex = 21;
@@ -186,7 +187,7 @@
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Image = global::Vistas.Properties.Resources.Back;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(141, 501);
+            this.btnVolver.Location = new System.Drawing.Point(141, 516);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(131, 49);
             this.btnVolver.TabIndex = 20;
@@ -203,7 +204,7 @@
             this.btnAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvanzada.Image = global::Vistas.Properties.Resources.Más_pequeño;
             this.btnAvanzada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAvanzada.Location = new System.Drawing.Point(129, 207);
+            this.btnAvanzada.Location = new System.Drawing.Point(129, 222);
             this.btnAvanzada.Name = "btnAvanzada";
             this.btnAvanzada.Size = new System.Drawing.Size(118, 49);
             this.btnAvanzada.TabIndex = 19;
@@ -220,7 +221,7 @@
             this.btnAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignar.Image = global::Vistas.Properties.Resources.Derivar;
             this.btnAsignar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsignar.Location = new System.Drawing.Point(463, 501);
+            this.btnAsignar.Location = new System.Drawing.Point(463, 516);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(109, 49);
             this.btnAsignar.TabIndex = 10;
@@ -237,7 +238,7 @@
             this.btnForm_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForm_Buscar.Image = global::Vistas.Properties.Resources.Search;
             this.btnForm_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnForm_Buscar.Location = new System.Drawing.Point(471, 213);
+            this.btnForm_Buscar.Location = new System.Drawing.Point(471, 228);
             this.btnForm_Buscar.Name = "btnForm_Buscar";
             this.btnForm_Buscar.Size = new System.Drawing.Size(101, 36);
             this.btnForm_Buscar.TabIndex = 9;
@@ -246,11 +247,20 @@
             this.btnForm_Buscar.UseVisualStyleBackColor = true;
             this.btnForm_Buscar.Click += new System.EventHandler(this.btnForm_Buscar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(721, 81);
+            this.panel1.TabIndex = 22;
+            // 
             // frmAsignarTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 565);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(718, 580);
             this.Controls.Add(this.lblIndicacion);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVolver);
@@ -262,8 +272,10 @@
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnForm_Buscar);
             this.Controls.Add(this.dgvTrabajador);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAsignarTrabajador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignar Trabajador";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrabajador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDNI)).EndInit();
@@ -294,5 +306,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderDNI;
         private System.Windows.Forms.ErrorProvider errorProviderNombre;
         private System.Windows.Forms.Label lblIndicacion;
+        private System.Windows.Forms.Panel panel1;
     }
 }
