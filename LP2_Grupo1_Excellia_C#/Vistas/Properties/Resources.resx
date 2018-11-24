@@ -121,8 +121,14 @@
   <data name="Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancel_close_closecancelsquare_cross_delete_remove_square_icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="app_essential_minimize_ui_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\app_essential_minimize_ui_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doc_document_new_note_icon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doc_document_new_note_icon_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,6 +181,12 @@
   <data name="Derivar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Derivar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Derivar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Derivar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Name" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="folder_guardar_paste_save_icon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_guardar_paste_save_icon_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,14 +208,17 @@
   <data name="icon restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Más pequeño" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Más pequeño.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Excellia_nombre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Excellia_nombre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="app_essential_minimize_ui_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\app_essential_minimize_ui_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="account_customer_man_profile_user_icon_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_customer_man_profile_user_icon_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,35 +226,23 @@
   <data name="account_customer_man_profile_user_icon_481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_customer_man_profile_user_icon_481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_guardar_paste_save_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_guardar_paste_save_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancel_close_closecancelsquare_cross_delete_remove_square_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Chat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="No" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\No.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Derivar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Derivar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel_close_closecancelsquare_cross_delete_remove_square_icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_guardar_paste_save_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_guardar_paste_save_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Visualizar_pequeño" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Visualizar_pequeño.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Name" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_close_closecancelsquare_cross_delete_remove_square_icon_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_close_closecancelsquare_cross_delete_remove_square_icon_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Name1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Name1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +256,7 @@
   <data name="Yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Más pequeño" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Más pequeño.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tuerca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tuerca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

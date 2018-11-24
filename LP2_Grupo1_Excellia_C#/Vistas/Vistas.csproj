@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConfiguraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguraciones.Designer.cs">
+      <DependentUpon>frmConfiguraciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarTrabajador.resx">
       <DependentUpon>frmBuscarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguraciones.resx">
+      <DependentUpon>frmConfiguraciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEvaluacionSolicitudCambio.resx">
       <DependentUpon>frmEvaluacionSolicitudCambio.cs</DependentUpon>
@@ -438,6 +447,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Más pequeño.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tuerca.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

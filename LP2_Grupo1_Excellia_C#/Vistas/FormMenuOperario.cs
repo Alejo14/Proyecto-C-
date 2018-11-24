@@ -22,6 +22,8 @@ namespace Vistas
             AbrirFormInPanel(new FormVisualizarProyectos(true));
             menuEscodido = false;
             op = operario;
+            lblUsuarios.Text = op.Nombre + " " + op.ApellidoPaterno + " " + op.ApellidoMaterno + Environment.NewLine +
+                op.Telefono + Environment.NewLine + op.Correo;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -131,6 +133,15 @@ namespace Vistas
         private void barraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ptbUsuario_Click(object sender, EventArgs e)
+        {
+            frmConfiguraciones conf = new frmConfiguraciones(op,0);
+            if(conf.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

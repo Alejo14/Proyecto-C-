@@ -33,8 +33,9 @@
             this.iconCerrar = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
             this.scOperario = new System.Windows.Forms.SplitContainer();
+            this.lblUsuarios = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbUsuario = new System.Windows.Forms.PictureBox();
             this.btnExportarReportes = new System.Windows.Forms.Button();
             this.btnSolicitarRetiroProyecto = new System.Windows.Forms.Button();
             this.btnVisualizarProyectos = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@
             this.scOperario.Panel1.SuspendLayout();
             this.scOperario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -117,8 +118,9 @@
             // scOperario.Panel1
             // 
             this.scOperario.Panel1.BackColor = System.Drawing.Color.White;
+            this.scOperario.Panel1.Controls.Add(this.lblUsuarios);
             this.scOperario.Panel1.Controls.Add(this.pictureBox2);
-            this.scOperario.Panel1.Controls.Add(this.pictureBox1);
+            this.scOperario.Panel1.Controls.Add(this.ptbUsuario);
             this.scOperario.Panel1.Controls.Add(this.btnExportarReportes);
             this.scOperario.Panel1.Controls.Add(this.btnSolicitarRetiroProyecto);
             this.scOperario.Panel1.Controls.Add(this.btnVisualizarProyectos);
@@ -131,6 +133,16 @@
             this.scOperario.SplitterDistance = 260;
             this.scOperario.TabIndex = 21;
             // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.AutoSize = true;
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Location = new System.Drawing.Point(87, 473);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(74, 16);
+            this.lblUsuarios.TabIndex = 28;
+            this.lblUsuarios.Text = "txtUsuarios";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Vistas.Properties.Resources.Excellia_nombre;
@@ -141,15 +153,16 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // ptbUsuario
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 476);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.ptbUsuario.Image = global::Vistas.Properties.Resources.User;
+            this.ptbUsuario.Location = new System.Drawing.Point(13, 464);
+            this.ptbUsuario.Name = "ptbUsuario";
+            this.ptbUsuario.Size = new System.Drawing.Size(68, 68);
+            this.ptbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbUsuario.TabIndex = 26;
+            this.ptbUsuario.TabStop = false;
+            this.ptbUsuario.Click += new System.EventHandler(this.ptbUsuario_Click);
             // 
             // btnExportarReportes
             // 
@@ -238,10 +251,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCerrar)).EndInit();
             this.scOperario.Panel1.ResumeLayout(false);
+            this.scOperario.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scOperario)).EndInit();
             this.scOperario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,10 +267,11 @@
         private System.Windows.Forms.PictureBox iconMinimizar;
         private System.Windows.Forms.SplitContainer scOperario;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbUsuario;
         private System.Windows.Forms.Button btnExportarReportes;
         private System.Windows.Forms.Button btnSolicitarRetiroProyecto;
         private System.Windows.Forms.Button btnVisualizarProyectos;
         private System.Windows.Forms.Button bttLogOut;
+        private System.Windows.Forms.Label lblUsuarios;
     }
 }

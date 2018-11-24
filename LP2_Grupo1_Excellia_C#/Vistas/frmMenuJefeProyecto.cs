@@ -17,12 +17,16 @@ namespace Vistas
     {
         private int id_jefe;
         private bool menuEscodido;
+        private JefeProyecto jf;
         public frmMenuJefeProyecto(JefeProyecto jefeProyecto)
         {
             InitializeComponent();
             AbrirFormInPanel(new FormVisualizarProyectos(false));
             menuEscodido = false;
+            jf = jefeProyecto;
             id_jefe = jefeProyecto.IdTrabajador;
+            lblUsuarios.Text = jf.Nombre + " " + jf.ApellidoPaterno + " " + jf.ApellidoMaterno + Environment.NewLine
+                + jf.Telefono + Environment.NewLine + jf.Correo;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -114,6 +118,20 @@ namespace Vistas
         private void btnGestionRequerimientos_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new frmSolicitudesModificacionRequerimientos(id_jefe));
+        }
+
+        private void ptbUsuarios_Click(object sender, EventArgs e)
+        {
+            Operario op = new Operario();
+            op.Nombre = jf.Nombre;
+            op.ApellidoMaterno = jf.ApellidoMaterno;
+            op.ApellidoPaterno = jf.ApellidoPaterno;
+            op.Correo = jf.Correo;
+            frmConfiguraciones conf = new frmConfiguraciones(op,1);
+            if(conf.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }
