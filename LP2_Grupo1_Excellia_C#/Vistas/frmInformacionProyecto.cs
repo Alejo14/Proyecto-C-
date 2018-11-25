@@ -45,7 +45,7 @@ namespace Vistas
         {
             int id = Int32.Parse(txtId.Text.Trim().ToString());
             int pri = Int32.Parse(cboPrioridad.SelectedIndex.ToString()) + 1;
-            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString())+1;
+            int et = Int32.Parse(cboEtapa.SelectedIndex.ToString()) + Proyecto.EtapaInt;
             if(Int32.Parse(cboEtapa.SelectedIndex.ToString()) == 7)
             {
                 MessageBox.Show("No se puede cambiar la fase a cancelado");
