@@ -19,7 +19,7 @@ namespace Vistas
         public FormMenuOperario(Operario operario)
         {
             InitializeComponent();
-            AbrirFormInPanel(new FormVisualizarProyectos(true));
+            AbrirFormInPanel(new FormVisualizarProyectos(true, operario));
             menuEscodido = false;
             op = operario;
             lblUsuarios.Text = op.Nombre + " " + op.ApellidoPaterno + " " + op.ApellidoMaterno + Environment.NewLine +
@@ -35,7 +35,7 @@ namespace Vistas
 
         private void btnVisualizarProyectos_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormVisualizarProyectos(true));
+            AbrirFormInPanel(new FormVisualizarProyectos(true, op));
         }
         private void AbrirFormInPanel(object Formhijo)
         {

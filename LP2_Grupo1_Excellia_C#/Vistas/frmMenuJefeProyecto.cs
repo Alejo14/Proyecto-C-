@@ -21,7 +21,7 @@ namespace Vistas
         public frmMenuJefeProyecto(JefeProyecto jefeProyecto)
         {
             InitializeComponent();
-            AbrirFormInPanel(new FormVisualizarProyectos(false));
+            AbrirFormInPanel(new FormVisualizarProyectos(false, jefeProyecto));
             menuEscodido = false;
             jf = jefeProyecto;
             id_jefe = jefeProyecto.IdTrabajador;
@@ -92,7 +92,7 @@ namespace Vistas
 
         private void btnVisualizarProyectos_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormVisualizarProyectos(false));
+            AbrirFormInPanel(new FormVisualizarProyectos(false, jf));
         }
 
         private void btnBuscarContacto_Click(object sender, EventArgs e)

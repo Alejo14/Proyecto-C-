@@ -52,7 +52,7 @@ namespace Vistas
             }
             else
             {
-                proyectoBL.ActualizarDatos(id, pri, et);
+                proyectoBL.ActualizarDatos(proyecto, pri, et);
                 MessageBox.Show("Se han realizado los cambios satisfactoriamente");
             }
             cboEtapa.Enabled = false;

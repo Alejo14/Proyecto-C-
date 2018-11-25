@@ -16,9 +16,11 @@ namespace Vistas
     {
         private ProyectoBL proyectoBL;
         private Proyecto proyecto;
-        public FormVisualizarProyectos(bool operario)
+        private Trabajador trabajadorProyecto;
+        public FormVisualizarProyectos(bool operario, Trabajador trabajador)
         {
             InitializeComponent();
+            trabajadorProyecto = trabajador;
             proyectoBL = new ProyectoBL();
             cboEtapa.DataSource = proyectoBL.listarEtapas();
             
@@ -90,6 +92,7 @@ namespace Vistas
             if (dgvVisualizarProyectos.SelectedRows.Count > 0)
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
+                proyecto.JefeProyecto = (JefeProyecto)trabajadorProyecto;
                 frmAsignarTrabajador at = new frmAsignarTrabajador(Proyecto);
                 if (at.ShowDialog() == DialogResult.OK)
                 {
@@ -112,7 +115,8 @@ namespace Vistas
                 int anio = mifecha.Year;
                 this.DialogResult = DialogResult.OK;
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
-
+                if (trabajadorProyecto is JefeProyecto)
+                    Proyecto.JefeProyecto = (JefeProyecto)trabajadorProyecto;
 
                 frmInformacionProyecto iP = new frmInformacionProyecto(Proyecto);
                 iP.ShowDialog();

@@ -48,9 +48,12 @@ namespace LogicaNegocio
             return proyectoDA.listarEtapas();
         }
 
-        public void ActualizarDatos(int id, int pri, int et)
+        public void ActualizarDatos(Proyecto proyectoActualizar, int pri, int et)
         {
-            proyectoDA.ActualizarDatos(id, pri, et);
+            if (et == 5 || et == 6) {
+                enviarCorreoActualizacionEtapa(proyectoActualizar, et);
+            }
+            proyectoDA.ActualizarDatos(proyectoActualizar.IdProyecto, pri, et);
         }
         public void CancelarProyecto(int id)
         {
@@ -69,6 +72,8 @@ namespace LogicaNegocio
 
         public void AsignarTrabajador(Proyecto p, Trabajador t)
         {
+            string mensajeCorreo = obtenerMensajeAsignacionTrabajador(p);
+            EmailSender.enviarEmail(t.Correo, "Asignacion a proyecto", mensajeCorreo);
             proyectoDA.AsignarTrabajador(p, t);
 
         }
@@ -102,6 +107,54 @@ namespace LogicaNegocio
                                     "\r\nCargo: " + operarioRetiro.CargoOperarioStr +
                                     "\r\n\r\nDeberá comunicarse con el operario y acordar si procede su retiro para registrarlo en el sistema." +
                                     "\r\n\r\nAtentamente,\r\n\r\nSistema de apoyo a la gestión de proyectos de Excellia.";
+
+            return mensajeCorreo;
+        }
+
+        private string obtenerMensajeAsignacionTrabajador(Proyecto proyectoAsignar) {
+            string mensajeCorreo = "Estimado Operario,\r\n\r\n"+
+                            "El presente correo es para notificarle que ha sido asignado a un proyecto. Los detalles del proyecto son los siguientes:" +
+                            "\r\n\r\nNombre del proyecto: " + proyectoAsignar.Nombre +
+                            "\r\nJefe de Proyecto: " + proyectoAsignar.JefeProyecto.Nombre + " " + proyectoAsignar.JefeProyecto.ApellidoPaterno +
+                            "\r\n\r\nCualquier Consulta, comuniquese con el jefe de proyecto." +
+                            "\r\n\r\nAtentamente," +
+                            "\r\nEl equipo de Excellia";
+
+            return mensajeCorreo;
+        }
+
+        private void enviarCorreoActualizacionEtapa(Proyecto proyectoActualizar, int idEtapa) {
+            string etapa = "";
+
+            if (idEtapa == 5)
+            {
+                etapa = "Post-Produccion";
+            }
+            else if (idEtapa == 6)
+            {
+                etapa = "Finalizado";
+            }
+
+            Cliente clienteProyecto = obtenerCliente(proyectoActualizar.IdProyecto);
+
+            string mensajeCorreo = obtenerMensajePasoEtapaProyecto(proyectoActualizar, clienteProyecto, etapa);
+
+            EmailSender.enviarEmail(clienteProyecto.Correo, "Paso de etapa de proyecto a " + etapa, mensajeCorreo);
+        }
+
+        private Cliente obtenerCliente(int idProyecto) {
+            ClienteDA clienteDA = new ClienteDA();
+            return clienteDA.obtenerCliente(idProyecto);
+        }
+
+        private string obtenerMensajePasoEtapaProyecto(Proyecto proyectoActualizar, Cliente clienteProyecto, string etapaActualizar) {
+            string mensajeCorreo = "Estimado " + clienteProyecto.Nombre + ",\r\n\r\n" +
+                            "El presente mensaje es para notificarle que uno de los proyectos que ha solicitado ha pasado a la etapa de " + etapaActualizar + ":" +
+                            "\r\n\r\nNombre del Proyecto: " + proyectoActualizar.Nombre +
+                            "\r\nJefe de Proyecto: " + proyectoActualizar.JefeProyecto.Nombre + " " + proyectoActualizar.JefeProyecto.ApellidoPaterno +
+                            "\r\n\r\nCualquier consulta, comunicarse con el KAM o el jefe del proyecto." +
+                            "\r\n\r\nAtentamente," +
+                            "\r\n\r\nEl equipo de Excellia";
 
             return mensajeCorreo;
         }
