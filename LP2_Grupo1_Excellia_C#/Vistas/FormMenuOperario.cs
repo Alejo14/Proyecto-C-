@@ -140,7 +140,9 @@ namespace Vistas
             frmConfiguraciones conf = new frmConfiguraciones(op,0);
             if(conf.ShowDialog() == DialogResult.OK)
             {
-
+                
+                lblUsuarios.Text = op.Nombre + " " + op.ApellidoPaterno + " " + op.ApellidoMaterno + Environment.NewLine +
+                       op.Telefono + Environment.NewLine + conf.Operario.Correo;
             }
         }
     }

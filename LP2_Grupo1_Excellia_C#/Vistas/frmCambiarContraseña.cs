@@ -22,10 +22,9 @@ namespace Vistas
             this.cu = cu;
             trabajadorBL = new TrabajadorBL();
             txtContra.Validating += TxtContra_Validating;
-            txtContraRep.Validating += TxtContraRep_Validating;
         }
 
-        private void TxtContraRep_Validating(object sender, CancelEventArgs e)
+        private void TxtContra_Validating(object sender, CancelEventArgs e)
         {
             int valoresEspeciales = txtContra.Text.Count(caracter => !char.IsLetterOrDigit(caracter));
             if (valoresEspeciales != 0)
@@ -35,18 +34,6 @@ namespace Vistas
             else
             {
                 errorContra.SetError(txtContra, "");
-            }
-        }
-
-        private void TxtContra_Validating(object sender, CancelEventArgs e)
-        {
-            if (!txtContra.Text.Equals(txtContraRep))
-            {
-                errorContraRep.SetError(txtContraRep, "Los datos ingresados no coinciden");
-            }
-            else
-            {
-                errorContraRep.SetError(txtContraRep, "");
             }
         }
 
@@ -64,6 +51,7 @@ namespace Vistas
             }
             if (!validarContra())
             {
+                MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             cu.Contrasena = txtContra.Text;
@@ -75,21 +63,13 @@ namespace Vistas
             {
                 MessageBox.Show("Ocurrió un error en la actualización de su perfil", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.DialogResult = DialogResult.OK;
         }
         private bool validarContra()
         {
             int valoresEspeciales = txtContra.Text.Count(caracter => !Char.IsLetterOrDigit(caracter));
-            if(valoresEspeciales != 0)
-            {
-                MessageBox.Show("La contraseña solo puede tener letras y/o números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (!txtContra.Text.Equals(txtContra))
-            {
-                MessageBox.Show("Los valores ingresados no coinciden entre si", "Adevertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
+            bool valido = valoresEspeciales == 0 && txtContra.Text.Equals(txtContra.Text);
+            return valido;
         }
     }
     

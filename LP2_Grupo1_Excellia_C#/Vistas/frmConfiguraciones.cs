@@ -18,13 +18,19 @@ namespace Vistas
         private CuentaUsuario cu;
         private TrabajadorBL trabajadorBL;
         private Trabajador t;
+        private Operario op;
+        private JefeProyecto jf;
         private int seleccionador;
         private enum Estados { INICIAL, EDITAR, GUARDAR }
+        public Operario Operario { get => op; set => value = op; }
+        public JefeProyecto JefeProyecto { get => jf; set => value = jf; }
         private Estados estado;
         public frmConfiguraciones(Trabajador t, int seleccionador)
         {
             InitializeComponent();
             trabajadorBL = new TrabajadorBL();
+            if(seleccionador == 0) op = new Operario();
+            else jf = new JefeProyecto();
             this.t = t;
             this.seleccionador = seleccionador;
             estado = Estados.INICIAL;
@@ -33,12 +39,11 @@ namespace Vistas
 
         private void txtNombreUsuario_Validating(object sender, CancelEventArgs e)
         {
-            if (txtNombreUsuario.Text.Length < 3 && txtNombreUsuario.Text.Length > 8)
+            if (txtNombreUsuario.Text.Length < 3 || txtNombreUsuario.Text.Length > 15)
             {
-                errorNombreUsuario.SetError(txtNombreUsuario, "Nombre de usuario debe tener entre 3 y 8 caracteres");
+                errorNombreUsuario.SetError(txtNombreUsuario, "Nombre de usuario debe tener entre 3 y 15 caracteres");
             }
-
-            if (txtNombreUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter)) != 0)
+            else if (txtNombreUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter)) != 0)
             {
                 errorNombreUsuario.SetError(txtNombreUsuario, "Nombre de usuario debe tener solo numeros y letras");
             }
@@ -51,16 +56,12 @@ namespace Vistas
         private void txtCorreo_Validating(object sender, CancelEventArgs e)
         {
             int espaciosBlancos = txtCorreo.Text.Count(caracter => caracter == ' ');
-
             int numArroba = txtCorreo.Text.Count(caracter => caracter == '@');
-
             int numCar = txtCorreo.Text.Length;
-
             if (numCar > 80)
             {
                 errorCorreo.SetError(txtCorreo, "Correo debe tener a lo mas 80 caracteres");
             }
-
             else if (espaciosBlancos != 0 && numArroba != 1)
             {
                 errorCorreo.SetError(txtCorreo, "Correo debe poseer una @ y no debe contener espacios en blanco");
@@ -69,7 +70,6 @@ namespace Vistas
             {
                 errorCorreo.SetError(txtCorreo, "Correo no debe contener Espacios en blanco");
             }
-
             else if (numArroba != 1)
             {
                 errorCorreo.SetError(txtCorreo, "Correo debe poseer una @");
@@ -82,10 +82,18 @@ namespace Vistas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (!validarCorreo()) return;
-            if (!validarNombreUsuario()) return;
-            cu.Persona.Correo = txtCorreo.Text;
-            cu.NomUsuario = txtNombreUsuario.Text;
+            if (!validarCorreo())
+            {
+                MessageBox.Show("Correo no válido","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            if (!validarNombreUsuario())
+            {
+                MessageBox.Show("Nombre Usuario no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            cu.Persona.Correo = txtCorreo.Text.Trim();
+            cu.NomUsuario = txtNombreUsuario.Text.Trim();
             if (trabajadorBL.actualizarPerfil(cu))
             {
                MessageBox.Show("Se han guardado los cambios","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -94,8 +102,10 @@ namespace Vistas
             {
                 MessageBox.Show("Ocurrió un error en la actualización de su perfil", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            estado = Estados.INICIAL;
+            estado = Estados.GUARDAR;
             mostrarEstadoActual(estado, t, seleccionador);
+            if (seleccionador == 0) op.Correo = txtCorreo.Text.Trim();
+            else jf.Correo = txtCorreo.Text.Trim();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -105,10 +115,15 @@ namespace Vistas
 
         private void btnCambiarContrseña_Click(object sender, EventArgs e)
         {
+            cu.Persona.Correo = txtCorreo.Text.Trim();
+            cu.NomUsuario = txtNombreUsuario.Text.Trim();
             frmCambiarContraseña cc = new frmCambiarContraseña(cu);
             if (cc.ShowDialog() == DialogResult.OK)
             {
-
+                estado = Estados.GUARDAR;
+                mostrarEstadoActual(estado, t, seleccionador);
+                if (seleccionador == 0) op.Correo = txtCorreo.Text.Trim();
+                else jf.Correo = txtCorreo.Text.Trim();
             }
         }
         private bool validarCorreo()
@@ -123,7 +138,7 @@ namespace Vistas
         private bool validarNombreUsuario()
         {
             int especiales = txtNombreUsuario.Text.Count(caracter => !char.IsLetterOrDigit(caracter));
-            bool valido = txtNombreUsuario.Text.Length >= 3 && txtNombreUsuario.Text.Length <= 8 && especiales == 0;
+            bool valido = txtNombreUsuario.Text.Length >= 3 && txtNombreUsuario.Text.Length <= 15 && especiales == 0;
             
             return valido;
         }
@@ -155,11 +170,12 @@ namespace Vistas
                 btnEditar.Visible = true;
                 if (seleccionador == 0)
                 {
-                    Operario op = (Operario)t;
+                    op = (Operario)t;
                     txtTipoUsuario.Text = Convert.ToString(op.Cargo);
                 }
                 else
                 {
+                    jf = (JefeProyecto)t;
                     txtTipoUsuario.Text = "JEFE DE PROYECTO";
                 }
                 txtTipoUsuario.Enabled = false;
@@ -173,6 +189,11 @@ namespace Vistas
                 txtCorreo.Validating += txtCorreo_Validating;
                 txtNombreUsuario.Validating += txtNombreUsuario_Validating;
                 btnEditar.Visible = false;
+            }else if(e == Estados.GUARDAR)
+            {
+                txtCorreo.Enabled = false;
+                txtNombreUsuario.Enabled = false;
+                btnEditar.Visible = true;
             }
         }
     }

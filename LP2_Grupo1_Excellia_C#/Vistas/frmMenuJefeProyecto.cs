@@ -125,7 +125,8 @@ namespace Vistas
             frmConfiguraciones conf = new frmConfiguraciones(jf,1);
             if(conf.ShowDialog() == DialogResult.OK)
             {
-
+                lblUsuarios.Text = jf.Nombre + " " + jf.ApellidoPaterno + " " + jf.ApellidoMaterno + Environment.NewLine
+                    + jf.Telefono + Environment.NewLine + conf.JefeProyecto.Correo;
             }
         }
     }
