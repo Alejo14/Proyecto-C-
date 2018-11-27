@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblContra = new System.Windows.Forms.Label();
             this.lblContraRep = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
@@ -36,7 +37,11 @@
             this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.errorContra = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorContraRep = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraRep)).BeginInit();
             this.SuspendLayout();
             // 
             // lblContra
@@ -126,6 +131,14 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // errorContra
+            // 
+            this.errorContra.ContainerControl = this;
+            // 
+            // errorContraRep
+            // 
+            this.errorContraRep.ContainerControl = this;
+            // 
             // frmCambiarContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +158,8 @@
             this.Text = "Nueva Contraseña";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorContraRep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +175,7 @@
         private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.ErrorProvider errorContra;
+        private System.Windows.Forms.ErrorProvider errorContraRep;
     }
 }

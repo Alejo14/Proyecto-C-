@@ -102,8 +102,8 @@ namespace AccesoDatos
             {
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand();
-                String sql = "UPDATE PERSONA P, CUENTA_USUARIO CU SET P.CORREO = " + cu.Persona.Correo + ", CU.CONTRASEÑA = " + cu.Contrasena + 
-                    ", CU.NOMBRE_USUARIO = " + cu.NomUsuario + " WHERE ID_CUENTA = " + cu.IdCuenta;
+                String sql = "UPDATE PERSONA P INNER JOIN CUENTA_USUARIO CU ON P.ID_CUENTA = CU.ID_CUENTA SET P.CORREO = '" + cu.Persona.Correo + "', CU.CONTRASENA = '" + cu.Contrasena +
+                    "', CU.NOMBRE_USUARIO = '" + cu.NomUsuario + "' WHERE P.ID_CUENTA = " + cu.IdCuenta;
                 cmd.CommandText = sql;
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
@@ -116,5 +116,6 @@ namespace AccesoDatos
                 con.Close();
                 return false;
             }
+        }
     }
 }

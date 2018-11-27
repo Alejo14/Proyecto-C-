@@ -56,6 +56,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorNombreUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnEditar = new System.Windows.Forms.Button();
             this.gbDatosPersonales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,7 +69,7 @@
             this.btnCambiarContrseña.FlatAppearance.BorderSize = 0;
             this.btnCambiarContrseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarContrseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarContrseña.Image = global::Vistas.Properties.Resources.Evaluar;
+            this.btnCambiarContrseña.Image = global::Vistas.Properties.Resources.tuerca;
             this.btnCambiarContrseña.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCambiarContrseña.Location = new System.Drawing.Point(247, 523);
             this.btnCambiarContrseña.Name = "btnCambiarContrseña";
@@ -305,9 +306,9 @@
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(415, 523);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(120, 53);
+            this.btnGuardar.Size = new System.Drawing.Size(113, 53);
             this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar\r\nCambios";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -329,12 +330,29 @@
             // 
             this.errorNombreUsuario.ContainerControl = this;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::Vistas.Properties.Resources.Evaluar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(415, 528);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(113, 43);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmConfiguraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(558, 604);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnCambiarContrseña);
@@ -386,5 +404,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider errorCorreo;
         private System.Windows.Forms.ErrorProvider errorNombreUsuario;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
