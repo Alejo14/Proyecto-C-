@@ -95,5 +95,26 @@ namespace AccesoDatos
             con.Close();
             return dominio;
         }
+        public bool actualizarPerfil(CuentaUsuario cu)
+        {
+            MySqlConnection con = new MySqlConnection(DBManager.cadena);
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                String sql = "UPDATE PERSONA P, CUENTA_USUARIO CU SET P.CORREO = " + cu.Persona.Correo + ", CU.CONTRASEÑA = " + cu.Contrasena + 
+                    ", CU.NOMBRE_USUARIO = " + cu.NomUsuario + " WHERE ID_CUENTA = " + cu.IdCuenta;
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+                return true;
+            }
+            catch
+            {
+                con.Close();
+                return false;
+            }
     }
 }

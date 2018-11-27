@@ -21,5 +21,10 @@ namespace Vistas
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCambiarContrseña = new System.Windows.Forms.Button();
             this.txtPefil = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -53,9 +54,13 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNombreUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbDatosPersonales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombreUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCambiarContrseña
@@ -316,6 +321,14 @@
             this.panel1.Size = new System.Drawing.Size(560, 71);
             this.panel1.TabIndex = 22;
             // 
+            // errorCorreo
+            // 
+            this.errorCorreo.ContainerControl = this;
+            // 
+            // errorNombreUsuario
+            // 
+            this.errorNombreUsuario.ContainerControl = this;
+            // 
             // frmConfiguraciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +351,8 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNombreUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,5 +384,7 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ErrorProvider errorCorreo;
+        private System.Windows.Forms.ErrorProvider errorNombreUsuario;
     }
 }

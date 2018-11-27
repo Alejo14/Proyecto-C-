@@ -99,6 +99,7 @@
             this.btnGuardarCambios.Text = "Guardar Cambios";
             this.btnGuardarCambios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // pnlTitulo
             // 

@@ -28,5 +28,9 @@ namespace LogicaNegocio
         {
             return trabajadorDA.obtenerDominio(id);
         }
+        public bool actualizarPerfil(CuentaUsuario cu)
+        {
+            return trabajadorDA.actualizarPerfil(cu);
+        }
     }
 }
