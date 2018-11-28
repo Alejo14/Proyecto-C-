@@ -65,7 +65,9 @@ namespace Vistas
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se realizó la exportación con éxito");
+            frmDetalleReporte detalleReporte = new frmDetalleReporte();
+            if(detalleReporte.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("Se realizó la exportación con éxito");
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
