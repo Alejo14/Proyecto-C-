@@ -53,11 +53,6 @@ namespace Vistas
             AbrirFormInPanel(new frmSolicitarRetiroDeProyecto(op));
         }
 
-        private void btnExportarReportes_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new frmExportarReportes());
-        }
-
         private void bttLogOut_Click(object sender, EventArgs e)
         {
             frmLoggin lg = new frmLoggin();

@@ -6,15 +6,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CrystalDecisions.Shared;
 using System.Windows.Forms;
 
 namespace Vistas
 {
     public partial class frmDetalleReporte : Form
     {
-        public frmDetalleReporte()
+        public frmDetalleReporte(ParameterFields parametrosReporte)
         {
             InitializeComponent();
+            crvReporteProyectos.ParameterFieldInfo = parametrosReporte;
         }
     }
 }

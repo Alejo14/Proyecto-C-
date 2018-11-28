@@ -71,7 +71,7 @@ namespace Vistas
         private void btnRetirarOperario_Click(object sender, EventArgs e)
         { 
 
-            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            if (dgvVisualizarProyectos.SelectedCells.Count > 0)
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
                 frmRetirarOperarioXProyecto frm = new frmRetirarOperarioXProyecto(Proyecto);
@@ -82,14 +82,14 @@ namespace Vistas
             }
             else
             {
-                MessageBox.Show("Se debe de seleccionar un proyecto para retirar usuarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se debe de seleccionar un proyecto para retirar operarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
-            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            if (dgvVisualizarProyectos.SelectedCells.Count > 0)
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
                 proyecto.JefeProyecto = (JefeProyecto)trabajadorProyecto;
@@ -101,13 +101,13 @@ namespace Vistas
             }
             else
             {
-                MessageBox.Show("Se debe de seleccionar un proyecto para retirar usuarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se debe de seleccionar un proyecto para asignar operarios", "Asignar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnInformacionProyecto_Click(object sender, EventArgs e)
         {
-            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            if (dgvVisualizarProyectos.SelectedCells.Count > 0)
             {
                 DateTime mifecha = dtpFechaComienzo.Value.Date;
                 int dia = mifecha.Day;
@@ -125,7 +125,7 @@ namespace Vistas
             }
             else
             {
-                MessageBox.Show("Se debe de seleccionar un proyecto para retirar usuarios", "Retirar operarios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se debe de seleccionar un proyecto para ver su información", "Información de proyecto", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

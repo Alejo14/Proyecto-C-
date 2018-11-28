@@ -87,7 +87,11 @@ namespace Vistas
         }
         private void btnExportarReportes_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmExportarReportes());
+            frmExportarReportes rp = new frmExportarReportes();
+            if (rp.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void btnVisualizarProyectos_Click(object sender, EventArgs e)

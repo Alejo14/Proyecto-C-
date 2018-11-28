@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crvReporteProyectos = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.Reporte_JefeProyecto1 = new Vistas.Reporte_JefeProyecto();
+            this.reportDocument1 = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
             this.SuspendLayout();
             // 
             // crvReporteProyectos
@@ -40,9 +40,15 @@
             this.crvReporteProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvReporteProyectos.Location = new System.Drawing.Point(0, 0);
             this.crvReporteProyectos.Name = "crvReporteProyectos";
-            this.crvReporteProyectos.ReportSource = this.Reporte_JefeProyecto1;
+            this.crvReporteProyectos.ReportSource = "D:\\Diego Paredes\\LP2\\TA\\ProyectoLP2_EnCapas\\Proyecto-C-\\LP2_Grupo1_Excellia_C#\\Re" +
+    "portes\\Reporte_JefeProyecto.rpt";
             this.crvReporteProyectos.Size = new System.Drawing.Size(800, 450);
             this.crvReporteProyectos.TabIndex = 0;
+            // 
+            // reportDocument1
+            // 
+            this.reportDocument1.FileName = "rassdk://D:\\Diego Paredes\\LP2\\TA\\ProyectoLP2_EnCapas\\Proyecto-C-\\LP2_Grupo1_Excel" +
+    "lia_C#\\Reportes\\Reporte_JefeProyecto.rpt";
             // 
             // frmDetalleReporte
             // 
@@ -60,5 +66,7 @@
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReporteProyectos;
         private Reporte_JefeProyecto Reporte_JefeProyecto1;
+        private Reporte_JefeProyecto Reporte_JefeProyecto2;
+        private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
     }
 }
