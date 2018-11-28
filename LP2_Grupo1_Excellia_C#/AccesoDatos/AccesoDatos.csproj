@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArchivoDA.cs" />
     <Compile Include="ClienteDA.cs" />
     <Compile Include="CuentaUsuarioDA.cs" />
     <Compile Include="DBManager.cs" />
