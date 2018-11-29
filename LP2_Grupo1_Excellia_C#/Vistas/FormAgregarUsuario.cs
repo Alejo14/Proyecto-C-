@@ -72,7 +72,7 @@ namespace Vistas
             }
 
             else if (numValido != 0) {
-                errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numerico, no agregar prefijo (+51)");
+                errorProviderTelefono.SetError(txtTelefono, "Telefono debe ser numerico positivo, no agregar prefijo (+51)");
             }
             else
             {
@@ -135,11 +135,11 @@ namespace Vistas
 
             if (!esNumerico && !tamanoAdecuado)
             {
-                errorProviderDni.SetError(txtDni, "DNI debe ser numerico y de tamaño 8");
+                errorProviderDni.SetError(txtDni, "DNI debe ser numerico positivo y de tamaño 8");
             }
             else if (!esNumerico)
             {
-                errorProviderDni.SetError(txtDni, "DNI debe ser numerico");
+                errorProviderDni.SetError(txtDni, "DNI debe ser numerico positivo");
             }
             else if (!tamanoAdecuado)
             {
@@ -170,7 +170,7 @@ namespace Vistas
 
             if (!txtDni.Text.All(caracter => char.IsDigit(caracter)))
             {
-                MessageBox.Show("DNI debe ser numerico");
+                MessageBox.Show("DNI debe ser numerico positivo");
                 return;
             }
 
@@ -253,7 +253,7 @@ namespace Vistas
             }
 
             if (txtTelefono.Text.Count(caracter => !char.IsDigit(caracter)) != 0) {
-                MessageBox.Show("Telefono debe ser numerico, no agregar prefijo (+51)");
+                MessageBox.Show("Telefono debe ser numerico positivo, no agregar prefijo (+51)");
                 return;
             }
 
