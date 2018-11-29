@@ -132,10 +132,14 @@ namespace Vistas
 
         private void btnSubirDocs_Click(object sender, EventArgs e)
         {
-            if (dgvVisualizarProyectos.SelectedRows.Count > 0)
+            if (dgvVisualizarProyectos.SelectedCells.Count > 0)
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
                 FormSubirArchivos administadorDocs = new FormSubirArchivos(Proyecto.IdProyecto,trabajadorProyecto.IdTrabajador);
+                if(administadorDocs.ShowDialog() == DialogResult.OK)
+                {
+
+                }
             }
             else
             {
