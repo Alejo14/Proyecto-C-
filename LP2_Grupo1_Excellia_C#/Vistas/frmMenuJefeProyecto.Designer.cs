@@ -61,9 +61,8 @@
             this.panel2.Controls.Add(this.btnSlide);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1587, 54);
+            this.panel2.Size = new System.Drawing.Size(1210, 44);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -71,10 +70,9 @@
             // 
             this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbMinimizar.Image = global::Vistas.Properties.Resources.icon_minimizar;
-            this.pbMinimizar.Location = new System.Drawing.Point(1468, 10);
-            this.pbMinimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbMinimizar.Location = new System.Drawing.Point(1121, 8);
             this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(43, 37);
+            this.pbMinimizar.Size = new System.Drawing.Size(32, 30);
             this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMinimizar.TabIndex = 3;
             this.pbMinimizar.TabStop = false;
@@ -84,10 +82,9 @@
             // 
             this.pbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbExit.Image = global::Vistas.Properties.Resources.icon_cerrar2;
-            this.pbExit.Location = new System.Drawing.Point(1535, 10);
-            this.pbExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbExit.Location = new System.Drawing.Point(1171, 8);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(36, 37);
+            this.pbExit.Size = new System.Drawing.Size(27, 30);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 1;
             this.pbExit.TabStop = false;
@@ -96,10 +93,9 @@
             // btnSlide
             // 
             this.btnSlide.Image = global::Vistas.Properties.Resources.Menu1;
-            this.btnSlide.Location = new System.Drawing.Point(4, 4);
-            this.btnSlide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSlide.Location = new System.Drawing.Point(3, 3);
             this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(57, 48);
+            this.btnSlide.Size = new System.Drawing.Size(43, 39);
             this.btnSlide.TabIndex = 0;
             this.btnSlide.TabStop = false;
             this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
@@ -108,8 +104,7 @@
             // 
             this.scJefeProyecto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scJefeProyecto.IsSplitterFixed = true;
-            this.scJefeProyecto.Location = new System.Drawing.Point(0, 54);
-            this.scJefeProyecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scJefeProyecto.Location = new System.Drawing.Point(0, 44);
             this.scJefeProyecto.Name = "scJefeProyecto";
             // 
             // scJefeProyecto.Panel1
@@ -124,19 +119,17 @@
             this.scJefeProyecto.Panel1.Controls.Add(this.btnExportarReportes);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnHome);
             this.scJefeProyecto.Panel1.Controls.Add(this.btnlogoInicio);
-            this.scJefeProyecto.Size = new System.Drawing.Size(1587, 697);
-            this.scJefeProyecto.SplitterDistance = 313;
-            this.scJefeProyecto.SplitterWidth = 5;
+            this.scJefeProyecto.Size = new System.Drawing.Size(1210, 566);
+            this.scJefeProyecto.SplitterDistance = 238;
             this.scJefeProyecto.TabIndex = 2;
             // 
             // lblUsuarios
             // 
             this.lblUsuarios.AutoSize = true;
             this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(99, 594);
-            this.lblUsuarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuarios.Location = new System.Drawing.Point(74, 483);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(83, 18);
+            this.lblUsuarios.Size = new System.Drawing.Size(68, 15);
             this.lblUsuarios.TabIndex = 19;
             this.lblUsuarios.Text = "txtUsuarios";
             // 
@@ -147,10 +140,9 @@
             this.btnGestionRequerimientos.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionRequerimientos.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnGestionRequerimientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionRequerimientos.Location = new System.Drawing.Point(11, 386);
-            this.btnGestionRequerimientos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGestionRequerimientos.Location = new System.Drawing.Point(8, 311);
             this.btnGestionRequerimientos.Name = "btnGestionRequerimientos";
-            this.btnGestionRequerimientos.Size = new System.Drawing.Size(284, 50);
+            this.btnGestionRequerimientos.Size = new System.Drawing.Size(209, 41);
             this.btnGestionRequerimientos.TabIndex = 18;
             this.btnGestionRequerimientos.Text = "Gestión de Requisitos";
             this.btnGestionRequerimientos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,10 +156,9 @@
             this.btnGenerarProyecto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarProyecto.Image = global::Vistas.Properties.Resources.Derivar;
             this.btnGenerarProyecto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarProyecto.Location = new System.Drawing.Point(11, 203);
-            this.btnGenerarProyecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerarProyecto.Location = new System.Drawing.Point(8, 165);
             this.btnGenerarProyecto.Name = "btnGenerarProyecto";
-            this.btnGenerarProyecto.Size = new System.Drawing.Size(284, 50);
+            this.btnGenerarProyecto.Size = new System.Drawing.Size(213, 41);
             this.btnGenerarProyecto.TabIndex = 17;
             this.btnGenerarProyecto.Text = "Generar Proyecto";
             this.btnGenerarProyecto.UseVisualStyleBackColor = true;
@@ -176,10 +167,9 @@
             // ptbUsuarios
             // 
             this.ptbUsuarios.Image = global::Vistas.Properties.Resources.account_customer_man_profile_user_icon_64;
-            this.ptbUsuarios.Location = new System.Drawing.Point(11, 582);
-            this.ptbUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbUsuarios.Location = new System.Drawing.Point(8, 473);
             this.ptbUsuarios.Name = "ptbUsuarios";
-            this.ptbUsuarios.Size = new System.Drawing.Size(80, 78);
+            this.ptbUsuarios.Size = new System.Drawing.Size(60, 63);
             this.ptbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbUsuarios.TabIndex = 16;
             this.ptbUsuarios.TabStop = false;
@@ -192,10 +182,9 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::Vistas.Properties.Resources.LogOut;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(11, 513);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(8, 417);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(268, 62);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(201, 50);
             this.btnCerrarSesion.TabIndex = 15;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -208,10 +197,9 @@
             this.btnBuscarContacto.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarContacto.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnBuscarContacto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarContacto.Location = new System.Drawing.Point(11, 325);
-            this.btnBuscarContacto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarContacto.Location = new System.Drawing.Point(8, 264);
             this.btnBuscarContacto.Name = "btnBuscarContacto";
-            this.btnBuscarContacto.Size = new System.Drawing.Size(284, 50);
+            this.btnBuscarContacto.Size = new System.Drawing.Size(213, 41);
             this.btnBuscarContacto.TabIndex = 14;
             this.btnBuscarContacto.Text = "Buscar Contacto";
             this.btnBuscarContacto.UseVisualStyleBackColor = true;
@@ -224,10 +212,9 @@
             this.btnExportarReportes.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportarReportes.Image = global::Vistas.Properties.Resources.folder_guardar_paste_save_icon_32;
             this.btnExportarReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExportarReportes.Location = new System.Drawing.Point(11, 261);
-            this.btnExportarReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExportarReportes.Location = new System.Drawing.Point(8, 212);
             this.btnExportarReportes.Name = "btnExportarReportes";
-            this.btnExportarReportes.Size = new System.Drawing.Size(300, 57);
+            this.btnExportarReportes.Size = new System.Drawing.Size(225, 46);
             this.btnExportarReportes.TabIndex = 11;
             this.btnExportarReportes.Text = "Exportar Reportes";
             this.btnExportarReportes.UseVisualStyleBackColor = true;
@@ -240,10 +227,9 @@
             this.btnHome.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(11, 134);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Location = new System.Drawing.Point(8, 109);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(197, 62);
+            this.btnHome.Size = new System.Drawing.Size(148, 50);
             this.btnHome.TabIndex = 10;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -252,22 +238,20 @@
             // btnlogoInicio
             // 
             this.btnlogoInicio.Image = global::Vistas.Properties.Resources.Name1;
-            this.btnlogoInicio.Location = new System.Drawing.Point(28, 26);
-            this.btnlogoInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogoInicio.Location = new System.Drawing.Point(21, 21);
             this.btnlogoInicio.Name = "btnlogoInicio";
-            this.btnlogoInicio.Size = new System.Drawing.Size(240, 81);
+            this.btnlogoInicio.Size = new System.Drawing.Size(180, 66);
             this.btnlogoInicio.TabIndex = 9;
             this.btnlogoInicio.TabStop = false;
             // 
             // frmMenuJefeProyecto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1587, 751);
+            this.ClientSize = new System.Drawing.Size(1210, 610);
             this.Controls.Add(this.scJefeProyecto);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMenuJefeProyecto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuJefeProyecto";

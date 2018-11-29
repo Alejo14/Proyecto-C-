@@ -11,7 +11,7 @@ namespace AccesoDatos
 {
     public class RolDA
     {
-        public BindingList<TipoTrabajador> listarRoles()
+        public BindingList<TipoTrabajador> listarRoles(int seleccionador)
         {
             BindingList<TipoTrabajador> roles = new BindingList<TipoTrabajador>();
             MySqlConnection con = new MySqlConnection(DBManager.cadena);
@@ -25,7 +25,7 @@ namespace AccesoDatos
                 TipoTrabajador rol = new TipoTrabajador();
                 rol.IdTipoTrabajador = lector.GetInt32("ID_TIPO");
                 rol.Descripcion = lector.GetString("DESCRIPCION");
-                roles.Add(rol);
+                if((seleccionador == 1 && rol.IdTipoTrabajador != 4) || seleccionador == 0) roles.Add(rol);
             }
             con.Close();
             return roles;

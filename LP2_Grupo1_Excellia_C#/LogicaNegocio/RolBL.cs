@@ -16,9 +16,9 @@ namespace LogicaNegocio
         {
             rolDA = new RolDA();
         }
-        public BindingList<TipoTrabajador> listarRoles()
+        public BindingList<TipoTrabajador> listarRoles(int seleccionador)
         {
-            return rolDA.listarRoles();
+            return rolDA.listarRoles(seleccionador);
         }
 
     }

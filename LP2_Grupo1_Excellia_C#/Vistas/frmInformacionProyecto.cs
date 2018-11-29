@@ -59,6 +59,7 @@ namespace Vistas
             cboPrioridad.Enabled = false;
             btnGuardar.Enabled = false;
             btnEditar.Enabled = true;
+            Dispose();
         }
 
         private void btnCancelarProyecto_Click(object sender, EventArgs e)

@@ -64,7 +64,7 @@ namespace Vistas
             bool entre = false;
             if (dgvTrabajador.Rows.Count >= 1)
             {
-                if (MessageBox.Show("¿Seguro que quiere asignar a estos trabajadores al proyecto.?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("¿Seguro que quiere asignar a estos trabajadores al proyecto?", "Advertencia", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     entre = true;
                     proyectoBL.AsignarTrabajador((Proyecto)Proyecto, (Trabajador)dgvTrabajador.CurrentRow.DataBoundItem);
@@ -91,12 +91,12 @@ namespace Vistas
             op.Dni = txtDNI.Text.Trim();
             op.Nombre = txtNombre.Text.Trim().Replace("  ", " ");
             op.ApellidoMaterno = op.ApellidoPaterno = op.Correo = op.Telefono = "";
-            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadores(op,"");
+            dgvTrabajador.DataSource = trabajadorBL.listarTrabajadoresDisponibles(Proyecto,op,"");
         }
 
         private void btnAvanzada_Click(object sender, EventArgs e)
         {
-            frmBuscarTrabajador bt = new frmBuscarTrabajador(1);
+            frmBuscarTrabajador bt = new frmBuscarTrabajador(1,Proyecto);
             if(bt.ShowDialog() == DialogResult.OK)
             {
 

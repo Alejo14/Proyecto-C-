@@ -101,7 +101,7 @@ namespace Vistas
 
         private void btnBuscarContacto_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new frmBuscarTrabajador(0));
+            AbrirFormInPanel(new frmBuscarTrabajador(0,null));
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

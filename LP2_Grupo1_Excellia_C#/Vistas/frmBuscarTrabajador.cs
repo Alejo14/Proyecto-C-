@@ -16,10 +16,12 @@ namespace Vistas
     {
         private TrabajadorBL trabajadorBL;
         private RolBL rolBL;
-        public frmBuscarTrabajador(int seleccionar)
+        private int seleccionar;
+        private Proyecto p;
+        public frmBuscarTrabajador(int seleccionar, Proyecto p)
         {
             InitializeComponent();
-            if(seleccionar == 1)
+            if (seleccionar == 1)//Jefe de Proyecto
             {
                 btnRegresar.Visible = true;
                 this.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -27,18 +29,22 @@ namespace Vistas
                 this.BackColor = Color.White;
                 this.pnlTitulo.BackColor = Color.DarkOrange;
                 this.lblTitulo.BackColor = Color.DarkOrange;
+                this.p = p;
             }
-            else if(seleccionar == 0)
+            else if (seleccionar == 0)//Operario
             {
                 this.pnlTitulo.Visible = false;
                 btnRegresar.Visible = false;
                 btnSeleccionar.Visible = false;
             }
+            this.seleccionar = seleccionar;
             rolBL = new RolBL();
             TipoTrabajador todosTiposTrabajador = new TipoTrabajador();
             todosTiposTrabajador.IdTipoTrabajador = 0;
             todosTiposTrabajador.Descripcion = "Todos";
-            BindingList<TipoTrabajador> roles = rolBL.listarRoles();
+            BindingList<TipoTrabajador> roles = new BindingList<TipoTrabajador>();
+            if (seleccionar == 0) roles = rolBL.listarRoles(0);
+            else if (seleccionar == 1) roles = rolBL.listarRoles(1);
             roles.Insert(0, todosTiposTrabajador);
             cmbRol.DataSource = roles;
             cmbRol.DisplayMember = "Descripcion";
@@ -47,7 +53,7 @@ namespace Vistas
             cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        
+
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -69,18 +75,27 @@ namespace Vistas
             op.ApellidoMaterno = txtApMat.Text;
             op.Correo = txtCorreo.Text;
             op.Telefono = txtTelefono.Text;
-            if (rol.IdTipoTrabajador == 0)
+            if (seleccionar == 0)
             {
-                t = trabajadorBL.listarTrabajadores(op, "");
-            }
-            else
-            {
-                t = trabajadorBL.listarTrabajadores(op, rol.Descripcion);
-            }
-            if (t != null)
-            {
+                if (rol.IdTipoTrabajador == 0)
+                    t = trabajadorBL.listarTrabajadores(op, "");
+                else
+                    t = trabajadorBL.listarTrabajadores(op, rol.Descripcion);
+                if (t.Count == 0)
+                    MessageBox.Show("No se encontró resultados que desea.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dgvTrabajadores.DataSource = t;
             }
+            else if(seleccionar == 1)
+            {
+                if (rol.IdTipoTrabajador == 0)
+                    t = trabajadorBL.listarTrabajadoresDisponibles(p,op, "");
+                else
+                    t = trabajadorBL.listarTrabajadoresDisponibles(p,op, rol.Descripcion);
+                if (t.Count == 0)
+                    MessageBox.Show("No se encontró resultados que desea.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dgvTrabajadores.DataSource = t;  
+            }
+                
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

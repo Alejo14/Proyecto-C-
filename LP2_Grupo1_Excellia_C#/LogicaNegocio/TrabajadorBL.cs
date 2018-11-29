@@ -18,7 +18,11 @@ namespace LogicaNegocio
         }
         public BindingList<Trabajador> listarTrabajadores(Operario op, string rol)
         {
-            return trabajadorDA.listarTrabajadores(op,rol);
+            return trabajadorDA.listarTrabajadores(op,rol);           
+        }
+        public BindingList<Trabajador> listarTrabajadoresDisponibles(Proyecto p, Operario op, string rol)
+        {
+            return trabajadorDA.listarTrabajadoresDisponibles(p, op, rol);
         }
         public BindingList<Trabajador> listarOperarios(Proyecto p)
         {
