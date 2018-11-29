@@ -91,13 +91,15 @@ namespace AccesoDatos
 
             MySqlDataReader lector = cmd.ExecuteReader();
 
+            byte[] contenido = null;
+
             while (lector.Read())
             {
-                byte[] contenido = lector.GetInt32("ID_DOCUMENTO");
+                
             }
 
             conn.Close();
-            return ;
+            return contenido;
         }
     }
 }

@@ -135,7 +135,7 @@ namespace Vistas
             if (dgvVisualizarProyectos.SelectedCells.Count > 0)
             {
                 Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
-                //FormSubirArchivos administadorDocs = new FormSubirArchivos(Proyecto,trabajadorProyecto.IdTrabajador);
+                FormSubirArchivos administadorDocs = new FormSubirArchivos(Proyecto.IdProyecto,trabajadorProyecto.IdTrabajador);
             }
             else
             {
