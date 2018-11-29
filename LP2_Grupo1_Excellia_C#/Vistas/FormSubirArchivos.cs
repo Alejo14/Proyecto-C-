@@ -61,7 +61,6 @@ namespace Vistas
                 Archivo cargado = new Archivo(0, fi.Name, documentConten, idProyecto, idTrabajador);
                 archivos.Add(cargado);
 
-                MessageBox.Show("yes");
             }
         }
 
@@ -80,8 +79,9 @@ namespace Vistas
                 int idArch = logicaNegocio.guardarArchivo(archivos[i]);
                 archivos[i].IdArchivo = idArch;
             }
+            int numArchSubidos = archivos.Count - numArchivos;
             numArchivos = archivos.Count;
-            MessageBox.Show("Archivos subidos con éxito");
+            MessageBox.Show("Se subieron " + numArchivos + " exitosamente");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Vistas
 
                 if (archDescargar.Contenido == null)
                 {
-                    //archDescargar.
+                    archDescargar.Contenido = logicaNegocio.obtenerDocumento(archDescargar.IdArchivo);
                 }
 
 

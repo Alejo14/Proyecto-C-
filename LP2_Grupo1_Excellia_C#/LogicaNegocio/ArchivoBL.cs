@@ -24,5 +24,11 @@ namespace LogicaNegocio
             ArchivoDA accesoDatos = new ArchivoDA();
             return accesoDatos.guardarDocumento(arch);
         }
+
+        public byte[] obtenerDocumento(int idArch)
+        {
+            ArchivoDA accesoDatos = new ArchivoDA();
+            return accesoDatos.obtenerDocumento(idArch);
+        }
     }
 }

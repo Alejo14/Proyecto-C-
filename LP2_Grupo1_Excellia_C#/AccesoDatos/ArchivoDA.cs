@@ -54,7 +54,6 @@ namespace AccesoDatos
             MySqlCommand cmd = new MySqlCommand("INSERT INTO DOCUMENTO(NOMBRE_DOCUMENTO, DOCUMENTO, ID_PROYECTO, TRABAJADOR_ID_TRABAJADOR) " +
                 "VALUES (@nombre, @documento, @idProy, @idTrab);",conn);
 
-            //String query = ;
             cmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = arch.Nombre;
             cmd.Parameters.Add("@documento", MySqlDbType.VarBinary).Value = arch.Contenido;
             cmd.Parameters.Add("@idProy", MySqlDbType.Int32).Value = arch.IdProyecto;
@@ -84,18 +83,22 @@ namespace AccesoDatos
 
             MySqlCommand cmd = new MySqlCommand("SELECT DOCUMENTO FROM DOCUMENTO WHERE ID_DOCUMENTO = @iddoc", conn);
 
-            //String query = ;
             cmd.Parameters.Add("@iddoc", MySqlDbType.Int32).Value = idArch;
 
             conn.Open();
 
             MySqlDataReader lector = cmd.ExecuteReader();
 
-            byte[] contenido = null;
+            lector.Read();
+            int length = (int)lector.GetBytes(0, 0, null, 0, 0);
+            byte[] contenido = new byte[length];
+            int index = 0;
 
-            while (lector.Read())
+            while (index < length)
             {
-                
+                int bytesRead = (int)lector.GetBytes(0, index,
+                                                contenido, index, length - index);
+                index += bytesRead;
             }
 
             conn.Close();
