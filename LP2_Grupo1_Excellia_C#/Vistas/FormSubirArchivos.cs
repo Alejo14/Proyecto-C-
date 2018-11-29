@@ -25,12 +25,13 @@ namespace Vistas
         public FormSubirArchivos(int idProy = 1, int idTrab = 1)//entradas harcodeadas
         {
             InitializeComponent();
-            logicaNegocio = new ArchivoBL();
-            archivos = logicaNegocio.listarDocumentosProyecto(idProyecto);
-            nombresArch = new BindingList<StringValue>();
 
             idProyecto = idProy;
             idTrabajador = idTrab;
+
+            logicaNegocio = new ArchivoBL();
+            archivos = logicaNegocio.listarDocumentosProyecto(idProyecto);
+            nombresArch = new BindingList<StringValue>();
             numArchivos = archivos.Count;
 
             nombresArch = new BindingList<StringValue>();
@@ -57,10 +58,10 @@ namespace Vistas
 
                 nombresArch.Add(new StringValue(fi.Name));
 
-                Archivo cargado = new Archivo(0, fi.Name, documentConten);
+                Archivo cargado = new Archivo(0, fi.Name, documentConten, idProyecto, idTrabajador);
                 archivos.Add(cargado);
 
-                MessageBox.Show("yes ");
+                MessageBox.Show("yes");
             }
         }
 
@@ -73,6 +74,13 @@ namespace Vistas
                 MessageBox.Show("No hay archivos nuevos que subir");
                 return;
             }
+
+            for(int i=numArchivos; i<archivos.Count; i++)
+            {
+                int idArch = logicaNegocio.guardarArchivo(archivos[i]);
+                archivos[i].IdArchivo = idArch;
+            }
+            numArchivos = archivos.Count;
             MessageBox.Show("Archivos subidos con éxito");
         }
 
@@ -104,6 +112,13 @@ namespace Vistas
             {
                 String ruta = foldDescarga.SelectedPath + "\\";
                 Archivo archDescargar = archivos.ElementAt(indxArch);
+
+                if (archDescargar.Contenido == null)
+                {
+                    //archDescargar.
+                }
+
+
 
                 ruta = ruta + archDescargar.Nombre;
                 if (File.Exists(@ruta))

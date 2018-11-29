@@ -18,5 +18,11 @@ namespace LogicaNegocio
             ArchivoDA accesoDatos = new ArchivoDA();
             return accesoDatos.listarDocumentosProyecto(idProyecto);
         }
+
+        public int guardarArchivo(Archivo arch)
+        {
+            ArchivoDA accesoDatos = new ArchivoDA();
+            return accesoDatos.guardarDocumento(arch);
+        }
     }
 }

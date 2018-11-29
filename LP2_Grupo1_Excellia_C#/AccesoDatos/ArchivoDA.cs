@@ -39,7 +39,65 @@ namespace AccesoDatos
 
         public int guardarDocumento(Archivo arch)
         {
-            return 1;
+            MySqlConnection conn;
+            string cadena = DBManager.cadena;
+
+            try
+            {
+                conn = new MySqlConnection(cadena);
+            }
+            catch
+            {
+                return -1;
+            }
+
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO DOCUMENTO(NOMBRE_DOCUMENTO, DOCUMENTO, ID_PROYECTO, TRABAJADOR_ID_TRABAJADOR) " +
+                "VALUES (@nombre, @documento, @idProy, @idTrab);",conn);
+
+            //String query = ;
+            cmd.Parameters.Add("@nombre", MySqlDbType.VarChar).Value = arch.Nombre;
+            cmd.Parameters.Add("@documento", MySqlDbType.VarBinary).Value = arch.Contenido;
+            cmd.Parameters.Add("@idProy", MySqlDbType.Int32).Value = arch.IdProyecto;
+            cmd.Parameters.Add("@idTrab", MySqlDbType.Int32).Value = arch.IdTrabajador;
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            int id = (int)cmd.LastInsertedId;
+
+            conn.Close();
+            return id;
+        }
+
+        public byte[] obtenerDocumento(int idArch)
+        {
+            MySqlConnection conn;
+            string cadena = DBManager.cadena;
+
+            try
+            {
+                conn = new MySqlConnection(cadena);
+            }
+            catch
+            {
+                return null;
+            }
+
+            MySqlCommand cmd = new MySqlCommand("SELECT DOCUMENTO FROM DOCUMENTO WHERE ID_DOCUMENTO = @iddoc", conn);
+
+            //String query = ;
+            cmd.Parameters.Add("@iddoc", MySqlDbType.Int32).Value = idArch;
+
+            conn.Open();
+
+            MySqlDataReader lector = cmd.ExecuteReader();
+
+            while (lector.Read())
+            {
+                byte[] contenido = lector.GetInt32("ID_DOCUMENTO");
+            }
+
+            conn.Close();
+            return ;
         }
     }
 }
