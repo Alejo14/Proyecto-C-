@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisualizarProyectos = new System.Windows.Forms.DataGridView();
             this.colIdProyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +45,7 @@
             this.btnInformacionProyecto = new System.Windows.Forms.Button();
             this.btnAsignar = new System.Windows.Forms.Button();
             this.btnRetirarOperario = new System.Windows.Forms.Button();
+            this.btnSubirDocs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisualizarProyectos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,10 +94,10 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "Presupuesto";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.HeaderText = "Presupuesto";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -198,7 +199,7 @@
             this.btnAsignar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignar.Image = global::Vistas.Properties.Resources.mas;
             this.btnAsignar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsignar.Location = new System.Drawing.Point(559, 452);
+            this.btnAsignar.Location = new System.Drawing.Point(387, 452);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(161, 38);
             this.btnAsignar.TabIndex = 10;
@@ -214,7 +215,7 @@
             this.btnRetirarOperario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetirarOperario.Image = global::Vistas.Properties.Resources.doc_document_new_note_icon_32;
             this.btnRetirarOperario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetirarOperario.Location = new System.Drawing.Point(740, 452);
+            this.btnRetirarOperario.Location = new System.Drawing.Point(574, 452);
             this.btnRetirarOperario.Name = "btnRetirarOperario";
             this.btnRetirarOperario.Size = new System.Drawing.Size(161, 38);
             this.btnRetirarOperario.TabIndex = 9;
@@ -223,12 +224,29 @@
             this.btnRetirarOperario.UseVisualStyleBackColor = true;
             this.btnRetirarOperario.Click += new System.EventHandler(this.btnRetirarOperario_Click);
             // 
+            // btnSubirDocs
+            // 
+            this.btnSubirDocs.FlatAppearance.BorderSize = 0;
+            this.btnSubirDocs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubirDocs.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubirDocs.Image = global::Vistas.Properties.Resources.Exportar_pequeño;
+            this.btnSubirDocs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubirDocs.Location = new System.Drawing.Point(756, 452);
+            this.btnSubirDocs.Name = "btnSubirDocs";
+            this.btnSubirDocs.Size = new System.Drawing.Size(145, 38);
+            this.btnSubirDocs.TabIndex = 12;
+            this.btnSubirDocs.Text = "Documentos";
+            this.btnSubirDocs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSubirDocs.UseVisualStyleBackColor = true;
+            this.btnSubirDocs.Click += new System.EventHandler(this.btnSubirDocs_Click);
+            // 
             // FormVisualizarProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(934, 522);
+            this.Controls.Add(this.btnSubirDocs);
             this.Controls.Add(this.btnInformacionProyecto);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnRetirarOperario);
@@ -270,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaFinEstimada;
         private System.Windows.Forms.Button btnAsignar;
         private System.Windows.Forms.Button btnInformacionProyecto;
+        private System.Windows.Forms.Button btnSubirDocs;
     }
 }

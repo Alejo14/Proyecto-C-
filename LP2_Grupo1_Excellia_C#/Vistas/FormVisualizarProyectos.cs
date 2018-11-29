@@ -129,6 +129,19 @@ namespace Vistas
             }
 
         }
+
+        private void btnSubirDocs_Click(object sender, EventArgs e)
+        {
+            if (dgvVisualizarProyectos.SelectedCells.Count > 0)
+            {
+                Proyecto = (Proyecto)dgvVisualizarProyectos.CurrentRow.DataBoundItem;
+                //FormSubirArchivos administadorDocs = new FormSubirArchivos(Proyecto,trabajadorProyecto.IdTrabajador);
+            }
+            else
+            {
+                MessageBox.Show("Se debe seleccionar un proyecto para poder subir/descargar documentos.", "Administración de Documentos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     
 }
