@@ -218,12 +218,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reporte_JefeProyecto.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reporte_JefeProyecto.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="FormAgregarUsuario.resx">
       <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,10 +300,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reporte_JefeProyecto.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Reporte_JefeProyecto.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

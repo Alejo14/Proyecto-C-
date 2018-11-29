@@ -50,7 +50,7 @@ namespace LogicaNegocio
 
         public void ActualizarDatos(Proyecto proyectoActualizar, int pri, int et)
         {
-            if (et == 5 || et == 6) {
+            if (et == 4 || et == 6) {
                 enviarCorreoActualizacionEtapa(proyectoActualizar, et);
             }
             proyectoDA.ActualizarDatos(proyectoActualizar.IdProyecto, pri, et);
@@ -126,9 +126,9 @@ namespace LogicaNegocio
         private void enviarCorreoActualizacionEtapa(Proyecto proyectoActualizar, int idEtapa) {
             string etapa = "";
 
-            if (idEtapa == 5)
+            if (idEtapa == 4)
             {
-                etapa = "Post-Produccion";
+                etapa = "Preparación";
             }
             else if (idEtapa == 6)
             {
@@ -137,7 +137,15 @@ namespace LogicaNegocio
 
             Cliente clienteProyecto = obtenerCliente(proyectoActualizar.IdProyecto);
 
-            string mensajeCorreo = obtenerMensajePasoEtapaProyecto(proyectoActualizar, clienteProyecto, etapa);
+            string mensajeCorreo = "";
+
+            if (idEtapa == 4)
+
+                mensajeCorreo = obtenerMensajePasoEtapaProyectoPostProduccion(proyectoActualizar, clienteProyecto, etapa);
+
+            else if (idEtapa == 6)
+
+                mensajeCorreo = obtenerMensajePasoEtapaProyectoCompletado(proyectoActualizar, clienteProyecto, etapa);
 
             EmailSender.enviarEmail(clienteProyecto.Correo, "Paso de etapa de proyecto a " + etapa, mensajeCorreo);
         }
@@ -147,7 +155,21 @@ namespace LogicaNegocio
             return clienteDA.obtenerCliente(idProyecto);
         }
 
-        private string obtenerMensajePasoEtapaProyecto(Proyecto proyectoActualizar, Cliente clienteProyecto, string etapaActualizar) {
+        private string obtenerMensajePasoEtapaProyectoPostProduccion(Proyecto proyectoActualizar, Cliente clienteProyecto, string etapaActualizar) {
+            string mensajeCorreo = "Estimado " + clienteProyecto.Nombre + ",\r\n\r\n" +
+                            "El presente mensaje es para notificarle que uno de los proyectos que ha solicitado ha pasado a la etapa de " + etapaActualizar + ":" +
+                            "\r\n\r\nNombre del Proyecto: " + proyectoActualizar.Nombre +
+                            "\r\nJefe de Proyecto: " + proyectoActualizar.JefeProyecto.Nombre + " " + proyectoActualizar.JefeProyecto.ApellidoPaterno +
+                            "\r\n\r\nDeberá aprobar su paso a post-producción de haber conformidad con el estado del proyecto." +
+                            "\r\n\r\nCualquier consulta, comunicarse con el KAM o el jefe del proyecto." +
+                            "\r\n\r\nAtentamente," +
+                            "\r\n\r\nEl equipo de Excellia";
+
+            return mensajeCorreo;
+        }
+
+        private string obtenerMensajePasoEtapaProyectoCompletado(Proyecto proyectoActualizar, Cliente clienteProyecto, string etapaActualizar)
+        {
             string mensajeCorreo = "Estimado " + clienteProyecto.Nombre + ",\r\n\r\n" +
                             "El presente mensaje es para notificarle que uno de los proyectos que ha solicitado ha pasado a la etapa de " + etapaActualizar + ":" +
                             "\r\n\r\nNombre del Proyecto: " + proyectoActualizar.Nombre +

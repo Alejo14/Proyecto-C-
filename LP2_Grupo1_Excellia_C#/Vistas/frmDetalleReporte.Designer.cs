@@ -34,14 +34,12 @@
             // 
             // crvReporteProyectos
             // 
-            this.crvReporteProyectos.ActiveViewIndex = 0;
+            this.crvReporteProyectos.ActiveViewIndex = -1;
             this.crvReporteProyectos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvReporteProyectos.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvReporteProyectos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvReporteProyectos.Location = new System.Drawing.Point(0, 0);
             this.crvReporteProyectos.Name = "crvReporteProyectos";
-            this.crvReporteProyectos.ReportSource = "D:\\Diego Paredes\\LP2\\TA\\ProyectoLP2_EnCapas\\Proyecto-C-\\LP2_Grupo1_Excellia_C#\\Re" +
-    "portes\\Reporte_JefeProyecto.rpt";
             this.crvReporteProyectos.Size = new System.Drawing.Size(800, 450);
             this.crvReporteProyectos.TabIndex = 0;
             // 
@@ -65,8 +63,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvReporteProyectos;
-        private Reporte_JefeProyecto Reporte_JefeProyecto1;
-        private Reporte_JefeProyecto Reporte_JefeProyecto2;
         private CrystalDecisions.CrystalReports.Engine.ReportDocument reportDocument1;
     }
 }

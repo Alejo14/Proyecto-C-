@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CrystalDecisions.Shared;
 using System.Windows.Forms;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace Vistas
 {
@@ -16,6 +17,9 @@ namespace Vistas
         public frmDetalleReporte(ParameterFields parametrosReporte)
         {
             InitializeComponent();
+            ReportDocument dir = new ReportDocument();
+            dir.Load(Application.StartupPath + "\\Reporte_JefeProyecto.rpt");
+            crvReporteProyectos.ReportSource = dir;
             crvReporteProyectos.ParameterFieldInfo = parametrosReporte;
         }
     }
