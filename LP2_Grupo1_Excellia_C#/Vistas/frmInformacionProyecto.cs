@@ -52,6 +52,15 @@ namespace Vistas
             }
             else
             {
+                if (et == 5) {
+                    MessageBox.Show("No se puede cambiar a la fase de post-producción: Debe pasar preparación y esperar aprobación del cliente");
+                    return;
+                }
+                if (et >= 6 && Proyecto.EtapaInt < 5) {
+                    MessageBox.Show("No se puede cambiar a la fase solicitada: Debe pasar por post-producción");
+                    return;
+                }
+
                 proyectoBL.ActualizarDatos(proyecto, pri, et);
                 MessageBox.Show("Se han realizado los cambios satisfactoriamente");
             }
